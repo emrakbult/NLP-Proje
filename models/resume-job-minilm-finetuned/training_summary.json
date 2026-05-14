@@ -1,0 +1,29 @@
+{
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "output_dir": "D:\\Software\\School\\year3\\NaturalLanguageProcessing\\NLP-Proje\\models\\resume-job-minilm-finetuned",
+  "device": "cuda",
+  "train_records": 6241,
+  "eval_records": 1759,
+  "train_label_distribution": {
+    "No Fit": 3143,
+    "Potential Fit": 1556,
+    "Good Fit": 1542
+  },
+  "eval_label_distribution": {
+    "No Fit": 857,
+    "Potential Fit": 444,
+    "Good Fit": 458
+  },
+  "epochs": 1,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "max_seq_length": 256,
+  "baseline_metrics": {
+    "resume-job-fit_pearson_cosine": 0.11101953024018743,
+    "resume-job-fit_spearman_cosine": 0.10646834631050023
+  },
+  "final_metrics": {
+    "resume-job-fit_pearson_cosine": 0.4055439773565987,
+    "resume-job-fit_spearman_cosine": 0.37855097603726234
+  }
+}

@@ -1,0 +1,1760 @@
+label,predicted_label,semantic_score,unweighted_skill_match_score,skill_match_score,overall_score,matched_skills,missing_skills
+No Fit,No Fit,12.51,33.33,35.00,17.01,Excel,Communication; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; HTML; JavaScript; Node.js; Problem Solving; React
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,No Fit,11.02,11.11,4.17,9.65,Leadership,Agile; Communication; Java; Kafka; Kubernetes; Microservices; SQL; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Critical Thinking; Excel; Leadership; Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,Potential Fit,51.39,0.00,0.00,41.11,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,0.00,25.00,30.77,6.15,Machine Learning,Agile; AWS; CI/CD
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+No Fit,No Fit,0.00,50.00,35.00,7.00,Communication,Customer Service
+No Fit,No Fit,3.16,0.00,0.00,2.53,,CI/CD; Leadership
+No Fit,Potential Fit,60.01,0.00,0.00,48.01,,
+No Fit,No Fit,0.00,33.33,26.92,5.38,Communication,Excel; Teamwork
+No Fit,No Fit,2.71,0.00,0.00,2.17,,C; C++; Linux; Python
+No Fit,No Fit,21.75,50.00,54.05,28.21,Java; JavaScript; MySQL; PHP; SQL,Agile; Angular; Docker; Natural Language Processing; Scala
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,26.54,0.00,0.00,21.23,,
+No Fit,No Fit,16.05,50.00,35.00,19.84,Customer Service; Excel,Communication; Leadership
+No Fit,No Fit,11.05,37.50,31.03,15.05,Communication; CSS; HTML,Angular; Git; JavaScript; Node.js; TypeScript
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Project Management; R
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,3.24,0.00,0.00,2.60,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+No Fit,Potential Fit,52.97,83.33,77.60,57.90,Communication; Data Analysis; Excel; Python; SQL,Power BI
+No Fit,No Fit,15.61,66.67,55.56,23.60,C; Communication,Transformer Models
+No Fit,No Fit,18.87,25.00,17.24,18.54,Communication; JavaScript,Angular; CSS; Git; HTML; Node.js; TypeScript
+No Fit,No Fit,0.00,20.00,17.50,3.50,Leadership,Communication; Critical Thinking; Excel; Problem Solving
+No Fit,No Fit,2.56,0.00,0.00,2.05,,
+No Fit,No Fit,1.57,0.00,0.00,1.26,,Communication; Customer Service
+No Fit,No Fit,3.80,0.00,0.00,3.04,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,30.56,50.00,80.00,40.45,CI/CD,Leadership
+No Fit,No Fit,2.35,0.00,0.00,1.88,,CI/CD; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Customer Service; Teamwork
+No Fit,No Fit,3.34,0.00,0.00,2.67,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,No Fit,1.83,50.00,35.00,8.46,Leadership,Excel
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; HTML; JavaScript; Node.js; Problem Solving; React
+No Fit,No Fit,13.34,0.00,0.00,10.68,,Data Analysis; SQL; Tableau
+No Fit,No Fit,0.41,50.00,24.14,5.16,Communication,Data Analysis
+No Fit,No Fit,0.00,20.00,9.09,1.82,Communication,Agile; AWS; Azure; Teamwork
+No Fit,No Fit,23.32,0.00,0.00,18.66,,Communication; Data Analysis; Excel; Statistics
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; C; C#; C++; Communication; Problem Solving
+No Fit,Potential Fit,50.34,22.22,33.33,46.94,Java; SQL,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,40.19,100.00,35.00,39.15,Communication,
+No Fit,No Fit,0.00,75.00,85.42,17.08,Communication; Data Analysis; Excel,Leadership
+No Fit,No Fit,0.00,28.57,25.96,5.19,Communication; Recruitment,Leadership; Microsoft SQL Server; Project Management; SQL; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,4.89,0.00,0.00,3.91,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,20.00,14.63,2.93,Excel,Agile; Communication; Go; SQL
+No Fit,No Fit,0.00,50.00,35.00,7.00,Communication,Customer Service
+No Fit,No Fit,4.90,0.00,0.00,3.92,,C; Communication; Transformer Models
+No Fit,No Fit,9.45,33.33,35.00,14.56,Excel,Communication; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Engineering
+No Fit,No Fit,0.04,0.00,0.00,0.03,,Communication; Project Management; R
+No Fit,No Fit,8.85,0.00,0.00,7.08,,Communication; Excel; Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.59,50.00,35.00,7.47,Communication,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel
+No Fit,No Fit,4.12,8.33,2.64,3.83,Communication,Agile; Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,25.99,0.00,0.00,20.79,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,0.00,66.67,35.00,7.00,Communication; Excel,Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,10.70,0.00,0.00,8.56,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Critical Thinking; Excel; Leadership; Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,50.00,24.14,4.83,Communication,Data Analysis
+No Fit,No Fit,27.13,33.33,33.33,28.37,SQL,Data Engineering; PostgreSQL
+No Fit,No Fit,27.81,66.67,83.33,38.92,Communication; R,Project Management
+No Fit,No Fit,0.00,14.29,6.42,1.28,Communication,Critical Thinking; Excel; Power BI; Problem Solving; Recruitment; Tableau
+No Fit,No Fit,2.03,100.00,35.00,8.62,Excel,
+No Fit,No Fit,34.94,0.00,0.00,27.95,,Teamwork
+No Fit,No Fit,0.00,50.00,50.00,10.00,Python,Linux
+No Fit,Potential Fit,61.84,44.44,16.67,52.81,Agile; Communication; Leadership; Teamwork,Java; Kafka; Kubernetes; Microservices; SQL
+No Fit,No Fit,0.00,50.00,35.00,7.00,Customer Service; Leadership,Communication; Excel
+No Fit,No Fit,7.36,11.11,4.00,6.69,Customer Service,Agile; Communication; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,15.05,50.00,30.16,18.07,Communication; Excel,Data Analysis; Statistics
+No Fit,No Fit,48.17,0.00,0.00,38.53,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,0.00,50.00,35.00,7.00,Communication,Customer Service
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,22.63,0.00,0.00,18.10,,Communication; Customer Service; Excel; Leadership
+No Fit,No Fit,1.60,33.33,35.00,8.28,Excel,Communication; Teamwork
+No Fit,Potential Fit,45.66,33.33,33.33,43.20,Python,AWS; Data Engineering
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,Potential Fit,54.26,0.00,0.00,43.41,,Excel; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,SQL
+No Fit,No Fit,22.52,0.00,0.00,18.02,,Data Engineering
+No Fit,No Fit,11.66,100.00,100.00,29.33,Java,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,100.00,100.00,20.00,SQL,
+No Fit,No Fit,16.43,0.00,0.00,13.14,,Data Analysis; SQL; Tableau
+No Fit,No Fit,6.32,0.00,0.00,5.06,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,Potential Fit,59.10,16.67,22.22,51.73,C,.NET; C#; C++; Communication; Problem Solving
+No Fit,No Fit,48.41,0.00,0.00,38.73,,
+No Fit,No Fit,1.41,0.00,0.00,1.13,,
+No Fit,No Fit,33.04,0.00,0.00,26.43,,Python; SQL
+No Fit,No Fit,18.48,0.00,0.00,14.78,,
+No Fit,No Fit,13.45,66.67,35.00,17.76,Communication; Excel,Problem Solving
+No Fit,Potential Fit,55.75,20.00,9.09,46.42,Agile,AWS; Azure; Communication; Teamwork
+No Fit,No Fit,25.17,0.00,0.00,20.14,,C; C++; Project Management; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,0.00,33.33,66.67,13.33,R,Communication; Project Management
+No Fit,Potential Fit,49.70,33.33,27.78,45.31,C; Communication,.NET; C#; C++; Problem Solving
+No Fit,No Fit,25.10,50.00,46.03,29.29,Communication; Statistics,Data Analysis; Excel
+No Fit,No Fit,5.23,25.00,40.00,12.18,C,C++; Project Management; Teamwork
+No Fit,No Fit,1.80,0.00,0.00,1.44,,Data Science; Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; Angular; Azure; C; C#; CI/CD; Communication; REST API; TypeScript
+No Fit,No Fit,22.31,18.18,18.54,21.55,CI/CD; SQL,AWS; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark
+No Fit,No Fit,16.30,42.86,60.58,25.16,Communication; Microsoft SQL Server; SQL,Leadership; Project Management; Recruitment; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.39,0.00,0.00,0.31,,Communication; Customer Service
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Science; Excel
+No Fit,No Fit,4.81,0.00,0.00,3.85,,
+No Fit,No Fit,10.19,33.33,26.92,13.53,Communication,Excel; Teamwork
+No Fit,No Fit,42.06,0.00,0.00,33.64,,.NET; C; C#; C++; Communication; Problem Solving
+No Fit,No Fit,34.82,100.00,35.00,34.85,Excel; Leadership,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,No Fit,22.28,0.00,0.00,17.83,,Communication; Project Management; R
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Java
+No Fit,No Fit,0.00,33.33,16.67,3.33,Communication,Project Management; R
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; HTML; JavaScript; Node.js; Problem Solving; React
+No Fit,No Fit,0.74,0.00,0.00,0.59,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile
+No Fit,No Fit,0.34,0.00,0.00,0.27,,
+No Fit,No Fit,18.13,0.00,0.00,14.51,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,4.92,14.29,4.55,4.85,Problem Solving,.NET; Agile; HTML; JavaScript; Node.js; React
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.14,50.00,24.14,4.94,Communication,Data Analysis
+No Fit,No Fit,14.85,0.00,0.00,11.88,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,10.75,50.00,35.29,15.66,Excel,Data Science
+No Fit,No Fit,4.39,33.33,66.67,16.84,R,Communication; Project Management
+No Fit,No Fit,4.07,60.00,35.00,10.25,Communication; Critical Thinking; Excel,Leadership; Problem Solving
+No Fit,No Fit,0.00,33.33,16.67,3.33,Communication,Project Management; R
+No Fit,No Fit,10.53,0.00,0.00,8.42,,Teamwork
+No Fit,No Fit,2.88,100.00,100.00,22.30,Java,
+No Fit,No Fit,42.49,0.00,0.00,33.99,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+No Fit,No Fit,41.42,16.67,16.67,36.47,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication
+No Fit,Potential Fit,26.64,100.00,100.00,41.32,SQL,
+No Fit,No Fit,18.96,0.00,0.00,15.17,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+No Fit,No Fit,5.10,0.00,0.00,4.08,,Communication; Problem Solving; R
+No Fit,Potential Fit,69.15,50.00,50.40,65.40,Communication; Power BI; Python,Data Analysis; Excel; SQL
+No Fit,No Fit,10.43,0.00,0.00,8.34,,
+No Fit,No Fit,38.53,11.11,4.00,31.62,Communication,Agile; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,C; Communication; Transformer Models
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Linux; Python
+No Fit,No Fit,19.97,25.00,11.11,18.20,Communication,Data Analysis; Excel; Statistics
+No Fit,No Fit,0.00,28.57,22.73,4.55,Agile; HTML,.NET; JavaScript; Node.js; Problem Solving; React
+No Fit,Potential Fit,46.69,16.67,16.67,40.69,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Communication; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,SQL
+No Fit,No Fit,43.96,16.67,16.67,38.50,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Data Analysis
+No Fit,No Fit,0.35,75.00,35.00,7.28,Customer Service; Excel; Leadership,Communication
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Customer Service
+No Fit,No Fit,20.96,75.00,85.42,33.85,Data Analysis; Excel; Leadership,Communication
+No Fit,No Fit,17.22,16.67,5.13,14.80,Communication; Teamwork,Agile; Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python; REST API
+No Fit,No Fit,0.00,33.33,35.00,7.00,Excel,Communication; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,12.01,50.00,35.29,16.66,Excel,Data Science
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Analysis; SQL; Tableau
+No Fit,No Fit,2.30,33.33,26.92,7.22,Communication,Excel; Teamwork
+No Fit,No Fit,4.53,0.00,0.00,3.63,,Communication; Java; Leadership; Machine Learning; Python; SQL; Tableau
+No Fit,No Fit,12.08,33.33,16.67,13.00,Communication,Machine Learning; Teamwork
+No Fit,No Fit,31.94,33.33,35.90,32.73,SQL,Data Analysis; Tableau
+No Fit,No Fit,3.48,0.00,0.00,2.79,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication,
+No Fit,Potential Fit,52.61,45.45,45.77,51.24,Agile; AWS; Pandas; Python; SQL,Data Science; Docker; Git; Machine Learning; NoSQL; Teamwork
+No Fit,No Fit,8.98,8.33,2.56,7.69,Communication,Agile; Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Communication; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,CI/CD; Leadership
+No Fit,No Fit,23.68,0.00,0.00,18.95,,Agile
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Analysis; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,10.21,60.00,60.00,20.17,HTML; Java; JavaScript,Angular; CSS
+No Fit,No Fit,3.30,50.00,35.00,9.64,Communication,Excel
+No Fit,No Fit,37.27,16.67,22.40,34.30,SQL,Communication; Data Analysis; Excel; Power BI; Python
+No Fit,No Fit,0.00,33.33,11.11,2.22,Communication,C; Transformer Models
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Machine Learning; Teamwork
+No Fit,No Fit,6.14,20.00,14.63,7.84,Excel,Agile; Communication; Go; SQL
+No Fit,No Fit,0.00,33.33,16.67,3.33,Communication,Machine Learning; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Communication; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,48.49,0.00,0.00,38.79,,AWS; Data Engineering; Python
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication,
+No Fit,No Fit,22.74,0.00,0.00,18.19,,
+No Fit,No Fit,6.71,0.00,0.00,5.36,,Problem Solving
+No Fit,No Fit,9.05,0.00,0.00,7.24,,Problem Solving
+No Fit,No Fit,5.72,0.00,0.00,4.57,,
+No Fit,No Fit,6.43,12.50,3.45,5.84,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,No Fit,14.20,0.00,0.00,11.36,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,0.00,60.00,35.00,7.00,Communication; Excel; Leadership,Critical Thinking; Problem Solving
+No Fit,No Fit,32.62,14.29,4.55,27.01,Communication,Java; Leadership; Machine Learning; Python; SQL; Tableau
+No Fit,No Fit,0.00,25.00,25.00,5.00,Excel,Communication; Data Analysis; Leadership
+No Fit,No Fit,0.15,0.00,0.00,0.12,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,10.08,0.00,0.00,8.07,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,6.14,8.33,2.64,5.44,Communication,Agile; Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,49.38,0.00,0.00,39.51,,Data Science; Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Java
+No Fit,Potential Fit,41.58,50.00,45.60,42.39,Communication; Data Analysis; SQL,Excel; Power BI; Python
+No Fit,No Fit,24.06,33.33,35.90,26.43,SQL,Data Analysis; Tableau
+No Fit,No Fit,0.00,33.33,26.92,5.38,Communication,Excel; Problem Solving
+No Fit,No Fit,5.81,0.00,0.00,4.65,,Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,6.01,0.00,0.00,4.81,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,4.75,0.00,0.00,3.80,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,2.56,33.33,33.33,8.71,Python,AWS; Data Engineering
+No Fit,No Fit,26.38,50.00,20.00,25.10,Leadership,CI/CD
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,2.56,0.00,0.00,2.04,,.NET; C; C#; C++; Communication; Problem Solving
+No Fit,No Fit,3.14,0.00,0.00,2.51,,Data Engineering
+No Fit,No Fit,0.16,0.00,0.00,0.13,,Problem Solving
+No Fit,No Fit,7.39,0.00,0.00,5.91,,Linux; Python
+No Fit,No Fit,24.64,18.18,18.54,23.42,Git; SQL,AWS; CI/CD; Data Science; Docker; Machine Learning; Microservices; NoSQL; Python; Spark
+No Fit,No Fit,0.52,50.00,35.00,7.42,Communication; Customer Service,Excel; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; HTML; JavaScript; Node.js; Problem Solving; React
+No Fit,No Fit,6.76,0.00,0.00,5.41,,
+No Fit,No Fit,6.99,100.00,35.00,12.59,Communication,
+No Fit,No Fit,0.00,28.57,13.46,2.69,Communication; Leadership,Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+No Fit,No Fit,0.00,16.67,5.56,1.11,Problem Solving,.NET; C; C#; C++; Communication
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Angular; Docker; Java; JavaScript; MySQL; Natural Language Processing; PHP; Scala; SQL
+No Fit,No Fit,22.29,0.00,0.00,17.83,,Agile; Customer Service; Teamwork
+No Fit,Potential Fit,51.74,60.00,54.55,52.30,Agile; Azure; Communication,AWS; Teamwork
+No Fit,No Fit,7.48,0.00,0.00,5.98,,C; C++; Project Management; Teamwork
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication,
+No Fit,Potential Fit,48.64,20.00,9.09,40.73,Communication,Agile; AWS; Azure; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Data Analysis; Excel; Leadership
+No Fit,Potential Fit,41.20,50.00,35.29,40.02,Excel,Data Science
+No Fit,No Fit,0.00,0.00,0.00,0.00,,C; C++; Linux; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,1.64,0.00,0.00,1.31,,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,35.97,0.00,0.00,28.78,,
+No Fit,No Fit,11.62,0.00,0.00,9.30,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,40.39,50.00,24.14,37.14,Communication,Data Analysis
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,13.45,0.00,0.00,10.76,,C; C++; Project Management; Teamwork
+No Fit,No Fit,21.41,16.67,9.60,19.05,Excel,Communication; Data Analysis; Power BI; Python; SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,CI/CD; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication
+No Fit,No Fit,9.25,9.09,9.27,9.25,SQL,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; Communication; Leadership; SQL
+No Fit,No Fit,8.27,0.00,0.00,6.62,,
+No Fit,No Fit,5.07,0.00,0.00,4.06,,Communication; Data Analysis; Excel; Power BI; Python; SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,SQL
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication; Customer Service,
+No Fit,No Fit,42.66,0.00,0.00,34.13,,Communication
+No Fit,No Fit,13.95,33.33,44.44,20.05,C,Communication; Transformer Models
+No Fit,No Fit,25.84,0.00,0.00,20.67,,
+No Fit,No Fit,45.52,16.67,16.67,39.75,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Data Analysis; Excel; Leadership
+No Fit,No Fit,3.94,0.00,0.00,3.15,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Problem Solving
+No Fit,Potential Fit,53.31,9.09,10.53,44.75,SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,Potential Fit,54.89,50.00,35.00,50.91,Excel,Leadership
+No Fit,No Fit,5.56,0.00,0.00,4.45,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,No Fit,31.32,50.00,35.00,32.06,Excel,Leadership
+No Fit,No Fit,12.84,100.00,35.00,17.27,Communication,
+No Fit,No Fit,1.93,0.00,0.00,1.54,,.NET; Agile; HTML; JavaScript; Node.js; Problem Solving; React
+No Fit,No Fit,16.21,66.67,35.00,19.97,Communication; Teamwork,Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,12.50,3.45,0.69,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,No Fit,12.28,50.00,35.00,16.83,Communication; Customer Service,Excel; Leadership
+No Fit,Potential Fit,50.14,0.00,0.00,40.11,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel; Leadership
+No Fit,No Fit,4.79,25.00,40.00,11.83,C,C++; Project Management; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,C; C++; Project Management; Teamwork
+No Fit,No Fit,5.48,0.00,0.00,4.38,,Teamwork
+No Fit,No Fit,3.23,0.00,0.00,2.59,,SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,1.44,0.00,0.00,1.15,,SQL
+No Fit,No Fit,17.55,0.00,0.00,14.04,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,No Fit,9.03,0.00,0.00,7.22,,Communication; Excel; Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,7.03,20.00,30.00,11.63,Excel,Communication; Critical Thinking; Leadership; Problem Solving
+No Fit,Potential Fit,43.89,33.33,25.00,40.11,Agile; Leadership; SQL,Communication; Java; Kafka; Kubernetes; Microservices; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,CI/CD; Leadership
+No Fit,No Fit,19.78,0.00,0.00,15.82,,C; Communication; Transformer Models
+No Fit,No Fit,34.82,33.33,35.90,35.04,SQL,Data Analysis; Tableau
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication,
+No Fit,No Fit,18.38,0.00,0.00,14.71,,Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,5.74,0.00,0.00,4.59,,
+No Fit,Potential Fit,61.54,66.67,35.00,56.23,Customer Service; Teamwork,Agile
+No Fit,Good Fit,74.04,66.67,72.00,73.63,Data Analysis; Excel; Power BI; SQL,Communication; Python
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,8.99,0.00,0.00,7.19,,Python; SQL
+No Fit,No Fit,1.60,50.00,35.00,8.28,Excel,Leadership
+No Fit,No Fit,34.03,0.00,0.00,27.22,,Excel; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,31.99,22.22,8.00,27.19,Communication; Customer Service,Agile; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,16.45,10.00,10.81,15.32,SQL,Agile; Angular; Docker; Java; JavaScript; MySQL; Natural Language Processing; PHP; Scala
+No Fit,No Fit,26.97,60.00,54.55,32.49,Agile; AWS; Communication,Azure; Teamwork
+No Fit,No Fit,44.22,0.00,0.00,35.38,,Python; SQL
+No Fit,No Fit,38.64,0.00,0.00,30.91,,CI/CD; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,8.33,2.64,0.53,Communication,Agile; Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+No Fit,No Fit,0.00,14.29,26.92,5.38,SQL,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; Teamwork
+No Fit,No Fit,7.93,0.00,0.00,6.35,,AWS; Data Engineering; Python
+No Fit,No Fit,39.45,0.00,0.00,31.56,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Engineering
+No Fit,No Fit,5.68,16.67,22.22,8.99,C,.NET; C#; C++; Communication; Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Excel
+No Fit,No Fit,1.13,0.00,0.00,0.90,,
+No Fit,No Fit,7.95,100.00,35.00,13.36,Excel,
+No Fit,No Fit,21.56,0.00,0.00,17.25,,Communication
+No Fit,No Fit,0.00,66.67,35.00,7.00,Communication; Excel,Problem Solving
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Science; Excel
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,5.27,0.00,0.00,4.22,,Communication; Java; Leadership; Machine Learning; Python; SQL; Tableau
+No Fit,No Fit,2.27,11.11,4.00,2.62,Customer Service,Agile; Communication; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,1.04,0.00,0.00,0.83,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Problem Solving; R
+No Fit,No Fit,39.26,0.00,0.00,31.41,,SQL
+No Fit,No Fit,30.39,18.18,18.54,28.02,Git; SQL,AWS; CI/CD; Data Science; Docker; Machine Learning; Microservices; NoSQL; Python; Spark
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Java
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,2.97,0.00,0.00,2.38,,Excel
+No Fit,No Fit,15.46,0.00,0.00,12.37,,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,38.61,10.00,10.81,33.05,SQL,Agile; Angular; Docker; Java; JavaScript; MySQL; Natural Language Processing; PHP; Scala
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Project Management; R
+No Fit,No Fit,1.71,0.00,0.00,1.37,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,22.53,0.00,0.00,18.03,,C; C++; Linux; Python
+No Fit,No Fit,20.66,50.00,50.00,26.53,Python,SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,5.49,0.00,0.00,4.39,,Communication; Excel; Teamwork
+No Fit,No Fit,35.99,0.00,0.00,28.79,,AWS; C; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+No Fit,No Fit,10.17,40.00,45.45,17.22,Communication; SQL,.NET; Agile; Leadership
+No Fit,No Fit,13.19,0.00,0.00,10.55,,
+No Fit,No Fit,28.84,33.33,16.67,26.41,Communication,Machine Learning; Teamwork
+No Fit,No Fit,0.89,0.00,0.00,0.71,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,21.11,11.11,4.17,17.72,Communication,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,3.65,0.00,0.00,2.92,,Communication; Data Analysis; Excel; Leadership
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Java
+No Fit,No Fit,34.09,100.00,35.00,34.27,Communication,
+No Fit,No Fit,24.91,33.33,35.00,26.93,Excel,Communication; Teamwork
+No Fit,No Fit,1.45,0.00,0.00,1.16,,
+No Fit,No Fit,47.09,0.00,0.00,37.67,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+No Fit,No Fit,2.74,100.00,35.00,9.19,Communication; Customer Service; Excel; Leadership,
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Data Analysis; SQL; Tableau
+No Fit,No Fit,10.48,100.00,35.00,15.38,Communication,
+No Fit,No Fit,0.00,100.00,35.00,7.00,Problem Solving,
+No Fit,No Fit,19.48,0.00,0.00,15.58,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+No Fit,No Fit,4.17,0.00,0.00,3.34,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,.NET; Agile; Communication; Leadership; SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,1.34,25.00,10.00,3.07,Teamwork,C; C++; Project Management
+No Fit,No Fit,9.45,14.29,4.55,8.47,Communication,Java; Leadership; Machine Learning; Python; SQL; Tableau
+No Fit,No Fit,32.10,0.00,0.00,25.68,,Linux; Python
+No Fit,No Fit,3.06,0.00,0.00,2.45,,Communication; Problem Solving; R
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+No Fit,No Fit,42.89,0.00,0.00,34.31,,CI/CD; Leadership
+No Fit,No Fit,29.04,0.00,0.00,23.23,,Data Engineering
+No Fit,No Fit,0.00,50.00,39.58,7.92,Communication; Excel,Data Analysis; Leadership
+No Fit,No Fit,0.00,20.00,17.50,3.50,Leadership,Communication; Critical Thinking; Excel; Problem Solving
+No Fit,No Fit,23.24,0.00,0.00,18.59,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,50.00,20.00,4.00,Leadership,CI/CD
+No Fit,No Fit,3.86,0.00,0.00,3.09,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,9.58,11.11,4.00,8.46,Communication,Agile; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,0.00,100.00,35.00,7.00,Communication; Excel,
+No Fit,No Fit,24.20,0.00,0.00,19.36,,
+No Fit,No Fit,2.60,100.00,100.00,22.08,Data Analysis; SQL; Tableau,
+No Fit,Potential Fit,49.57,40.00,18.18,43.29,Agile; Communication,AWS; Azure; Teamwork
+No Fit,No Fit,3.11,22.22,24.24,7.34,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,53.22,0.00,0.00,42.57,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,Potential Fit,71.27,100.00,35.00,64.02,Excel,
+No Fit,Potential Fit,71.15,11.11,11.38,59.19,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+No Fit,No Fit,27.09,0.00,0.00,21.67,,
+No Fit,Potential Fit,50.25,0.00,0.00,40.20,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,Potential Fit,39.52,80.00,80.00,47.61,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,63.67,45.45,52.63,61.46,.NET; C; C#; Microsoft SQL Server; SQL,Agile; AWS; Azure; Critical Thinking; Elasticsearch; Java
+No Fit,Potential Fit,45.59,33.33,50.00,46.47,Java; Kafka; Kubernetes,Agile; Communication; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,34.03,20.00,9.09,29.04,Teamwork,Agile; AWS; Azure; Communication
+No Fit,No Fit,0.55,100.00,100.00,20.44,Java,
+No Fit,Potential Fit,50.39,50.00,50.00,50.31,AWS; Python; SQL,Airflow; Data Engineering; NoSQL
+No Fit,No Fit,40.09,20.00,14.71,35.01,Agile; Angular,.NET; Azure; C; C#; CI/CD; Communication; REST API; TypeScript
+No Fit,Potential Fit,53.72,40.00,48.78,52.73,Excel; SQL,Agile; Communication; Go
+No Fit,Potential Fit,38.79,50.00,50.00,41.03,AWS; Data Engineering; SQL,Airflow; NoSQL; Python
+No Fit,No Fit,29.61,40.00,48.78,33.44,Excel; SQL,Agile; Communication; Go
+No Fit,No Fit,38.57,0.00,0.00,30.85,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,30.77,33.33,31.32,30.88,Agile; Java; Recruitment; SQL,Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; REST API; Teamwork
+No Fit,No Fit,41.12,0.00,0.00,32.90,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,59.06,45.45,36.84,54.62,Agile; C; Critical Thinking; Java; SQL,.NET; AWS; Azure; C#; Elasticsearch; Microsoft SQL Server
+No Fit,No Fit,35.02,33.33,25.00,33.02,Agile; Communication; SQL,Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,15.22,0.00,0.00,12.18,,
+No Fit,Potential Fit,64.04,25.00,40.00,59.23,C,C++; Project Management; Teamwork
+No Fit,No Fit,24.58,20.00,9.09,21.48,Communication,Agile; AWS; Azure; Teamwork
+No Fit,Potential Fit,63.55,0.00,0.00,50.84,,C; C++; Project Management; Teamwork
+No Fit,No Fit,0.00,50.00,35.00,7.00,Leadership,Excel
+No Fit,Potential Fit,57.39,11.11,4.17,46.74,Communication,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,38.71,11.11,16.67,34.30,SQL,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,59.93,0.00,0.00,47.94,,Agile; AWS; CI/CD; Machine Learning
+No Fit,Potential Fit,63.88,50.00,38.46,58.80,Agile; AWS,CI/CD; Machine Learning
+No Fit,Potential Fit,60.49,45.45,44.74,57.34,Agile; Azure; Elasticsearch; Microsoft SQL Server; SQL,.NET; AWS; C; C#; Critical Thinking; Java
+No Fit,No Fit,31.92,0.00,0.00,25.54,,
+No Fit,Potential Fit,48.77,50.00,44.83,47.98,Communication; Git; HTML; JavaScript,Angular; CSS; Node.js; TypeScript
+No Fit,No Fit,19.87,0.00,0.00,15.89,,
+No Fit,No Fit,44.38,20.00,8.54,37.21,Communication,Agile; Excel; Go; SQL
+No Fit,Potential Fit,45.97,40.00,42.68,45.31,Agile; SQL,Communication; Excel; Go
+No Fit,Potential Fit,47.28,80.00,65.85,51.00,Agile; Communication; Excel; SQL,Go
+No Fit,No Fit,15.69,20.00,8.54,14.26,Communication,Agile; Excel; Go; SQL
+No Fit,Potential Fit,45.71,40.00,23.17,41.20,Agile; Excel,Communication; Go; SQL
+No Fit,Potential Fit,48.99,40.00,48.78,48.95,Excel; SQL,Agile; Communication; Go
+No Fit,No Fit,25.70,40.00,18.18,24.20,Agile; Communication,AWS; Azure; Teamwork
+No Fit,No Fit,18.29,0.00,0.00,14.64,,Excel; Leadership
+No Fit,Potential Fit,66.03,33.33,37.50,60.32,Communication; Java; SQL,Agile; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,24.37,0.00,0.00,19.49,,
+No Fit,Potential Fit,28.12,80.00,90.91,40.68,Agile; AWS; Azure; Communication,Teamwork
+No Fit,Potential Fit,67.38,44.44,41.67,62.24,Agile; Communication; Java; SQL,Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,6.67,0.00,0.00,5.33,,
+No Fit,No Fit,20.46,25.00,23.08,20.99,Agile; Git; Python,Ansible; Bash; CI/CD; Communication; Go; Jenkins; Oracle Database; REST API; Teamwork
+No Fit,No Fit,22.20,100.00,35.00,24.76,Excel; Leadership,
+No Fit,No Fit,17.19,0.00,0.00,13.75,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,0.46,33.33,16.67,3.70,Communication,Project Management; R
+No Fit,Potential Fit,51.64,50.00,50.00,51.31,SQL,Python
+No Fit,Potential Fit,53.69,0.00,0.00,42.95,,C; C++; Project Management; Teamwork
+No Fit,No Fit,31.34,60.00,27.27,30.52,Agile; Communication; Teamwork,AWS; Azure
+No Fit,Potential Fit,50.37,0.00,0.00,40.30,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,22.20,100.00,35.00,24.76,Excel; Leadership,
+No Fit,No Fit,0.00,14.29,18.18,3.64,HTML,.NET; Agile; JavaScript; Node.js; Problem Solving; React
+No Fit,Potential Fit,50.09,22.22,24.24,44.92,C; R,C++; Computer Vision; Deep Learning; Docker; PyTorch; Teamwork; TensorFlow
+No Fit,Potential Fit,52.20,33.33,33.33,48.43,Python; SQL,Airflow; AWS; Data Engineering; NoSQL
+No Fit,No Fit,6.61,0.00,0.00,5.29,,
+No Fit,Potential Fit,49.95,100.00,100.00,59.96,Angular; CSS; HTML; Java; JavaScript,
+No Fit,No Fit,49.09,0.00,0.00,39.27,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,0.00,16.67,13.21,2.64,Communication; SQL,Agile; Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+No Fit,No Fit,25.33,0.00,0.00,20.27,,
+No Fit,Potential Fit,60.76,9.09,10.53,50.72,SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,No Fit,47.67,0.00,0.00,38.14,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,11.56,80.00,80.00,25.25,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,77.48,33.33,37.50,69.48,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,56.63,60.00,60.00,57.30,CSS; HTML; JavaScript,Angular; Java
+No Fit,No Fit,33.59,0.00,0.00,26.87,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,30.22,44.44,45.53,33.28,C; C++; Python; SQL,AWS; Google Cloud; Machine Learning; Statistics; TensorFlow
+No Fit,Potential Fit,52.70,80.00,80.00,58.16,Angular; CSS; HTML; JavaScript,Java
+No Fit,No Fit,43.54,20.00,14.63,37.76,Excel,Agile; Communication; Go; SQL
+No Fit,Potential Fit,52.31,100.00,100.00,61.85,Angular; CSS; HTML; Java; JavaScript,
+No Fit,Potential Fit,49.73,75.00,69.23,53.63,Agile; AWS; CI/CD,Machine Learning
+No Fit,No Fit,29.62,20.00,20.00,27.69,HTML,Angular; CSS; Java; JavaScript
+No Fit,No Fit,42.47,33.33,16.67,37.31,Communication,Project Management; R
+No Fit,Potential Fit,63.60,11.11,4.17,51.72,Leadership,Agile; Communication; Java; Kafka; Kubernetes; Microservices; SQL; Teamwork
+No Fit,No Fit,26.15,0.00,0.00,20.92,,Agile; AWS; CI/CD; Machine Learning
+No Fit,Good Fit,66.98,83.33,83.33,70.25,Airflow; AWS; NoSQL; Python; SQL,Data Engineering
+No Fit,No Fit,0.00,50.00,44.83,8.97,Communication; CSS; Git; HTML,Angular; JavaScript; Node.js; TypeScript
+No Fit,No Fit,13.06,0.00,0.00,10.45,,
+No Fit,No Fit,17.43,0.00,0.00,13.94,,
+No Fit,Potential Fit,55.63,0.00,0.00,44.50,,Agile; AWS; CI/CD; Machine Learning
+No Fit,Potential Fit,60.29,63.64,65.79,61.39,.NET; Agile; AWS; C; C#; Microsoft SQL Server; SQL,Azure; Critical Thinking; Elasticsearch; Java
+No Fit,No Fit,21.46,0.00,0.00,17.17,,
+No Fit,No Fit,16.37,0.00,0.00,13.10,,
+No Fit,Potential Fit,49.31,60.00,57.32,50.91,Communication; Excel; SQL,Agile; Go
+No Fit,No Fit,21.73,0.00,0.00,17.39,,Data Engineering; PostgreSQL; SQL
+No Fit,Potential Fit,57.79,25.00,7.69,47.77,Agile,AWS; CI/CD; Machine Learning
+No Fit,Potential Fit,57.42,0.00,0.00,45.94,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,25.66,75.00,60.00,32.53,C; Project Management; Teamwork,C++
+No Fit,No Fit,35.66,0.00,0.00,28.53,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,No Fit,28.53,0.00,0.00,22.83,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,62.88,50.00,35.00,57.31,Communication; Excel,Customer Service; Leadership
+No Fit,Potential Fit,65.81,0.00,0.00,52.65,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,46.93,16.67,16.67,40.88,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+No Fit,Potential Fit,39.45,80.00,80.00,47.56,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,24.06,33.33,33.33,25.91,Agile,Customer Service; Teamwork
+No Fit,No Fit,41.74,0.00,0.00,33.39,,Agile; Communication; Excel; Go; SQL
+No Fit,Potential Fit,45.00,66.67,60.00,48.00,Communication; Excel; Python; SQL,Data Analysis; Power BI
+No Fit,No Fit,34.80,20.00,14.63,30.77,Excel,Agile; Communication; Go; SQL
+No Fit,No Fit,19.46,40.00,48.78,25.33,Excel; SQL,Agile; Communication; Go
+No Fit,Potential Fit,69.90,44.44,45.53,65.02,C; Python; SQL; TensorFlow,AWS; C++; Google Cloud; Machine Learning; Statistics
+No Fit,No Fit,39.87,50.00,35.00,38.90,Excel,Leadership
+No Fit,No Fit,31.45,40.00,18.18,28.80,Agile; Teamwork,AWS; Azure; Communication
+No Fit,Potential Fit,62.00,25.00,7.69,51.14,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,41.85,0.00,0.00,33.48,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,62.19,18.18,21.05,53.96,C; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,Potential Fit,39.14,33.33,44.44,40.20,C,Communication; Transformer Models
+No Fit,Potential Fit,54.97,0.00,0.00,43.98,,C; C++; Project Management; Teamwork
+No Fit,No Fit,18.46,50.00,35.00,21.77,Excel,Leadership
+No Fit,No Fit,23.84,20.00,20.00,23.07,Java,Angular; CSS; HTML; JavaScript
+No Fit,Potential Fit,60.31,11.11,11.38,50.53,C,AWS; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+No Fit,Potential Fit,60.62,100.00,100.00,68.49,Airflow; AWS; Data Engineering; NoSQL; Python; SQL,
+No Fit,Potential Fit,64.41,22.22,24.24,56.38,C; TensorFlow,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork
+No Fit,Potential Fit,61.24,33.33,16.67,52.32,Project Management,Communication; R
+No Fit,Potential Fit,45.68,37.50,31.03,42.75,Communication; CSS; HTML,Angular; Git; JavaScript; Node.js; TypeScript
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; Customer Service; Teamwork
+No Fit,No Fit,0.00,50.00,35.00,7.00,Excel,Leadership
+No Fit,No Fit,4.90,40.00,48.78,13.67,Excel; SQL,Agile; Communication; Go
+No Fit,Potential Fit,59.42,40.00,23.17,52.17,Communication; Excel,Agile; Go; SQL
+No Fit,No Fit,46.21,0.00,0.00,36.97,,C; C++; Project Management; Teamwork
+No Fit,No Fit,4.13,33.33,16.67,6.64,Communication,Project Management; R
+No Fit,Potential Fit,58.00,9.09,10.53,48.51,C,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,No Fit,2.22,33.33,16.67,5.11,Communication,Project Management; R
+No Fit,Potential Fit,43.09,66.67,33.33,41.14,Communication; Project Management,R
+No Fit,No Fit,36.95,0.00,0.00,29.56,,C; C++; Project Management; Teamwork
+No Fit,No Fit,17.72,66.67,55.56,25.29,C; Communication,Transformer Models
+No Fit,Potential Fit,57.54,0.00,0.00,46.03,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+No Fit,No Fit,20.35,100.00,35.00,23.28,Excel; Leadership,
+No Fit,No Fit,26.91,50.00,35.00,28.53,Excel,Leadership
+No Fit,Potential Fit,49.45,12.50,13.79,42.32,HTML,Angular; Communication; CSS; Git; JavaScript; Node.js; TypeScript
+No Fit,Potential Fit,50.81,50.00,38.46,48.34,Agile; AWS,CI/CD; Machine Learning
+No Fit,Potential Fit,51.75,60.00,60.00,53.40,CSS; Java; JavaScript,Angular; HTML
+No Fit,No Fit,8.19,33.33,33.33,13.22,SQL,Data Engineering; PostgreSQL
+No Fit,No Fit,28.16,0.00,0.00,22.53,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,0.53,0.00,0.00,0.43,,
+No Fit,Potential Fit,57.72,60.00,57.32,57.64,Communication; Excel; SQL,Agile; Go
+No Fit,Potential Fit,51.64,80.00,80.00,57.31,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,22.05,50.00,35.00,24.64,Excel,Leadership
+No Fit,Potential Fit,48.12,11.11,16.67,41.83,Java,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,14.73,100.00,35.00,18.78,Communication,
+No Fit,Potential Fit,44.22,60.00,60.00,47.38,CSS; HTML; Java,Angular; JavaScript
+No Fit,No Fit,5.81,100.00,35.00,11.64,Communication,
+No Fit,No Fit,34.95,60.00,60.00,39.96,CSS; HTML; JavaScript,Angular; Java
+No Fit,No Fit,8.83,100.00,35.00,14.07,Excel; Leadership,
+No Fit,No Fit,11.42,0.00,0.00,9.13,,
+No Fit,Potential Fit,55.29,0.00,0.00,44.23,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,Potential Fit,53.24,25.00,10.00,44.59,Project Management,C; C++; Teamwork
+No Fit,No Fit,21.61,0.00,0.00,17.29,,
+No Fit,Potential Fit,57.33,25.00,30.77,52.02,AWS,Agile; CI/CD; Machine Learning
+No Fit,No Fit,39.38,0.00,0.00,31.50,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,17.46,0.00,0.00,13.97,,Teamwork
+No Fit,Potential Fit,66.28,0.00,0.00,53.03,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+No Fit,No Fit,34.74,0.00,0.00,27.79,,Communication; Project Management; R
+No Fit,No Fit,19.10,22.22,24.24,20.13,C; R,C++; Computer Vision; Deep Learning; Docker; PyTorch; Teamwork; TensorFlow
+No Fit,No Fit,24.70,50.00,35.00,26.76,Excel,Leadership
+No Fit,No Fit,30.67,28.57,17.43,28.02,Communication; Excel,Critical Thinking; Power BI; Problem Solving; Recruitment; Tableau
+No Fit,Potential Fit,67.27,0.00,0.00,53.81,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,19.31,50.00,35.00,22.45,Excel,Leadership
+No Fit,Potential Fit,63.79,80.00,65.85,64.20,Agile; Communication; Excel; SQL,Go
+No Fit,Potential Fit,68.52,22.22,20.83,58.98,SQL; Teamwork,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices
+No Fit,Potential Fit,52.31,20.00,20.00,45.85,JavaScript,Angular; CSS; HTML; Java
+No Fit,No Fit,23.64,0.00,0.00,18.91,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,0.00,16.67,12.82,2.56,Communication; Go,Agile; Ansible; Bash; CI/CD; Git; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,56.70,63.64,65.79,58.51,.NET; Agile; C; C#; Java; Microsoft SQL Server; SQL,AWS; Azure; Critical Thinking; Elasticsearch
+No Fit,No Fit,0.00,50.00,80.00,16.00,C; C++,Project Management; Teamwork
+No Fit,No Fit,40.09,20.00,34.15,38.90,SQL,Agile; Communication; Excel; Go
+No Fit,No Fit,16.07,0.00,0.00,12.86,,
+No Fit,Potential Fit,50.61,37.50,41.38,48.77,CSS; HTML; JavaScript,Angular; Communication; Git; Node.js; TypeScript
+No Fit,Potential Fit,56.14,0.00,0.00,44.91,,Communication; Project Management; R
+No Fit,Potential Fit,53.91,55.56,58.33,54.80,Agile; Communication; Java; Microservices; SQL,Kafka; Kubernetes; Leadership; Teamwork
+No Fit,Potential Fit,50.62,60.00,57.32,51.96,Communication; Excel; SQL,Agile; Go
+No Fit,Potential Fit,57.81,63.64,65.79,59.41,.NET; Agile; C; C#; Java; Microsoft SQL Server; SQL,AWS; Azure; Critical Thinking; Elasticsearch
+No Fit,Potential Fit,52.70,0.00,0.00,42.16,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,22.20,0.00,0.00,17.76,,Excel; Leadership
+No Fit,No Fit,44.08,0.00,0.00,35.26,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,15.60,0.00,0.00,12.48,,
+No Fit,No Fit,34.03,33.33,16.67,30.55,Problem Solving,Communication; R
+No Fit,Potential Fit,66.72,33.33,25.00,58.37,Agile; Communication; SQL,Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,21.94,50.00,80.00,33.55,C; C++,Project Management; Teamwork
+No Fit,Potential Fit,65.92,22.22,20.83,56.90,Agile; Java,Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,46.66,0.00,0.00,37.32,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,68.77,44.44,45.53,64.12,Google Cloud; Machine Learning; Python; TensorFlow,AWS; C; C++; SQL; Statistics
+No Fit,Potential Fit,57.11,0.00,0.00,45.69,,Communication; Project Management; R
+No Fit,Potential Fit,46.39,100.00,35.00,44.11,Communication,
+No Fit,Potential Fit,42.12,100.00,100.00,53.70,Data Analysis; SQL; Tableau,
+No Fit,Potential Fit,63.51,25.00,7.69,52.35,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,20.40,66.67,35.00,23.32,Communication; Excel,Teamwork
+No Fit,Potential Fit,44.40,40.00,40.00,43.52,HTML; Java,Angular; CSS; JavaScript
+No Fit,No Fit,24.18,0.00,0.00,19.35,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,19.29,20.00,20.00,19.43,Java,Angular; CSS; HTML; JavaScript
+No Fit,Potential Fit,65.68,80.00,80.00,68.54,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,Potential Fit,52.45,44.44,54.17,52.79,Java; Kubernetes; Leadership; Microservices,Agile; Communication; Kafka; SQL; Teamwork
+No Fit,Potential Fit,51.22,18.18,21.05,45.19,.NET; SQL,Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,No Fit,18.86,40.00,29.41,20.97,Agile; C; C#; Communication,.NET; Angular; Azure; CI/CD; REST API; TypeScript
+No Fit,Potential Fit,80.40,22.22,20.83,68.49,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,24.65,100.00,35.00,26.72,Communication,
+No Fit,No Fit,46.10,11.11,4.17,37.71,Communication,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,61.62,80.00,80.00,65.29,Angular; CSS; HTML; JavaScript,Java
+No Fit,No Fit,42.11,25.00,30.77,39.84,Git; Python; REST API,Agile; Ansible; Bash; CI/CD; Communication; Go; Jenkins; Oracle Database; Teamwork
+No Fit,Potential Fit,55.80,18.18,21.05,48.85,Java; SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+No Fit,Potential Fit,49.62,25.00,27.59,45.21,HTML; JavaScript,Angular; Communication; CSS; Git; Node.js; TypeScript
+No Fit,Potential Fit,56.77,33.33,37.50,52.92,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,48.48,83.33,83.33,55.45,Airflow; AWS; Data Engineering; Python; SQL,NoSQL
+No Fit,Potential Fit,56.04,45.45,44.74,53.78,.NET; Agile; C; Java; SQL,AWS; Azure; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+No Fit,Potential Fit,60.77,11.11,12.12,51.04,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,21.37,50.00,35.00,24.10,Excel,Leadership
+No Fit,No Fit,18.25,12.50,3.45,15.29,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,Potential Fit,54.30,22.22,33.33,50.10,Java; SQL,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,41.32,33.33,50.00,43.06,Java; Kafka; Kubernetes,Agile; Communication; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,54.99,20.00,8.54,45.70,Communication,Agile; Excel; Go; SQL
+No Fit,No Fit,48.56,0.00,0.00,38.85,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,0.37,0.00,0.00,0.30,,
+No Fit,No Fit,9.14,33.33,66.67,20.65,Machine Learning,Communication; Teamwork
+No Fit,Potential Fit,43.68,50.00,53.85,45.71,Agile; CI/CD; Git; Jenkins; Python; REST API,Ansible; Bash; Communication; Go; Oracle Database; Teamwork
+No Fit,No Fit,35.93,20.00,14.63,31.67,Excel,Agile; Communication; Go; SQL
+No Fit,No Fit,7.69,0.00,0.00,6.15,,
+No Fit,Potential Fit,54.39,0.00,0.00,43.51,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,Potential Fit,62.55,27.27,31.58,56.36,C; C#; SQL,.NET; Agile; AWS; Azure; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,No Fit,28.09,0.00,0.00,22.47,,
+No Fit,No Fit,26.50,16.67,5.60,22.32,Communication,Data Analysis; Excel; Power BI; Python; SQL
+No Fit,No Fit,35.57,36.36,42.11,36.88,C; Java; Microsoft SQL Server; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch
+No Fit,Potential Fit,61.33,22.22,20.83,53.23,Java; Leadership,Agile; Communication; Kafka; Kubernetes; Microservices; SQL; Teamwork
+No Fit,No Fit,0.00,20.00,9.09,1.82,Communication,.NET; Agile; Leadership; SQL
+No Fit,No Fit,33.61,0.00,0.00,26.89,,
+No Fit,Potential Fit,41.65,40.00,40.00,41.32,HTML; Java,Angular; CSS; JavaScript
+No Fit,No Fit,8.30,0.00,0.00,6.64,,
+No Fit,No Fit,27.92,25.00,31.70,28.68,Java; REST API; SQL,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; Teamwork
+No Fit,No Fit,34.72,16.67,20.51,31.88,Git; Python,Agile; Ansible; Bash; CI/CD; Communication; Go; Jenkins; Oracle Database; REST API; Teamwork
+No Fit,Potential Fit,57.73,75.00,90.00,64.18,C; C++; Teamwork,Project Management
+No Fit,No Fit,29.89,25.00,15.85,27.08,Agile; Communication; SQL,Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+No Fit,Potential Fit,59.99,44.44,41.67,56.33,Agile; Communication; Java; Kafka,Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,78.58,22.22,20.83,67.03,Communication; SQL,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,55.31,0.00,0.00,44.25,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,61.02,80.00,80.00,64.81,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,54.14,80.00,80.00,59.31,Angular; CSS; HTML; JavaScript,Java
+No Fit,No Fit,32.90,0.00,0.00,26.32,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,21.41,0.00,0.00,17.13,,Linux; Python
+No Fit,No Fit,11.27,0.00,0.00,9.02,,
+No Fit,No Fit,16.37,0.00,0.00,13.10,,
+No Fit,No Fit,49.72,0.00,0.00,39.78,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,23.91,0.00,0.00,19.13,,
+No Fit,No Fit,3.77,0.00,0.00,3.01,,Agile
+No Fit,Potential Fit,44.30,80.00,80.00,51.44,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,26.27,0.00,0.00,21.02,,Excel; Leadership
+No Fit,Potential Fit,65.17,44.44,41.67,60.47,Agile; Communication; Java; SQL,Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,57.79,80.00,80.00,62.23,Angular; CSS; HTML; JavaScript,Java
+No Fit,No Fit,0.00,20.00,9.09,1.82,Communication,Agile; AWS; Azure; Teamwork
+No Fit,Good Fit,74.44,80.00,80.00,75.55,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,51.17,25.00,30.77,47.09,CI/CD,Agile; AWS; Machine Learning
+No Fit,Potential Fit,46.97,18.18,21.05,41.79,AWS; Java,.NET; Agile; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+No Fit,No Fit,25.02,0.00,0.00,20.01,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,41.59,100.00,35.00,40.27,Excel; Leadership,
+No Fit,No Fit,28.35,0.00,0.00,22.68,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,19.29,33.33,25.64,20.56,Agile; Bash; Communication; Python,Ansible; CI/CD; Git; Go; Jenkins; Oracle Database; REST API; Teamwork
+No Fit,Potential Fit,53.21,33.33,44.44,51.46,C,Communication; Transformer Models
+No Fit,Potential Fit,45.88,33.33,34.15,43.54,C; Python; SQL,AWS; C++; Google Cloud; Machine Learning; Statistics; TensorFlow
+No Fit,No Fit,29.60,45.45,44.74,32.63,Agile; C; C#; Microsoft SQL Server; SQL,.NET; AWS; Azure; Critical Thinking; Elasticsearch; Java
+No Fit,No Fit,43.54,33.33,16.67,38.17,Communication,Project Management; R
+No Fit,No Fit,37.09,25.00,23.08,34.29,Communication; Python; REST API,Agile; Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Teamwork
+No Fit,Potential Fit,45.02,27.27,31.58,42.33,C; C#; Java,.NET; Agile; AWS; Azure; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+No Fit,No Fit,35.83,0.00,0.00,28.67,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,47.60,0.00,0.00,38.08,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,No Fit,20.09,0.00,0.00,16.08,,
+No Fit,No Fit,46.97,0.00,0.00,37.57,,Communication; Problem Solving; R
+No Fit,Potential Fit,62.88,25.00,7.69,51.84,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,13.67,33.33,33.33,17.60,SQL,Data Engineering; PostgreSQL
+No Fit,Potential Fit,74.57,11.11,16.67,62.99,Java,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,56.66,22.22,24.24,50.18,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,25.13,0.00,0.00,20.10,,
+No Fit,No Fit,34.96,50.00,35.00,34.97,Excel,Leadership
+No Fit,Good Fit,63.63,100.00,100.00,70.90,Angular; CSS; HTML; Java; JavaScript,
+No Fit,Potential Fit,37.85,83.33,94.40,49.16,Data Analysis; Excel; Power BI; Python; SQL,Communication
+No Fit,No Fit,28.72,100.00,35.00,29.98,Excel; Leadership,
+No Fit,Potential Fit,48.84,22.22,22.76,43.63,Python; SQL,AWS; C; C++; Google Cloud; Machine Learning; Statistics; TensorFlow
+No Fit,Potential Fit,73.84,33.33,37.50,66.57,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,72.87,55.56,58.33,69.96,Agile; Communication; Java; Microservices; SQL,Kafka; Kubernetes; Leadership; Teamwork
+No Fit,No Fit,48.78,0.00,0.00,39.03,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,49.12,0.00,0.00,39.30,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,Potential Fit,38.09,60.00,60.00,42.48,HTML; Java; JavaScript,Angular; CSS
+No Fit,Potential Fit,57.81,80.00,65.85,59.42,Agile; Communication; Excel; SQL,Go
+No Fit,No Fit,42.20,20.00,20.00,37.76,Java,Angular; CSS; HTML; JavaScript
+No Fit,No Fit,42.03,33.33,25.00,38.62,Communication; Leadership; SQL,Agile; Java; Kafka; Kubernetes; Microservices; Teamwork
+No Fit,Potential Fit,52.44,22.22,33.33,48.62,Java; SQL,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,11.27,0.00,0.00,9.01,,
+No Fit,Potential Fit,50.34,0.00,0.00,40.27,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Linux; Python
+No Fit,Potential Fit,69.32,11.11,16.67,58.79,SQL,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,6.50,0.00,0.00,5.20,,Communication
+No Fit,Potential Fit,51.59,25.00,40.00,49.27,C,C++; Project Management; Teamwork
+No Fit,Potential Fit,69.51,25.00,30.77,61.76,Machine Learning,Agile; AWS; CI/CD
+No Fit,Potential Fit,59.16,80.00,65.85,60.50,Agile; Communication; Excel; SQL,Go
+No Fit,No Fit,15.92,0.00,0.00,12.73,,Teamwork
+No Fit,No Fit,25.66,33.33,35.00,27.52,Excel,Communication; Teamwork
+No Fit,No Fit,41.08,50.00,35.00,39.86,Excel,Leadership
+No Fit,Potential Fit,77.18,33.33,25.00,66.74,Agile; Leadership; SQL,Communication; Java; Kafka; Kubernetes; Microservices; Teamwork
+No Fit,No Fit,40.87,0.00,0.00,32.69,,Communication; Project Management; R
+No Fit,Potential Fit,55.11,50.00,38.46,51.78,Agile; AWS,CI/CD; Machine Learning
+No Fit,No Fit,23.85,50.00,35.00,26.08,Excel,Leadership
+No Fit,Potential Fit,61.62,55.56,45.83,58.46,Agile; Communication; Java; SQL; Teamwork,Kafka; Kubernetes; Leadership; Microservices
+No Fit,No Fit,33.59,0.00,0.00,26.87,,Agile; Customer Service; Teamwork
+No Fit,No Fit,4.54,33.33,27.78,9.19,C; Communication,.NET; C#; C++; Problem Solving
+No Fit,Potential Fit,64.66,22.22,24.24,56.57,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,57.13,0.00,0.00,45.71,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,53.91,22.22,24.24,47.98,Docker; TensorFlow,C; C++; Computer Vision; Deep Learning; PyTorch; R; Teamwork
+No Fit,Potential Fit,74.86,22.22,20.83,64.05,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,63.92,83.33,83.33,67.80,Airflow; AWS; NoSQL; Python; SQL,Data Engineering
+No Fit,No Fit,26.80,40.00,18.18,25.07,Agile; Teamwork,AWS; Azure; Communication
+No Fit,Potential Fit,54.39,0.00,0.00,43.51,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,44.48,0.00,0.00,35.59,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,27.39,66.67,66.67,35.25,PostgreSQL; SQL,Data Engineering
+No Fit,Potential Fit,70.74,22.22,8.33,58.26,Agile; Communication,Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,Potential Fit,51.34,0.00,0.00,41.07,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,8.29,22.22,20.83,10.80,Communication; SQL,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,38.32,27.27,23.68,35.40,Agile; Java; SQL,.NET; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+No Fit,No Fit,13.53,0.00,0.00,10.82,,
+No Fit,No Fit,44.48,33.33,16.67,38.91,Communication,Project Management; R
+No Fit,Good Fit,68.02,50.00,80.00,70.41,C; C++,Project Management; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Communication
+No Fit,Potential Fit,61.03,100.00,100.00,68.82,Agile; Communication; Excel; Go; SQL,
+No Fit,No Fit,16.85,0.00,0.00,13.48,,Teamwork
+No Fit,Potential Fit,70.45,22.22,8.33,58.02,Communication; Leadership,Agile; Java; Kafka; Kubernetes; Microservices; SQL; Teamwork
+No Fit,No Fit,37.00,40.00,23.17,34.23,Communication; Excel,Agile; Go; SQL
+No Fit,No Fit,13.54,0.00,0.00,10.83,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,73.04,22.22,20.83,62.60,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,59.16,40.00,23.17,51.96,Communication; Excel,Agile; Go; SQL
+No Fit,Potential Fit,54.52,80.00,80.00,59.62,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,34.47,100.00,100.00,47.58,Python; SQL,
+No Fit,No Fit,30.45,50.00,61.54,36.67,AWS; Machine Learning,Agile; CI/CD
+No Fit,No Fit,22.44,66.67,72.22,32.40,C; C#; C++; Communication,.NET; Problem Solving
+No Fit,No Fit,32.97,60.00,27.27,31.83,Agile; Communication; Teamwork,AWS; Azure
+No Fit,Potential Fit,51.71,80.00,80.00,57.37,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,33.39,0.00,0.00,26.71,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,Potential Fit,51.81,0.00,0.00,41.45,,C; C++; Project Management; Teamwork
+No Fit,No Fit,47.31,0.00,0.00,37.85,,Communication; Project Management; R
+No Fit,No Fit,32.65,60.00,54.55,37.03,Agile; AWS; Communication,Azure; Teamwork
+No Fit,No Fit,27.25,0.00,0.00,21.80,,Python; SQL
+No Fit,Potential Fit,77.40,0.00,0.00,61.92,,Agile; AWS; CI/CD; Machine Learning
+No Fit,Potential Fit,64.80,75.00,90.00,69.84,C; C++; Teamwork,Project Management
+No Fit,Potential Fit,59.41,60.00,57.32,58.99,Agile; Excel; SQL,Communication; Go
+No Fit,No Fit,43.59,0.00,0.00,34.87,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+No Fit,Potential Fit,40.35,50.00,50.00,42.28,AWS; Data Engineering; SQL,Airflow; NoSQL; Python
+No Fit,Potential Fit,54.87,60.00,60.00,55.90,HTML; Java; JavaScript,Angular; CSS
+No Fit,No Fit,21.32,33.33,28.21,22.69,Data Analysis,SQL; Tableau
+No Fit,Potential Fit,69.85,22.22,20.83,60.04,Agile; Java,Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,15.17,0.00,0.00,12.13,,
+No Fit,Potential Fit,52.32,0.00,0.00,41.86,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,42.68,0.00,0.00,34.14,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,74.31,22.22,20.83,63.61,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,27.98,33.33,16.67,25.72,Project Management,Communication; R
+No Fit,No Fit,22.96,25.00,7.69,19.91,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,33.33,16.67,3.33,Communication,Machine Learning; Teamwork
+No Fit,No Fit,42.39,20.00,20.00,37.91,Java,Angular; CSS; HTML; JavaScript
+No Fit,Potential Fit,45.26,80.00,80.00,52.21,Angular; HTML; Java; JavaScript,CSS
+No Fit,Potential Fit,52.90,50.00,50.00,52.32,NoSQL; Python; SQL,Airflow; AWS; Data Engineering
+No Fit,No Fit,36.93,0.00,0.00,29.54,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,28.31,100.00,35.00,29.65,Excel; Leadership,
+No Fit,Potential Fit,55.40,33.33,16.67,47.65,Communication,Project Management; R
+No Fit,Potential Fit,47.16,80.00,80.00,53.73,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,47.85,11.11,16.67,41.61,Java,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+No Fit,No Fit,45.24,0.00,0.00,36.19,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+No Fit,No Fit,18.67,0.00,0.00,14.94,,
+No Fit,Potential Fit,52.88,25.00,7.69,43.84,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,11.07,0.00,0.00,8.86,,
+No Fit,Potential Fit,44.30,37.50,41.38,43.71,CSS; HTML; JavaScript,Angular; Communication; Git; Node.js; TypeScript
+No Fit,Potential Fit,63.77,0.00,0.00,51.01,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,20.56,100.00,35.00,23.45,Excel; Leadership,
+No Fit,No Fit,6.90,0.00,0.00,5.52,,
+No Fit,Potential Fit,44.30,60.00,60.00,47.44,CSS; HTML; JavaScript,Angular; Java
+No Fit,Potential Fit,56.00,50.00,50.00,54.80,AWS; Python; SQL,Airflow; Data Engineering; NoSQL
+No Fit,Potential Fit,70.23,22.22,20.83,60.35,Communication; SQL,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,Potential Fit,63.45,36.36,34.21,57.60,Agile; AWS; Java; SQL,.NET; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+No Fit,Potential Fit,57.11,0.00,0.00,45.69,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,49.27,0.00,0.00,39.42,,Communication; Project Management; R
+No Fit,Potential Fit,57.77,33.33,27.27,51.67,C; C++; Teamwork,Computer Vision; Deep Learning; Docker; PyTorch; R; TensorFlow
+No Fit,Potential Fit,54.46,60.00,60.00,55.57,HTML; Java; JavaScript,Angular; CSS
+No Fit,No Fit,14.78,33.33,33.33,18.49,AWS; SQL,Airflow; Data Engineering; NoSQL; Python
+No Fit,No Fit,17.69,0.00,0.00,14.15,,
+No Fit,No Fit,30.10,0.00,0.00,24.08,,
+No Fit,No Fit,11.35,0.00,0.00,9.08,,
+No Fit,Potential Fit,57.29,40.00,23.17,50.47,Communication; Excel,Agile; Go; SQL
+No Fit,No Fit,8.19,0.00,0.00,6.56,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+No Fit,Potential Fit,72.47,33.33,25.00,62.97,Agile; Communication; SQL,Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,8.86,0.00,0.00,7.09,,
+No Fit,Potential Fit,58.01,0.00,0.00,46.41,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,Potential Fit,52.66,100.00,100.00,62.13,Angular; CSS; HTML; Java; JavaScript,
+No Fit,Potential Fit,69.38,22.22,20.83,59.67,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,64.01,18.18,21.05,55.42,C; Java,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+No Fit,No Fit,18.35,100.00,35.00,21.68,Excel; Leadership,
+No Fit,No Fit,25.43,0.00,0.00,20.35,,
+No Fit,No Fit,43.92,18.18,21.05,39.34,AWS; Java,.NET; Agile; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+No Fit,No Fit,14.90,100.00,35.00,18.92,Excel; Leadership,
+No Fit,Potential Fit,66.95,40.00,48.78,63.32,Excel; SQL,Agile; Communication; Go
+No Fit,No Fit,33.65,50.00,35.00,33.92,Excel,Leadership
+No Fit,Potential Fit,53.35,0.00,0.00,42.68,,Communication; Excel; Teamwork
+No Fit,No Fit,29.24,0.00,0.00,23.39,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,0.00,16.67,12.82,2.56,Communication; Git,Agile; Ansible; Bash; CI/CD; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+No Fit,No Fit,32.58,0.00,0.00,26.06,,Angular; CSS; HTML; Java; JavaScript
+No Fit,Potential Fit,34.20,100.00,100.00,47.36,Angular; CSS; HTML; Java; JavaScript,
+No Fit,Potential Fit,47.68,60.00,60.00,50.14,CSS; HTML; JavaScript,Angular; Java
+No Fit,Potential Fit,56.30,40.00,40.00,53.04,CSS; JavaScript,Angular; HTML; Java
+No Fit,Potential Fit,74.36,33.33,37.50,66.99,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,67.44,33.33,37.50,61.45,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,51.16,0.00,0.00,40.93,,Communication; Project Management; R
+No Fit,Potential Fit,46.98,66.67,66.67,50.92,AWS; NoSQL; Python; SQL,Airflow; Data Engineering
+No Fit,No Fit,18.20,25.00,7.69,16.10,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,26.57,0.00,0.00,21.26,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,No Fit,0.00,75.00,75.00,15.00,C; C++; Linux,Python
+No Fit,No Fit,31.33,22.22,32.00,31.47,Power BI; Tableau,Agile; Communication; Customer Service; Data Analysis; Microsoft SQL Server; Recruitment; SQL
+No Fit,Potential Fit,49.19,75.00,82.76,55.91,Angular; CSS; Git; HTML; JavaScript; Node.js,Communication; TypeScript
+No Fit,Potential Fit,45.65,62.50,58.62,48.24,Communication; CSS; HTML; JavaScript; Node.js,Angular; Git; TypeScript
+No Fit,No Fit,2.72,0.00,0.00,2.17,,
+No Fit,No Fit,5.99,100.00,35.00,11.79,Communication,
+No Fit,No Fit,0.00,18.18,21.05,4.21,C; Java,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+No Fit,Potential Fit,38.94,62.50,68.97,44.94,Angular; CSS; Git; HTML; JavaScript,Communication; Node.js; TypeScript
+No Fit,No Fit,28.57,50.00,35.00,29.86,Excel,Leadership
+No Fit,Potential Fit,73.53,33.33,37.50,66.32,Communication; Java; SQL,Agile; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,No Fit,0.00,0.00,0.00,0.00,,
+No Fit,Potential Fit,61.18,50.00,38.46,56.64,Agile; Machine Learning,AWS; CI/CD
+No Fit,Potential Fit,62.67,22.22,20.83,54.30,Agile; SQL,Communication; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,65.14,33.33,25.00,57.11,Agile; Communication; SQL,Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+No Fit,Potential Fit,54.55,60.00,60.00,55.64,CSS; HTML; Java,Angular; JavaScript
+No Fit,No Fit,40.74,0.00,0.00,32.59,,Angular; CSS; HTML; Java; JavaScript
+No Fit,No Fit,48.09,0.00,0.00,38.47,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+No Fit,No Fit,42.71,20.00,14.63,37.09,Excel,Agile; Communication; Go; SQL
+No Fit,No Fit,0.00,0.00,0.00,0.00,,Agile; AWS; CI/CD; Machine Learning
+No Fit,No Fit,3.55,22.22,22.76,7.40,C; SQL,AWS; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+No Fit,Potential Fit,35.11,66.67,66.67,41.42,PostgreSQL; SQL,Data Engineering
+No Fit,Potential Fit,33.35,100.00,100.00,46.68,Linux; Python,
+No Fit,No Fit,28.23,0.00,0.00,22.58,,Agile; AWS; Azure; Communication; Teamwork
+No Fit,Potential Fit,50.90,60.00,60.00,52.72,HTML; Java; JavaScript,Angular; CSS
+No Fit,Potential Fit,39.78,60.00,57.32,43.28,Communication; Excel; SQL,Agile; Go
+No Fit,Potential Fit,51.52,25.00,7.69,42.76,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,0.00,22.22,22.76,4.55,C; C++,AWS; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+No Fit,No Fit,32.42,0.00,0.00,25.94,,
+No Fit,No Fit,27.56,0.00,0.00,22.04,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,42.02,0.00,0.00,33.62,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+No Fit,Potential Fit,55.19,33.33,35.00,51.15,Excel,Communication; Teamwork
+No Fit,Potential Fit,61.43,50.00,50.00,59.15,AWS; Python; SQL,Airflow; Data Engineering; NoSQL
+No Fit,No Fit,18.00,50.00,35.00,21.40,Excel,Leadership
+No Fit,No Fit,22.93,0.00,0.00,18.35,,
+No Fit,No Fit,25.41,50.00,35.00,27.33,Excel,Leadership
+No Fit,No Fit,10.70,50.00,35.29,15.62,Excel,Data Science
+No Fit,No Fit,0.00,25.00,40.00,8.00,C,C++; Project Management; Teamwork
+No Fit,Potential Fit,56.30,44.44,41.67,53.37,Agile; Java; SQL; Teamwork,Communication; Kafka; Kubernetes; Leadership; Microservices
+No Fit,No Fit,0.89,0.00,0.00,0.71,,
+No Fit,No Fit,17.65,66.67,66.67,27.45,PostgreSQL; SQL,Data Engineering
+No Fit,No Fit,22.62,20.00,36.36,25.37,AWS,Agile; Azure; Communication; Teamwork
+No Fit,Potential Fit,51.08,50.00,35.00,47.87,Excel,Leadership
+No Fit,No Fit,10.72,0.00,0.00,8.58,,
+No Fit,Potential Fit,57.82,60.00,57.32,57.72,Communication; Excel; SQL,Agile; Go
+No Fit,Potential Fit,60.66,80.00,80.00,64.53,CSS; HTML; Java; JavaScript,Angular
+No Fit,Potential Fit,57.71,0.00,0.00,46.17,,
+No Fit,No Fit,39.02,0.00,0.00,31.21,,Data Engineering; PostgreSQL; SQL
+No Fit,No Fit,24.69,25.00,7.69,21.29,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,30.87,33.33,33.33,31.37,SQL,Data Engineering; PostgreSQL
+No Fit,Potential Fit,45.05,50.00,55.17,47.07,Git; HTML; JavaScript; Node.js,Angular; Communication; CSS; TypeScript
+No Fit,No Fit,16.23,0.00,0.00,12.98,,Linux; Python
+No Fit,Potential Fit,41.46,80.00,80.00,49.17,CSS; HTML; Java; JavaScript,Angular
+No Fit,No Fit,33.02,50.00,50.00,36.41,C; C++; Communication,.NET; C#; Problem Solving
+No Fit,Potential Fit,49.13,33.33,25.64,44.43,Agile; Communication; Oracle Database; Python,Ansible; Bash; CI/CD; Git; Go; Jenkins; REST API; Teamwork
+No Fit,Potential Fit,66.11,25.00,7.69,54.43,Agile,AWS; CI/CD; Machine Learning
+No Fit,No Fit,17.04,100.00,100.00,33.63,Data Engineering; PostgreSQL; SQL,
+No Fit,No Fit,25.50,18.18,21.05,24.61,C; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+No Fit,Potential Fit,70.53,44.44,29.17,62.26,Agile; Communication; Java; Leadership,Kafka; Kubernetes; Microservices; SQL; Teamwork
+Potential Fit,No Fit,3.72,28.57,13.46,5.67,Project Management; Teamwork,Communication; Leadership; Microsoft SQL Server; Recruitment; SQL
+Potential Fit,Good Fit,84.13,100.00,35.00,74.30,Excel,
+Potential Fit,Potential Fit,53.82,33.33,16.67,46.39,Project Management,Communication; R
+Potential Fit,No Fit,11.10,0.00,0.00,8.88,,Agile; Customer Service; Teamwork
+Potential Fit,No Fit,42.46,20.00,20.00,37.97,HTML,Angular; CSS; Java; JavaScript
+Potential Fit,No Fit,47.04,0.00,0.00,37.63,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Potential Fit,Potential Fit,64.60,0.00,0.00,51.68,,Agile; Communication; Excel; Go; SQL
+Potential Fit,No Fit,42.27,33.33,28.21,39.46,Data Analysis,SQL; Tableau
+Potential Fit,Good Fit,79.09,55.56,45.83,72.44,Agile; Communication; Java; Leadership; SQL,Kafka; Kubernetes; Microservices; Teamwork
+Potential Fit,Potential Fit,40.76,50.00,50.00,42.60,SQL,Python
+Potential Fit,No Fit,25.23,0.00,0.00,20.18,,Communication
+Potential Fit,Potential Fit,60.62,0.00,0.00,48.49,,Python; SQL
+Potential Fit,No Fit,16.38,0.00,0.00,13.10,,Communication; Excel; Teamwork
+Potential Fit,No Fit,36.86,50.00,49.60,39.41,Data Analysis; Excel; SQL,Communication; Power BI; Python
+Potential Fit,Potential Fit,50.36,30.00,26.47,45.58,Agile; CI/CD; REST API,.NET; Angular; Azure; C; C#; Communication; TypeScript
+Potential Fit,No Fit,29.30,16.67,22.40,27.92,SQL,Communication; Data Analysis; Excel; Power BI; Python
+Potential Fit,Potential Fit,42.90,33.33,33.33,40.98,SQL,Data Engineering; PostgreSQL
+Potential Fit,No Fit,45.89,20.00,14.63,39.64,Excel,Agile; Communication; Go; SQL
+Potential Fit,No Fit,45.21,0.00,0.00,36.17,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,No Fit,45.79,18.18,13.16,39.26,Agile; SQL,.NET; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+Potential Fit,No Fit,30.19,0.00,0.00,24.15,,
+Potential Fit,No Fit,44.46,20.00,20.00,39.57,Java,Angular; CSS; HTML; JavaScript
+Potential Fit,No Fit,39.61,20.00,20.00,35.69,Java,Angular; CSS; HTML; JavaScript
+Potential Fit,Potential Fit,52.04,11.11,12.12,44.06,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,30.94,0.00,0.00,24.75,,Linux; Python
+Potential Fit,No Fit,36.14,100.00,35.00,35.91,Communication,
+Potential Fit,No Fit,17.40,0.00,0.00,13.92,,
+Potential Fit,No Fit,4.10,0.00,0.00,3.28,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,Potential Fit,71.86,0.00,0.00,57.49,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,Potential Fit,66.89,33.33,16.67,56.84,Communication,Project Management; R
+Potential Fit,No Fit,9.77,0.00,0.00,7.81,,CI/CD; Leadership
+Potential Fit,Potential Fit,47.92,12.50,13.79,41.10,Git,Angular; Communication; CSS; HTML; JavaScript; Node.js; TypeScript
+Potential Fit,Potential Fit,78.03,25.00,30.77,68.58,CI/CD,Agile; AWS; Machine Learning
+Potential Fit,Potential Fit,67.91,55.56,45.83,63.49,Agile; Communication; Java; Leadership; SQL,Kafka; Kubernetes; Microservices; Teamwork
+Potential Fit,No Fit,48.26,11.11,3.03,39.21,Teamwork,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; TensorFlow
+Potential Fit,No Fit,32.79,0.00,0.00,26.23,,Communication
+Potential Fit,Potential Fit,59.35,0.00,0.00,47.48,,Communication; Problem Solving; R
+Potential Fit,No Fit,32.66,0.00,0.00,26.12,,Communication; Problem Solving; R
+Potential Fit,No Fit,29.19,0.00,0.00,23.35,,
+Potential Fit,Potential Fit,61.01,50.00,50.00,58.81,NoSQL; Python; SQL,Airflow; AWS; Data Engineering
+Potential Fit,Potential Fit,67.21,11.11,4.17,54.60,Leadership,Agile; Communication; Java; Kafka; Kubernetes; Microservices; SQL; Teamwork
+Potential Fit,No Fit,32.73,0.00,0.00,26.18,,
+Potential Fit,Potential Fit,60.03,0.00,0.00,48.02,,
+Potential Fit,No Fit,46.78,0.00,0.00,37.43,,Communication; Problem Solving; R
+Potential Fit,No Fit,30.90,66.67,35.00,31.72,Communication; Teamwork,Excel
+Potential Fit,No Fit,18.46,0.00,0.00,14.77,,Agile
+Potential Fit,No Fit,30.88,0.00,0.00,24.70,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,50.78,25.00,10.00,42.62,Project Management,C; C++; Teamwork
+Potential Fit,Potential Fit,65.43,0.00,0.00,52.34,,Agile; Communication; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,No Fit,34.07,0.00,0.00,27.25,,Communication
+Potential Fit,No Fit,26.59,33.33,35.90,28.45,SQL,Data Analysis; Tableau
+Potential Fit,No Fit,38.50,66.67,35.00,37.80,Communication; Excel,Teamwork
+Potential Fit,No Fit,20.29,0.00,0.00,16.24,,.NET; C; C#; C++; Communication; Problem Solving
+Potential Fit,Potential Fit,65.01,25.00,7.69,53.54,Agile; Communication; Teamwork,Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python; REST API
+Potential Fit,Potential Fit,67.60,30.00,26.47,59.37,Agile; C; REST API,.NET; Angular; Azure; C#; CI/CD; Communication; TypeScript
+Potential Fit,Potential Fit,51.23,0.00,0.00,40.98,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,Potential Fit,57.92,0.00,0.00,46.34,,Problem Solving
+Potential Fit,No Fit,24.46,0.00,0.00,19.56,,
+Potential Fit,Potential Fit,62.67,33.33,16.67,53.47,Communication,Problem Solving; R
+Potential Fit,No Fit,35.45,0.00,0.00,28.36,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,Potential Fit,77.77,0.00,0.00,62.22,,Excel
+Potential Fit,No Fit,20.44,0.00,0.00,16.35,,
+Potential Fit,No Fit,24.90,33.33,33.33,26.59,Agile,Customer Service; Teamwork
+Potential Fit,Potential Fit,62.23,22.22,20.83,53.95,Communication; Java,Agile; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,60.60,54.55,55.26,59.53,Agile; C; C#; Java; Microsoft SQL Server; SQL,.NET; AWS; Azure; Critical Thinking; Elasticsearch
+Potential Fit,No Fit,35.87,0.00,0.00,28.70,,
+Potential Fit,No Fit,18.24,0.00,0.00,14.59,,
+Potential Fit,No Fit,0.00,0.00,0.00,0.00,,Java
+Potential Fit,Potential Fit,63.25,11.11,11.38,52.87,C,AWS; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Potential Fit,No Fit,30.74,0.00,0.00,24.60,,
+Potential Fit,Potential Fit,53.08,100.00,35.00,49.47,Communication,
+Potential Fit,Potential Fit,41.85,90.91,90.73,51.63,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; NoSQL; Python; Spark; SQL,Microservices
+Potential Fit,Potential Fit,50.73,100.00,100.00,60.58,Python; SQL,
+Potential Fit,No Fit,35.87,33.33,44.57,37.61,Data Analysis; SQL; Tableau,Agile; Communication; Customer Service; Microsoft SQL Server; Power BI; Recruitment
+Potential Fit,No Fit,34.43,100.00,35.00,34.54,Communication,
+Potential Fit,Potential Fit,73.57,50.00,35.00,65.86,Communication; Customer Service,Excel; Leadership
+Potential Fit,No Fit,24.28,0.00,0.00,19.42,,
+Potential Fit,No Fit,46.51,0.00,0.00,37.20,,Agile; Customer Service; Teamwork
+Potential Fit,Potential Fit,69.20,45.45,44.74,64.30,Agile; Azure; Java; Microsoft SQL Server; SQL,.NET; AWS; C; C#; Critical Thinking; Elasticsearch
+Potential Fit,No Fit,18.68,33.33,27.78,20.50,C; Problem Solving,.NET; C#; C++; Communication
+Potential Fit,No Fit,29.13,44.44,41.67,31.64,Communication; Java; SQL; Teamwork,Agile; Kafka; Kubernetes; Leadership; Microservices
+Potential Fit,No Fit,10.59,0.00,0.00,8.47,,
+Potential Fit,Potential Fit,60.18,25.00,7.69,49.69,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,30.30,0.00,0.00,24.24,,Communication; Excel; Teamwork
+Potential Fit,Potential Fit,66.98,25.00,40.00,61.59,C,C++; Project Management; Teamwork
+Potential Fit,No Fit,44.29,33.33,17.95,39.02,Agile; Communication; REST API; Teamwork,Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python
+Potential Fit,No Fit,11.42,33.33,16.67,12.47,Communication,Project Management; R
+Potential Fit,No Fit,26.65,40.00,38.24,28.97,.NET; Agile; C; C#,Angular; Azure; CI/CD; Communication; REST API; TypeScript
+Potential Fit,Potential Fit,59.52,0.00,0.00,47.62,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,34.33,50.00,49.60,37.38,Data Analysis; Excel; SQL,Communication; Power BI; Python
+Potential Fit,No Fit,6.22,42.86,60.58,17.09,Communication; Microsoft SQL Server; SQL,Leadership; Project Management; Recruitment; Teamwork
+Potential Fit,Potential Fit,54.82,50.00,49.60,53.78,Data Analysis; Excel; SQL,Communication; Power BI; Python
+Potential Fit,Potential Fit,55.73,66.67,62.50,57.08,Agile; Communication; Java; Leadership; Microservices; SQL,Kafka; Kubernetes; Teamwork
+Potential Fit,No Fit,28.93,22.22,8.00,24.75,Communication; Customer Service,Agile; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+Potential Fit,No Fit,34.54,0.00,0.00,27.63,,Communication
+Potential Fit,Potential Fit,46.29,40.00,40.00,45.03,HTML; Java,Angular; CSS; JavaScript
+Potential Fit,Potential Fit,74.07,75.00,35.00,66.26,Communication; Customer Service; Excel,Leadership
+Potential Fit,Potential Fit,70.91,0.00,0.00,56.73,,Communication; Customer Service; Excel; Leadership
+Potential Fit,Potential Fit,55.74,20.00,8.54,46.30,Communication,Agile; Excel; Go; SQL
+Potential Fit,No Fit,10.90,14.29,6.73,10.06,Communication,Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,No Fit,32.36,0.00,0.00,25.88,,Communication
+Potential Fit,Potential Fit,63.31,0.00,0.00,50.65,,Communication; Excel; Teamwork
+Potential Fit,Potential Fit,75.23,50.00,38.46,67.87,Agile; CI/CD,AWS; Machine Learning
+Potential Fit,No Fit,25.64,100.00,35.00,27.51,Communication,
+Potential Fit,No Fit,47.79,0.00,0.00,38.23,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,No Fit,45.57,0.00,0.00,36.45,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,21.19,0.00,0.00,16.95,,
+Potential Fit,Potential Fit,69.34,60.00,57.32,66.94,Communication; Excel; SQL,Agile; Go
+Potential Fit,Potential Fit,72.92,50.00,38.46,66.03,Agile; AWS,CI/CD; Machine Learning
+Potential Fit,No Fit,17.34,0.00,0.00,13.87,,
+Potential Fit,No Fit,24.22,0.00,0.00,19.38,,Agile; Customer Service; Teamwork
+Potential Fit,No Fit,32.51,0.00,0.00,26.00,,
+Potential Fit,Potential Fit,68.10,25.00,21.21,58.72,Communication,Customer Service; Excel; Leadership
+Potential Fit,No Fit,35.91,0.00,0.00,28.73,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,Potential Fit,59.97,0.00,0.00,47.97,,Communication; Problem Solving; R
+Potential Fit,No Fit,22.81,100.00,35.00,25.25,Agile; Customer Service; Teamwork,
+Potential Fit,Potential Fit,81.65,25.00,21.21,69.56,Customer Service,Communication; Excel; Leadership
+Potential Fit,Potential Fit,74.24,22.22,8.33,61.06,Agile; Communication,Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,44.46,60.00,27.27,41.03,Agile; Communication; Teamwork,AWS; Azure
+Potential Fit,Potential Fit,52.60,0.00,0.00,42.08,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,Potential Fit,57.86,66.67,33.33,52.95,Communication; Project Management,R
+Potential Fit,Potential Fit,26.05,100.00,100.00,40.84,SQL,
+Potential Fit,Potential Fit,69.99,25.00,7.69,57.53,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,Potential Fit,70.89,44.44,41.67,65.04,Agile; Java; SQL; Teamwork,Communication; Kafka; Kubernetes; Leadership; Microservices
+Potential Fit,Potential Fit,72.58,22.22,22.76,62.62,C; SQL,AWS; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Potential Fit,Potential Fit,28.82,100.00,100.00,43.06,Data Analysis; SQL; Tableau,
+Potential Fit,Potential Fit,72.47,60.00,51.22,68.22,Agile; Communication; SQL,Excel; Go
+Potential Fit,Potential Fit,61.13,22.22,33.33,55.57,Java; SQL,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Potential Fit,51.61,0.00,0.00,41.29,,Problem Solving
+Potential Fit,Potential Fit,55.09,33.33,36.36,51.34,C; C++; Docker,Computer Vision; Deep Learning; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,Potential Fit,52.52,0.00,0.00,42.01,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,Potential Fit,51.85,0.00,0.00,41.48,,
+Potential Fit,Potential Fit,58.56,0.00,0.00,46.85,,Problem Solving
+Potential Fit,Potential Fit,50.48,9.09,10.77,42.53,SQL,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; Teamwork
+Potential Fit,No Fit,18.71,33.33,33.33,21.63,Agile,Customer Service; Teamwork
+Potential Fit,No Fit,37.32,0.00,0.00,29.86,,Communication
+Potential Fit,Potential Fit,76.99,50.00,38.46,69.28,Agile; CI/CD,AWS; Machine Learning
+Potential Fit,No Fit,36.02,0.00,0.00,28.81,,Data Engineering; PostgreSQL; SQL
+Potential Fit,No Fit,44.35,16.67,20.51,39.58,Git; Python,Agile; Ansible; Bash; CI/CD; Communication; Go; Jenkins; Oracle Database; REST API; Teamwork
+Potential Fit,Potential Fit,63.19,40.00,23.17,55.19,Communication; Excel,Agile; Go; SQL
+Potential Fit,No Fit,34.79,0.00,0.00,27.83,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,55.92,11.11,12.12,47.16,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,31.65,8.33,10.26,27.37,REST API,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; Teamwork
+Potential Fit,Potential Fit,74.78,44.44,41.67,68.16,Agile; Java; Leadership; SQL,Communication; Kafka; Kubernetes; Microservices; Teamwork
+Potential Fit,Potential Fit,51.77,66.67,64.10,54.24,Data Analysis; SQL,Tableau
+Potential Fit,Potential Fit,56.57,11.11,16.67,48.59,Java,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,No Fit,19.22,33.33,26.92,20.76,Communication,Excel; Teamwork
+Potential Fit,Potential Fit,80.71,0.00,0.00,64.57,,Excel
+Potential Fit,Potential Fit,48.37,33.33,32.00,45.09,Excel; SQL,Communication; Data Analysis; Power BI; Python
+Potential Fit,Potential Fit,67.42,44.44,41.67,62.27,Agile; Java; Leadership; SQL,Communication; Kafka; Kubernetes; Microservices; Teamwork
+Potential Fit,Potential Fit,62.05,36.36,34.21,56.48,.NET; Agile; C; C#,AWS; Azure; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Potential Fit,Potential Fit,73.02,44.44,41.67,66.75,Agile; Java; Leadership; SQL,Communication; Kafka; Kubernetes; Microservices; Teamwork
+Potential Fit,Potential Fit,61.43,33.33,27.27,54.60,C; Docker; Teamwork,C++; Computer Vision; Deep Learning; PyTorch; R; TensorFlow
+Potential Fit,Potential Fit,60.54,40.00,23.17,53.07,Communication; Excel,Agile; Go; SQL
+Potential Fit,Potential Fit,72.40,25.00,7.69,59.46,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,Potential Fit,51.24,66.67,35.00,47.99,Communication; Excel,Teamwork
+Potential Fit,Potential Fit,54.71,50.00,39.58,51.69,Communication; Excel,Data Analysis; Leadership
+Potential Fit,Potential Fit,64.64,33.33,15.20,54.75,Communication; Excel,Data Analysis; Power BI; Python; SQL
+Potential Fit,No Fit,43.40,33.33,16.67,38.05,Communication,Problem Solving; R
+Potential Fit,Potential Fit,62.93,0.00,0.00,50.35,,Communication; Project Management; R
+Potential Fit,Potential Fit,61.11,66.67,33.33,55.55,Communication; Project Management,R
+Potential Fit,No Fit,4.19,0.00,0.00,3.35,,Communication; Excel; Teamwork
+Potential Fit,Potential Fit,66.72,54.55,55.26,64.43,.NET; Agile; C; C#; Microsoft SQL Server; SQL,AWS; Azure; Critical Thinking; Elasticsearch; Java
+Potential Fit,No Fit,18.93,0.00,0.00,15.14,,
+Potential Fit,Potential Fit,58.99,0.00,0.00,47.19,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,33.05,50.00,50.00,36.44,SQL,Python
+Potential Fit,Potential Fit,56.55,80.00,80.00,61.24,CSS; HTML; Java; JavaScript,Angular
+Potential Fit,Potential Fit,52.71,0.00,0.00,42.16,,Problem Solving
+Potential Fit,Potential Fit,56.30,0.00,0.00,45.04,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,34.17,0.00,0.00,27.34,,Agile; Customer Service; Teamwork
+Potential Fit,Potential Fit,60.64,75.00,35.00,55.51,Communication; Customer Service; Leadership,Excel
+Potential Fit,Potential Fit,66.68,36.36,42.11,61.77,C; Java; Microsoft SQL Server; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch
+Potential Fit,Potential Fit,65.18,0.00,0.00,52.14,,Problem Solving
+Potential Fit,Potential Fit,56.31,33.33,35.00,52.05,Excel,Communication; Teamwork
+Potential Fit,Potential Fit,59.95,0.00,0.00,47.96,,Communication; Problem Solving; R
+Potential Fit,Potential Fit,53.03,0.00,0.00,42.43,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,No Fit,23.21,0.00,0.00,18.57,,Communication
+Potential Fit,No Fit,33.56,11.11,12.12,29.28,Docker,C; C++; Computer Vision; Deep Learning; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,21.91,0.00,0.00,17.53,,
+Potential Fit,No Fit,18.66,0.00,0.00,14.93,,
+Potential Fit,Potential Fit,47.05,20.00,14.63,40.57,Excel,Agile; Communication; Go; SQL
+Potential Fit,Potential Fit,52.65,0.00,0.00,42.12,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Potential Fit,No Fit,32.66,0.00,0.00,26.13,,Communication; Project Management; R
+Potential Fit,Potential Fit,58.66,33.33,16.67,50.26,Communication,Problem Solving; R
+Potential Fit,No Fit,36.22,33.33,44.44,37.87,C; C++,.NET; C#; Communication; Problem Solving
+Potential Fit,Potential Fit,64.71,18.18,21.05,55.98,Microsoft SQL Server; SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java
+Potential Fit,No Fit,15.41,11.11,16.00,15.53,SQL,Agile; Communication; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; Tableau
+Potential Fit,Potential Fit,57.81,16.67,12.82,48.81,Agile; Git,Ansible; Bash; CI/CD; Communication; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Potential Fit,Potential Fit,49.31,33.33,26.92,44.83,Communication,Excel; Teamwork
+Potential Fit,No Fit,26.23,11.11,4.00,21.79,Communication,Agile; Customer Service; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+Potential Fit,Potential Fit,46.63,100.00,100.00,57.31,Data Analysis; SQL; Tableau,
+Potential Fit,Potential Fit,43.16,33.33,33.33,41.20,Customer Service,Agile; Teamwork
+Potential Fit,No Fit,25.33,20.00,20.00,24.26,Java,Angular; CSS; HTML; JavaScript
+Potential Fit,No Fit,34.63,0.00,0.00,27.71,,
+Potential Fit,Potential Fit,49.85,33.33,26.92,45.26,Communication,Excel; Teamwork
+Potential Fit,No Fit,20.85,33.33,33.33,23.34,Customer Service,Agile; Teamwork
+Potential Fit,No Fit,27.88,0.00,0.00,22.31,,
+Potential Fit,Potential Fit,76.97,20.00,23.53,66.28,C; C#,.NET; Agile; Angular; Azure; CI/CD; Communication; REST API; TypeScript
+Potential Fit,No Fit,13.25,0.00,0.00,10.60,,
+Potential Fit,No Fit,22.99,16.67,22.22,22.84,C,.NET; C#; C++; Communication; Problem Solving
+Potential Fit,No Fit,45.85,0.00,0.00,36.68,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,Potential Fit,61.79,0.00,0.00,49.43,,Problem Solving
+Potential Fit,Potential Fit,60.20,45.45,44.74,57.11,Agile; AWS; C; C#; Java,.NET; Azure; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+Potential Fit,No Fit,38.60,0.00,0.00,30.88,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,54.29,0.00,0.00,43.43,,Communication; Project Management; R
+Potential Fit,No Fit,33.12,0.00,0.00,26.50,,
+Potential Fit,No Fit,38.41,33.33,44.44,39.62,C; C++,.NET; C#; Communication; Problem Solving
+Potential Fit,No Fit,8.15,0.00,0.00,6.52,,
+Potential Fit,No Fit,35.72,50.00,35.00,35.57,Excel,Leadership
+Potential Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,No Fit,43.31,0.00,0.00,34.65,,Data Analysis; SQL; Tableau
+Potential Fit,No Fit,37.09,0.00,0.00,29.67,,
+Potential Fit,Potential Fit,60.27,25.00,27.59,53.73,CSS; JavaScript,Angular; Communication; Git; HTML; Node.js; TypeScript
+Potential Fit,Potential Fit,69.52,0.00,0.00,55.62,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,25.52,66.67,64.10,33.24,Data Analysis; SQL,Tableau
+Potential Fit,Potential Fit,76.01,0.00,0.00,60.81,,Communication; Customer Service; Excel; Leadership
+Potential Fit,Potential Fit,68.35,33.33,16.67,58.01,Communication,Project Management; R
+Potential Fit,No Fit,25.31,66.67,80.57,36.36,Communication; Data Analysis; Microsoft SQL Server; Power BI; SQL; Tableau,Agile; Customer Service; Recruitment
+Potential Fit,No Fit,46.74,0.00,0.00,37.40,,Communication; Problem Solving; R
+Potential Fit,Potential Fit,53.59,54.55,55.26,53.93,.NET; Agile; C; C#; Microsoft SQL Server; SQL,AWS; Azure; Critical Thinking; Elasticsearch; Java
+Potential Fit,Potential Fit,73.45,25.00,7.69,60.30,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,34.02,100.00,35.00,34.21,Communication,
+Potential Fit,No Fit,15.35,0.00,0.00,12.28,,.NET; C; C#; C++; Communication; Problem Solving
+Potential Fit,No Fit,23.24,33.33,33.33,25.26,Customer Service,Agile; Teamwork
+Potential Fit,Potential Fit,62.19,22.22,20.83,53.92,Communication; SQL,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,No Fit,23.55,0.00,0.00,18.84,,
+Potential Fit,Potential Fit,46.57,12.50,13.79,40.01,HTML,Angular; Communication; CSS; Git; JavaScript; Node.js; TypeScript
+Potential Fit,No Fit,42.34,0.00,0.00,33.87,,Communication
+Potential Fit,No Fit,13.04,0.00,0.00,10.43,,Communication; Excel; Teamwork
+Potential Fit,No Fit,43.75,0.00,0.00,35.00,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,67.97,20.00,14.63,57.30,Excel,Agile; Communication; Go; SQL
+Potential Fit,Potential Fit,73.38,0.00,0.00,58.71,,Excel
+Potential Fit,Potential Fit,56.25,0.00,0.00,45.00,,Problem Solving
+Potential Fit,No Fit,41.39,0.00,0.00,33.11,,C; C++; Project Management; Teamwork
+Potential Fit,No Fit,0.00,0.00,0.00,0.00,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,Potential Fit,62.29,16.67,16.67,53.16,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Potential Fit,Potential Fit,61.60,0.00,0.00,49.28,,Problem Solving
+Potential Fit,Potential Fit,55.93,0.00,0.00,44.75,,Problem Solving
+Potential Fit,Potential Fit,71.85,0.00,0.00,57.48,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,22.93,0.00,0.00,18.35,,
+Potential Fit,No Fit,48.43,0.00,0.00,38.74,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,No Fit,36.26,33.33,35.90,36.19,SQL,Data Analysis; Tableau
+Potential Fit,No Fit,0.05,0.00,0.00,0.04,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,Potential Fit,42.75,100.00,100.00,54.20,Data Analysis; SQL; Tableau,
+Potential Fit,Potential Fit,39.46,40.00,45.45,40.66,Azure; Communication,Agile; AWS; Teamwork
+Potential Fit,Potential Fit,50.21,22.22,24.24,45.02,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,No Fit,38.57,0.00,0.00,30.85,,Communication
+Potential Fit,No Fit,30.88,0.00,0.00,24.70,,Communication; Problem Solving; R
+Potential Fit,Potential Fit,62.13,33.33,25.00,54.70,Communication; Java; Leadership,Agile; Kafka; Kubernetes; Microservices; SQL; Teamwork
+Potential Fit,No Fit,24.94,63.64,73.08,34.57,AWS; Data Science; Docker; Git; Machine Learning; Python; SQL,Agile; NoSQL; Pandas; Teamwork
+Potential Fit,No Fit,33.39,100.00,35.00,33.71,Communication,
+Potential Fit,No Fit,30.72,100.00,35.00,31.58,Communication,
+Potential Fit,No Fit,31.10,20.00,20.00,28.88,Java,Angular; CSS; HTML; JavaScript
+Potential Fit,Potential Fit,73.85,50.00,35.00,66.08,Communication; Excel,Customer Service; Leadership
+Potential Fit,No Fit,17.45,100.00,100.00,33.96,Data Engineering; PostgreSQL; SQL,
+Potential Fit,Potential Fit,50.22,40.00,23.17,44.81,Communication; Excel,Agile; Go; SQL
+Potential Fit,No Fit,33.31,40.00,45.45,35.74,AWS; Communication,Agile; Azure; Teamwork
+Potential Fit,No Fit,22.11,100.00,100.00,37.68,Java,
+Potential Fit,No Fit,23.28,33.33,16.67,21.96,Communication,Project Management; R
+Potential Fit,Potential Fit,55.61,0.00,0.00,44.49,,Problem Solving
+Potential Fit,Potential Fit,57.84,25.00,40.00,54.27,C,C++; Project Management; Teamwork
+Potential Fit,No Fit,31.83,16.67,5.56,26.57,Communication,.NET; C; C#; C++; Problem Solving
+Potential Fit,Potential Fit,62.46,18.18,21.05,54.17,C; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+Potential Fit,Potential Fit,57.02,83.33,77.60,61.14,Communication; Data Analysis; Excel; Python; SQL,Power BI
+Potential Fit,Potential Fit,63.59,0.00,0.00,50.87,,Communication; Excel; Teamwork
+Potential Fit,No Fit,15.10,0.00,0.00,12.08,,Agile; Customer Service; Teamwork
+Potential Fit,Potential Fit,77.66,25.00,35.00,69.13,Excel,Communication; Customer Service; Leadership
+Potential Fit,Good Fit,80.84,100.00,35.00,71.67,Excel,
+Potential Fit,Potential Fit,72.13,8.33,2.56,58.22,Communication,Agile; Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Potential Fit,No Fit,21.40,66.67,35.00,24.12,Agile; Teamwork,Customer Service
+Potential Fit,Potential Fit,53.77,16.67,9.60,44.93,Excel,Communication; Data Analysis; Power BI; Python; SQL
+Potential Fit,Potential Fit,67.45,0.00,0.00,53.96,,Problem Solving
+Potential Fit,No Fit,38.68,22.22,8.00,32.54,Communication; Customer Service,Agile; Data Analysis; Microsoft SQL Server; Power BI; Recruitment; SQL; Tableau
+Potential Fit,No Fit,5.38,33.33,16.67,7.64,Communication,Problem Solving; R
+Potential Fit,No Fit,26.36,0.00,0.00,21.09,,
+Potential Fit,No Fit,42.27,20.00,20.00,37.82,Java,Angular; CSS; HTML; JavaScript
+Potential Fit,No Fit,35.90,50.00,50.00,38.72,C; C++; Problem Solving,.NET; C#; Communication
+Potential Fit,Good Fit,85.92,50.00,38.46,76.43,Agile; CI/CD,AWS; Machine Learning
+Potential Fit,Potential Fit,62.14,22.22,20.83,53.88,Communication; Java,Agile; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,38.04,100.00,100.00,50.43,Python; SQL,
+Potential Fit,Potential Fit,59.78,60.00,57.32,59.29,Agile; Excel; SQL,Communication; Go
+Potential Fit,Potential Fit,70.01,33.33,37.50,63.50,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Potential Fit,63.02,0.00,0.00,50.41,,Communication; Problem Solving; R
+Potential Fit,Potential Fit,54.71,22.22,15.15,46.80,C; Teamwork,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; TensorFlow
+Potential Fit,No Fit,33.19,0.00,0.00,26.55,,Data Analysis; SQL; Tableau
+Potential Fit,No Fit,17.22,0.00,0.00,13.78,,Communication
+Potential Fit,No Fit,34.54,11.11,12.12,30.06,Docker,C; C++; Computer Vision; Deep Learning; PyTorch; R; Teamwork; TensorFlow
+Potential Fit,Potential Fit,63.02,30.00,26.47,55.71,.NET; Agile; C,Angular; Azure; C#; CI/CD; Communication; REST API; TypeScript
+Potential Fit,No Fit,27.91,50.00,66.67,35.66,C; C#; C++,.NET; Communication; Problem Solving
+Potential Fit,Potential Fit,43.31,41.67,52.83,45.21,Ansible; AWS; Java; Jenkins; Kubernetes,Agile; Communication; Microservices; Recruitment; REST API; SQL; Teamwork
+Potential Fit,Potential Fit,59.57,0.00,0.00,47.66,,Excel
+Potential Fit,No Fit,33.77,33.33,33.33,33.68,SQL,Data Engineering; PostgreSQL
+Potential Fit,Potential Fit,63.51,50.00,50.00,60.81,SQL,Python
+Potential Fit,Potential Fit,59.51,9.09,10.53,49.71,AWS,.NET; Agile; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Potential Fit,No Fit,45.95,0.00,0.00,36.76,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Potential Fit,Potential Fit,58.69,11.11,16.67,50.29,Java,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,No Fit,0.00,28.57,13.46,2.69,Communication; Project Management,Leadership; Microsoft SQL Server; Recruitment; SQL; Teamwork
+Potential Fit,No Fit,30.32,0.00,0.00,24.25,,
+Potential Fit,No Fit,27.59,0.00,0.00,22.08,,
+Potential Fit,Good Fit,88.39,100.00,35.00,77.72,Excel,
+Potential Fit,Potential Fit,51.20,12.50,13.79,43.72,HTML,Angular; Communication; CSS; Git; JavaScript; Node.js; TypeScript
+Potential Fit,Potential Fit,53.24,0.00,0.00,42.59,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Potential Fit,Potential Fit,57.78,8.33,2.56,46.74,Agile,Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Potential Fit,Potential Fit,68.61,33.33,26.92,60.28,Teamwork,Communication; Excel
+Potential Fit,Potential Fit,55.98,50.00,55.17,55.81,CSS; Git; HTML; JavaScript,Angular; Communication; Node.js; TypeScript
+Potential Fit,Potential Fit,68.19,33.33,26.92,59.94,Communication,Excel; Teamwork
+Potential Fit,No Fit,26.42,0.00,0.00,21.14,,Communication; Excel; Teamwork
+Potential Fit,No Fit,22.07,0.00,0.00,17.65,,
+Potential Fit,No Fit,45.60,0.00,0.00,36.48,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,No Fit,38.36,33.33,26.92,36.07,Communication,Excel; Teamwork
+Potential Fit,No Fit,24.00,0.00,0.00,19.20,,Communication
+Potential Fit,Potential Fit,51.16,20.00,8.54,42.63,Communication,Agile; Excel; Go; SQL
+Potential Fit,No Fit,35.96,0.00,0.00,28.77,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,50.00,40.00,40.00,48.00,HTML; JavaScript,Angular; CSS; Java
+Potential Fit,No Fit,40.16,50.00,35.29,39.19,Excel,Data Science
+Potential Fit,Potential Fit,53.58,36.36,34.21,49.71,Agile; Java; Microsoft SQL Server; SQL,.NET; AWS; Azure; C; C#; Critical Thinking; Elasticsearch
+Potential Fit,No Fit,38.16,0.00,0.00,30.53,,
+Potential Fit,Potential Fit,52.45,0.00,0.00,41.96,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,Good Fit,71.18,80.00,65.85,70.12,Agile; Communication; Excel; SQL,Go
+Potential Fit,Potential Fit,50.49,40.00,42.68,48.93,Communication; SQL,Agile; Excel; Go
+Potential Fit,No Fit,44.90,0.00,0.00,35.92,,Agile; Communication; Excel; Go; SQL
+Potential Fit,Potential Fit,44.65,50.00,49.60,45.64,Data Analysis; Excel; Python,Communication; Power BI; SQL
+Potential Fit,Potential Fit,56.07,66.67,55.20,55.90,Communication; Data Analysis; Excel; SQL,Power BI; Python
+Potential Fit,No Fit,0.00,0.00,0.00,0.00,,
+Potential Fit,Potential Fit,51.54,33.33,44.80,50.19,Python; SQL,Communication; Data Analysis; Excel; Power BI
+Potential Fit,Potential Fit,66.14,20.00,8.54,54.62,Communication,Agile; Excel; Go; SQL
+Potential Fit,No Fit,15.45,0.00,0.00,12.36,,
+Potential Fit,Good Fit,85.76,25.00,7.69,70.15,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,6.31,14.29,6.73,6.39,Project Management,Communication; Leadership; Microsoft SQL Server; Recruitment; SQL; Teamwork
+Potential Fit,No Fit,26.18,83.33,94.44,39.83,.NET; C; C#; C++; Communication,Problem Solving
+Potential Fit,No Fit,34.53,0.00,0.00,27.62,,.NET; C; C#; C++; Communication; Problem Solving
+Potential Fit,No Fit,47.75,0.00,0.00,38.20,,Communication; Excel; Teamwork
+Potential Fit,Potential Fit,59.36,16.67,12.82,50.06,Communication; Python,Agile; Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; REST API; Teamwork
+Potential Fit,No Fit,25.48,33.33,33.33,27.05,Agile,Customer Service; Teamwork
+Potential Fit,Potential Fit,63.84,0.00,0.00,51.07,,Problem Solving
+Potential Fit,Potential Fit,75.33,44.44,41.67,68.59,Agile; Communication; Java; SQL,Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Potential Fit,70.58,0.00,0.00,56.47,,Communication; Customer Service; Excel; Leadership
+Potential Fit,No Fit,37.75,0.00,0.00,30.20,,Communication
+Potential Fit,No Fit,44.87,0.00,0.00,35.90,,Communication; Problem Solving; R
+Potential Fit,No Fit,4.41,0.00,0.00,3.53,,Agile
+Potential Fit,No Fit,45.69,9.09,10.53,38.65,C,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Potential Fit,Potential Fit,44.21,50.00,35.29,42.42,Excel,Data Science
+Potential Fit,Potential Fit,56.52,0.00,0.00,45.21,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,No Fit,36.71,66.67,33.33,36.03,Communication; Project Management,R
+Potential Fit,No Fit,36.12,0.00,0.00,28.90,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,72.19,75.00,35.00,64.75,Communication; Excel; Leadership,Customer Service
+Potential Fit,Good Fit,85.58,25.00,30.77,74.62,CI/CD,Agile; AWS; Machine Learning
+Potential Fit,No Fit,28.80,0.00,0.00,23.04,,Agile; AWS; Azure; Communication; Teamwork
+Potential Fit,No Fit,30.80,0.00,0.00,24.64,,
+Potential Fit,No Fit,29.99,0.00,0.00,23.99,,
+Potential Fit,No Fit,44.44,0.00,0.00,35.56,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Potential Fit,Potential Fit,47.51,50.00,50.00,48.00,SQL,Python
+Potential Fit,Potential Fit,61.15,50.00,35.00,55.92,Excel; Leadership,Communication; Customer Service
+Potential Fit,Potential Fit,68.55,22.22,20.83,59.01,Communication; Java,Agile; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,52.85,0.00,0.00,42.28,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,No Fit,30.85,40.00,45.45,33.77,Agile; SQL,.NET; Communication; Leadership
+Potential Fit,Potential Fit,67.74,0.00,0.00,54.19,,Problem Solving
+Potential Fit,Potential Fit,60.59,60.00,60.00,60.47,HTML; Java; JavaScript,Angular; CSS
+Potential Fit,No Fit,17.35,0.00,0.00,13.88,,
+Potential Fit,Potential Fit,55.14,11.11,4.17,44.95,Communication,Agile; Java; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,Potential Fit,76.55,44.44,41.67,69.57,Agile; Communication; Java; SQL,Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Good Fit,88.34,100.00,35.00,77.67,Excel,
+Potential Fit,Potential Fit,44.98,83.33,77.60,51.50,Communication; Data Analysis; Excel; Power BI; SQL,Python
+Potential Fit,Potential Fit,70.31,50.00,35.00,63.24,Communication; Customer Service,Excel; Leadership
+Potential Fit,No Fit,31.66,0.00,0.00,25.33,,
+Potential Fit,No Fit,21.85,0.00,0.00,17.48,,Agile; Customer Service; Teamwork
+Potential Fit,No Fit,24.23,0.00,0.00,19.39,,
+Potential Fit,Potential Fit,56.50,11.11,11.38,47.48,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Potential Fit,Potential Fit,44.36,33.33,28.21,41.13,Data Analysis,SQL; Tableau
+Potential Fit,Potential Fit,47.87,40.00,23.17,42.93,Communication; Excel,Agile; Go; SQL
+Potential Fit,Potential Fit,60.78,30.00,17.65,52.15,Agile; Azure; Communication,.NET; Angular; C; C#; CI/CD; REST API; TypeScript
+Potential Fit,No Fit,35.08,0.00,0.00,28.07,,
+Potential Fit,Good Fit,86.23,25.00,7.69,70.52,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,33.04,0.00,0.00,26.44,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Potential Fit,48.77,100.00,100.00,59.02,Python; SQL,
+Potential Fit,Potential Fit,38.79,66.67,64.10,43.85,Data Analysis; Tableau,SQL
+Potential Fit,Potential Fit,67.58,22.22,33.33,60.73,Java; SQL,Agile; Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,No Fit,40.69,33.33,16.67,35.89,Communication,Problem Solving; R
+Potential Fit,Potential Fit,76.81,0.00,0.00,61.45,,Agile; AWS; CI/CD; Machine Learning
+Potential Fit,Potential Fit,70.15,44.44,41.67,64.45,Communication; Java; SQL; Teamwork,Agile; Kafka; Kubernetes; Leadership; Microservices
+Potential Fit,No Fit,47.12,0.00,0.00,37.70,,Data Analysis; SQL; Tableau
+Potential Fit,No Fit,27.59,0.00,0.00,22.08,,
+Potential Fit,Potential Fit,47.27,66.67,66.67,51.15,Data Engineering; SQL,PostgreSQL
+Potential Fit,No Fit,29.37,33.33,33.33,30.16,SQL,Data Engineering; PostgreSQL
+Potential Fit,No Fit,37.69,0.00,0.00,30.15,,Data Engineering
+Potential Fit,Potential Fit,70.41,44.44,41.67,64.66,Communication; Java; SQL; Teamwork,Agile; Kafka; Kubernetes; Leadership; Microservices
+Potential Fit,No Fit,35.97,0.00,0.00,28.78,,Communication; Problem Solving; R
+Potential Fit,No Fit,24.29,0.00,0.00,19.43,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,Potential Fit,65.23,22.22,20.83,56.35,Agile; Java,Communication; Kafka; Kubernetes; Leadership; Microservices; SQL; Teamwork
+Potential Fit,No Fit,27.39,0.00,0.00,21.91,,
+Potential Fit,No Fit,24.48,16.67,5.56,20.70,Communication,.NET; C; C#; C++; Problem Solving
+Potential Fit,No Fit,6.00,0.00,0.00,4.80,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,Potential Fit,60.45,33.33,33.33,55.02,AWS; SQL,Airflow; Data Engineering; NoSQL; Python
+Potential Fit,No Fit,23.79,100.00,35.00,26.04,Communication,
+Potential Fit,Potential Fit,67.37,33.33,37.50,61.40,Communication; Java; SQL,Agile; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Potential Fit,56.80,40.00,48.78,55.20,Excel; SQL,Agile; Communication; Go
+Potential Fit,No Fit,36.03,66.67,35.00,35.83,Communication; Teamwork,Excel
+Potential Fit,No Fit,38.33,40.00,45.45,39.76,Agile; Azure,AWS; Communication; Teamwork
+Potential Fit,Potential Fit,53.88,0.00,0.00,43.10,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Potential Fit,Potential Fit,64.05,40.00,40.00,59.24,HTML; Java,Angular; CSS; JavaScript
+Potential Fit,Potential Fit,75.94,50.00,38.46,68.45,Agile; CI/CD,AWS; Machine Learning
+Potential Fit,Potential Fit,60.77,16.67,16.67,51.95,Python,Airflow; AWS; Data Engineering; NoSQL; SQL
+Potential Fit,No Fit,11.15,0.00,0.00,8.92,,
+Potential Fit,Potential Fit,58.96,40.00,23.17,51.80,Communication; Excel,Agile; Go; SQL
+Potential Fit,Potential Fit,56.19,83.33,77.60,60.47,Communication; Data Analysis; Excel; Python; SQL,Power BI
+Potential Fit,Potential Fit,77.20,50.00,35.00,68.76,Communication; Excel,Customer Service; Leadership
+Potential Fit,Potential Fit,68.50,0.00,0.00,54.80,,Excel
+Potential Fit,Potential Fit,66.80,41.67,36.98,60.83,Agile; AWS; Communication; REST API; SQL,Ansible; Java; Jenkins; Kubernetes; Microservices; Recruitment; Teamwork
+Potential Fit,No Fit,13.93,33.33,33.33,17.81,Customer Service,Agile; Teamwork
+Potential Fit,Potential Fit,82.98,25.00,7.69,67.92,Agile,AWS; CI/CD; Machine Learning
+Potential Fit,No Fit,9.86,33.33,35.00,14.89,Excel,Communication; Teamwork
+Potential Fit,No Fit,29.04,0.00,0.00,23.23,,Linux; Python
+Potential Fit,No Fit,14.60,0.00,0.00,11.68,,Agile
+Potential Fit,Potential Fit,76.76,25.00,35.00,68.40,Excel,Communication; Customer Service; Leadership
+Potential Fit,Potential Fit,76.48,0.00,0.00,61.18,,
+Potential Fit,Potential Fit,56.57,0.00,0.00,45.26,,Problem Solving
+Potential Fit,Potential Fit,68.53,0.00,0.00,54.82,,
+Potential Fit,Good Fit,81.83,33.33,37.50,72.96,Agile; Java; SQL,Communication; Kafka; Kubernetes; Leadership; Microservices; Teamwork
+Potential Fit,Potential Fit,51.05,0.00,0.00,40.84,,
+Potential Fit,No Fit,36.85,0.00,0.00,29.48,,Agile; Communication; Excel; Go; SQL
+Potential Fit,Potential Fit,45.38,33.33,33.33,42.97,SQL,Data Engineering; PostgreSQL
+Potential Fit,Potential Fit,55.31,0.00,0.00,44.25,,Problem Solving
+Potential Fit,Potential Fit,66.12,33.33,26.92,58.28,Communication,Excel; Teamwork
+Potential Fit,Potential Fit,60.95,80.00,80.00,64.76,CSS; HTML; Java; JavaScript,Angular
+Potential Fit,No Fit,2.03,28.57,13.46,4.32,Project Management; Teamwork,Communication; Leadership; Microsoft SQL Server; Recruitment; SQL
+Potential Fit,Potential Fit,62.11,27.27,23.68,54.42,Agile; C; SQL,.NET; AWS; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server
+Potential Fit,Potential Fit,73.81,40.00,48.78,68.81,Excel; SQL,Agile; Communication; Go
+Potential Fit,Potential Fit,44.80,50.00,50.00,45.84,Python,SQL
+Potential Fit,No Fit,38.40,0.00,0.00,30.72,,
+Potential Fit,No Fit,12.98,33.33,66.67,23.72,Machine Learning,Communication; Teamwork
+Potential Fit,Potential Fit,55.22,60.00,57.32,55.64,Communication; Excel; SQL,Agile; Go
+Potential Fit,Potential Fit,62.15,0.00,0.00,49.72,,Problem Solving
+Potential Fit,Potential Fit,57.21,0.00,0.00,45.77,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Potential Fit,No Fit,34.73,0.00,0.00,27.78,,Angular; CSS; HTML; Java; JavaScript
+Potential Fit,Potential Fit,59.47,50.00,50.00,57.58,SQL,Python
+Potential Fit,No Fit,27.52,50.00,35.29,29.07,Excel,Data Science
+Potential Fit,No Fit,0.02,0.00,0.00,0.01,,Communication; Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Potential Fit,Potential Fit,52.19,0.00,0.00,41.75,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Potential Fit,No Fit,12.49,0.00,0.00,9.99,,Communication
+Potential Fit,No Fit,14.18,33.33,33.33,18.01,Agile,Customer Service; Teamwork
+Potential Fit,No Fit,25.71,33.33,33.33,27.23,Customer Service,Agile; Teamwork
+Potential Fit,No Fit,38.04,0.00,0.00,30.44,,Data Engineering; PostgreSQL; SQL
+Potential Fit,Good Fit,77.84,44.44,41.67,70.60,Communication; Java; SQL; Teamwork,Agile; Kafka; Kubernetes; Leadership; Microservices
+Potential Fit,No Fit,10.28,14.29,6.73,9.57,Communication,Leadership; Microsoft SQL Server; Project Management; Recruitment; SQL; Teamwork
+Good Fit,Potential Fit,54.31,25.00,31.70,49.79,Java; Jenkins; SQL,Agile; Ansible; AWS; Communication; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,Potential Fit,50.96,12.50,3.45,41.45,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,Potential Fit,58.06,16.67,16.67,49.78,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,Potential Fit,76.29,0.00,0.00,61.03,,
+Good Fit,Potential Fit,41.85,81.82,83.44,50.17,AWS; CI/CD; Docker; Git; Machine Learning; NoSQL; Python; Spark; SQL,Data Science; Microservices
+Good Fit,Potential Fit,52.05,72.73,83.85,58.41,AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Python; SQL,Agile; Pandas; Teamwork
+Good Fit,No Fit,26.41,100.00,35.00,28.12,Communication,
+Good Fit,Potential Fit,51.07,0.00,0.00,40.86,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,54.92,0.00,0.00,43.94,,Linux; Python
+Good Fit,Potential Fit,60.52,45.45,52.63,58.94,Azure; C; C#; Java; SQL,.NET; Agile; AWS; Critical Thinking; Elasticsearch; Microsoft SQL Server
+Good Fit,Potential Fit,46.23,50.00,54.05,47.80,Angular; Java; JavaScript; MySQL; SQL,Agile; Docker; Natural Language Processing; PHP; Scala
+Good Fit,Good Fit,82.08,100.00,35.00,72.66,Excel,
+Good Fit,Potential Fit,66.11,16.67,5.13,53.92,Agile; Communication,Ansible; Bash; CI/CD; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Good Fit,Potential Fit,56.59,50.00,44.83,54.24,Communication; CSS; HTML; JavaScript,Angular; Git; Node.js; TypeScript
+Good Fit,No Fit,45.28,0.00,0.00,36.23,,Excel; Leadership
+Good Fit,No Fit,39.21,0.00,0.00,31.37,,Agile; AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,75.18,44.44,45.53,69.25,C; C++; Python; SQL,AWS; Google Cloud; Machine Learning; Statistics; TensorFlow
+Good Fit,No Fit,28.98,0.00,0.00,23.18,,Teamwork
+Good Fit,No Fit,3.43,25.00,25.00,7.74,C,C++; Linux; Python
+Good Fit,Potential Fit,46.25,33.33,42.26,45.46,Java; Kubernetes; Microservices; REST API,Agile; Ansible; AWS; Communication; Jenkins; Recruitment; SQL; Teamwork
+Good Fit,No Fit,45.76,0.00,0.00,36.61,,Linux; Python
+Good Fit,Potential Fit,63.72,75.00,90.00,68.98,C; C++; Project Management,Teamwork
+Good Fit,Potential Fit,71.72,100.00,35.00,64.38,Excel,
+Good Fit,Good Fit,83.02,100.00,35.00,73.42,Excel,
+Good Fit,Potential Fit,54.59,0.00,0.00,43.67,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,No Fit,47.11,20.00,9.09,39.51,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,61.62,50.00,80.00,65.30,C; C++,Project Management; Teamwork
+Good Fit,No Fit,40.91,0.00,0.00,32.72,,AWS; Data Engineering; Python
+Good Fit,No Fit,38.31,100.00,35.00,37.65,Excel; Leadership,
+Good Fit,Potential Fit,81.66,22.22,22.76,69.88,C; SQL,AWS; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,24.06,0.00,0.00,19.25,,Teamwork
+Good Fit,Potential Fit,66.42,83.33,83.33,69.81,Airflow; AWS; NoSQL; Python; SQL,Data Engineering
+Good Fit,Potential Fit,54.44,0.00,0.00,43.55,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,77.60,0.00,0.00,62.08,,Excel
+Good Fit,Potential Fit,52.76,0.00,0.00,42.21,,AWS; Data Engineering; Python
+Good Fit,Potential Fit,58.17,8.33,2.56,47.05,Teamwork,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API
+Good Fit,No Fit,8.98,100.00,35.00,14.18,Agile,
+Good Fit,Potential Fit,42.26,54.55,56.54,45.12,Agile; AWS; Docker; NoSQL; Python; SQL,Data Science; Git; Machine Learning; Pandas; Teamwork
+Good Fit,Potential Fit,63.74,18.18,21.05,55.20,C; Java,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+Good Fit,Potential Fit,59.25,0.00,0.00,47.40,,Excel; Leadership
+Good Fit,No Fit,24.20,0.00,0.00,19.36,,Teamwork
+Good Fit,Potential Fit,63.21,45.45,44.74,59.51,Agile; C; C#; Microsoft SQL Server; SQL,.NET; AWS; Azure; Critical Thinking; Elasticsearch; Java
+Good Fit,Potential Fit,61.51,50.00,20.00,53.21,Project Management; Teamwork,C; C++
+Good Fit,Potential Fit,58.78,50.00,80.00,63.02,C; C++,Project Management; Teamwork
+Good Fit,Potential Fit,48.53,50.00,35.00,45.82,Excel,Leadership
+Good Fit,Potential Fit,54.58,8.33,10.26,45.71,Python,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; REST API; Teamwork
+Good Fit,No Fit,43.84,0.00,0.00,35.07,,Excel; Leadership
+Good Fit,Potential Fit,38.85,50.00,50.00,41.08,Python,Linux
+Good Fit,No Fit,47.00,0.00,0.00,37.60,,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Good Fit,Potential Fit,65.02,0.00,0.00,52.01,,
+Good Fit,Potential Fit,77.68,0.00,0.00,62.14,,Excel
+Good Fit,Potential Fit,42.85,50.00,35.00,41.28,Excel,Leadership
+Good Fit,Potential Fit,68.34,11.11,11.38,56.95,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,35.10,0.00,0.00,28.08,,Teamwork
+Good Fit,No Fit,30.22,40.00,45.45,33.27,Agile; AWS,Azure; Communication; Teamwork
+Good Fit,Potential Fit,54.60,0.00,0.00,43.68,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,No Fit,30.56,50.00,35.00,31.45,Excel,Leadership
+Good Fit,No Fit,33.63,0.00,0.00,26.91,,Teamwork
+Good Fit,No Fit,31.92,20.00,36.36,32.81,AWS,Agile; Azure; Communication; Teamwork
+Good Fit,No Fit,27.25,0.00,0.00,21.80,,Communication
+Good Fit,No Fit,19.46,100.00,35.00,22.56,Excel; Leadership,
+Good Fit,Potential Fit,52.92,66.67,35.00,49.34,Communication; Excel,Problem Solving
+Good Fit,No Fit,20.10,0.00,0.00,16.08,,Agile
+Good Fit,No Fit,10.51,50.00,20.00,12.41,Leadership,CI/CD
+Good Fit,Potential Fit,41.42,100.00,35.00,40.13,Teamwork,
+Good Fit,No Fit,32.89,50.00,35.00,33.31,Excel,Leadership
+Good Fit,Potential Fit,60.49,18.18,21.05,52.60,C; C#,.NET; Agile; AWS; Azure; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Good Fit,Potential Fit,47.49,27.27,27.81,43.56,AWS; Python; SQL,CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Spark
+Good Fit,No Fit,8.79,100.00,100.00,27.03,Communication; Data Analysis; Excel; Statistics,
+Good Fit,Potential Fit,74.75,33.33,34.15,66.63,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,55.82,62.50,58.62,56.38,Communication; CSS; Git; HTML; JavaScript,Angular; Node.js; TypeScript
+Good Fit,Good Fit,80.59,100.00,35.00,71.47,Excel,
+Good Fit,No Fit,26.68,20.00,9.09,23.16,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,54.86,50.00,35.00,50.89,Excel,Leadership
+Good Fit,Potential Fit,52.41,25.00,27.59,47.44,CSS; HTML,Angular; Communication; Git; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,34.46,20.00,9.09,29.39,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,Potential Fit,52.98,66.67,66.67,55.71,AWS; Python,Data Engineering
+Good Fit,No Fit,35.05,50.00,50.00,38.04,Python,Linux
+Good Fit,No Fit,49.09,0.00,0.00,39.27,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,38.22,40.00,45.45,39.66,Agile; AWS,Azure; Communication; Teamwork
+Good Fit,Potential Fit,59.63,0.00,0.00,47.70,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Good Fit,Potential Fit,65.79,63.64,65.79,65.79,.NET; Agile; C; C#; Java; Microsoft SQL Server; SQL,AWS; Azure; Critical Thinking; Elasticsearch
+Good Fit,No Fit,35.05,0.00,0.00,28.04,,Teamwork
+Good Fit,No Fit,31.46,100.00,35.00,32.17,Communication,
+Good Fit,Potential Fit,60.90,0.00,0.00,48.72,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,76.15,33.33,34.15,67.75,C; C++; Python,AWS; Google Cloud; Machine Learning; SQL; Statistics; TensorFlow
+Good Fit,No Fit,30.18,0.00,0.00,24.14,,Agile
+Good Fit,Potential Fit,46.38,100.00,100.00,57.10,Linux; Python,
+Good Fit,No Fit,40.70,0.00,0.00,32.56,,Teamwork
+Good Fit,Potential Fit,65.35,16.67,13.21,54.92,Agile; Java,Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Good Fit,Potential Fit,58.29,9.09,10.77,48.79,SQL,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; Teamwork
+Good Fit,Potential Fit,55.36,0.00,0.00,44.29,,AWS; Data Engineering; Python
+Good Fit,No Fit,44.39,11.11,12.12,37.94,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,47.13,100.00,100.00,57.70,AWS; Data Engineering; Python,
+Good Fit,No Fit,35.26,50.00,35.00,35.21,Leadership,Excel
+Good Fit,No Fit,31.40,0.00,0.00,25.12,,Excel; Leadership
+Good Fit,No Fit,29.07,40.00,18.18,26.89,Agile; Communication,AWS; Azure; Teamwork
+Good Fit,Potential Fit,56.97,50.00,50.00,55.58,C; Project Management,C++; Teamwork
+Good Fit,Potential Fit,57.88,72.73,78.08,61.92,Agile; AWS; Git; Machine Learning; NoSQL; Pandas; Python; SQL,Data Science; Docker; Teamwork
+Good Fit,No Fit,36.95,100.00,35.00,36.56,Excel; Leadership,
+Good Fit,No Fit,34.35,20.00,9.09,29.30,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,No Fit,16.89,0.00,0.00,13.51,,Agile
+Good Fit,Potential Fit,52.05,63.64,75.38,56.72,AWS; Docker; Git; Machine Learning; NoSQL; Python; SQL,Agile; Data Science; Pandas; Teamwork
+Good Fit,Potential Fit,50.20,0.00,0.00,40.16,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,60.16,0.00,0.00,48.13,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,67.76,25.00,40.00,62.21,C,C++; Project Management; Teamwork
+Good Fit,No Fit,29.64,50.00,35.00,30.71,Excel,Leadership
+Good Fit,No Fit,40.47,0.00,0.00,32.38,,Excel; Leadership
+Good Fit,Potential Fit,76.14,0.00,0.00,60.91,,Excel
+Good Fit,Potential Fit,51.27,0.00,0.00,41.02,,AWS; C; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,No Fit,25.21,0.00,0.00,20.17,,Teamwork
+Good Fit,No Fit,34.51,40.00,45.45,36.70,Agile; AWS,Azure; Communication; Teamwork
+Good Fit,No Fit,32.90,100.00,35.00,33.32,Teamwork,
+Good Fit,Potential Fit,53.25,62.50,68.97,56.39,CSS; Git; HTML; JavaScript; Node.js,Angular; Communication; TypeScript
+Good Fit,Potential Fit,51.32,0.00,0.00,41.06,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,No Fit,30.66,50.00,35.00,31.53,Excel,Leadership
+Good Fit,Potential Fit,62.48,40.00,18.18,53.62,Agile; Communication,AWS; Azure; Teamwork
+Good Fit,No Fit,34.60,0.00,0.00,27.68,,CI/CD; Leadership
+Good Fit,Potential Fit,64.13,0.00,0.00,51.30,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Good Fit,Potential Fit,57.21,54.55,63.16,58.40,.NET; C; C#; Java; Microsoft SQL Server; SQL,Agile; AWS; Azure; Critical Thinking; Elasticsearch
+Good Fit,Potential Fit,54.04,8.33,10.57,45.35,Java,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Good Fit,Potential Fit,73.34,0.00,0.00,58.67,,Excel
+Good Fit,Potential Fit,61.75,16.67,16.67,52.73,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,Potential Fit,48.13,50.00,55.47,49.60,Agile; AWS; Java; Jenkins; REST API; SQL,Ansible; Communication; Kubernetes; Microservices; Recruitment; Teamwork
+Good Fit,Potential Fit,44.71,25.00,23.77,40.53,Communication; REST API; SQL,Agile; Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; Teamwork
+Good Fit,Potential Fit,57.64,50.00,39.62,54.03,Agile; Communication; Java; REST API; SQL; Teamwork,Ansible; AWS; Jenkins; Kubernetes; Microservices; Recruitment
+Good Fit,Potential Fit,52.39,50.00,80.00,57.92,C; C++,Project Management; Teamwork
+Good Fit,No Fit,29.34,40.00,45.45,32.56,Agile; AWS,Azure; Communication; Teamwork
+Good Fit,Potential Fit,61.53,63.64,73.68,63.96,.NET; AWS; C; C#; Java; Microsoft SQL Server; SQL,Agile; Azure; Critical Thinking; Elasticsearch
+Good Fit,No Fit,34.44,100.00,35.00,34.55,Teamwork,
+Good Fit,No Fit,36.11,100.00,35.00,35.89,Teamwork,
+Good Fit,Potential Fit,58.47,0.00,0.00,46.78,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Good Fit,No Fit,29.28,0.00,0.00,23.42,,Communication
+Good Fit,Potential Fit,57.56,0.00,0.00,46.05,,
+Good Fit,No Fit,47.22,0.00,0.00,37.78,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,No Fit,38.06,50.00,35.00,37.45,Leadership,Excel
+Good Fit,No Fit,22.42,0.00,0.00,17.94,,Agile
+Good Fit,No Fit,23.97,33.33,26.42,24.46,Agile; Java; SQL; Teamwork,Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API
+Good Fit,No Fit,46.20,0.00,0.00,36.96,,Teamwork
+Good Fit,Potential Fit,41.93,50.00,35.00,40.54,Leadership,Excel
+Good Fit,Potential Fit,50.24,0.00,0.00,40.19,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Good Fit,83.24,33.33,34.15,73.42,AWS; C; SQL,C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Good Fit,79.57,33.33,34.15,70.49,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,31.77,0.00,0.00,25.42,,Communication
+Good Fit,Potential Fit,60.37,25.00,40.00,56.29,C,C++; Project Management; Teamwork
+Good Fit,Potential Fit,69.97,63.64,65.79,69.13,Agile; AWS; C; C#; Java; Microsoft SQL Server; SQL,.NET; Azure; Critical Thinking; Elasticsearch
+Good Fit,Potential Fit,65.36,11.11,11.38,54.57,AWS,C; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,No Fit,32.51,9.09,9.27,27.86,SQL,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark
+Good Fit,Potential Fit,78.49,0.00,0.00,62.79,,Excel
+Good Fit,Potential Fit,60.67,0.00,0.00,48.54,,
+Good Fit,No Fit,32.54,50.00,35.00,33.03,Leadership,Excel
+Good Fit,No Fit,15.15,100.00,35.00,19.12,Agile,
+Good Fit,Potential Fit,50.68,0.00,0.00,40.54,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,77.08,0.00,0.00,61.66,,
+Good Fit,No Fit,40.70,0.00,0.00,32.56,,Linux; Python
+Good Fit,No Fit,21.26,40.00,18.18,20.64,Agile; Communication,AWS; Azure; Teamwork
+Good Fit,No Fit,37.55,0.00,0.00,30.04,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,No Fit,32.44,0.00,0.00,25.95,,Linux; Python
+Good Fit,No Fit,19.46,57.14,59.09,27.38,Communication; Python; SQL; Tableau,Java; Leadership; Machine Learning
+Good Fit,No Fit,48.78,0.00,0.00,39.02,,Linux; Python
+Good Fit,Potential Fit,61.20,50.00,50.00,58.96,C; Project Management,C++; Teamwork
+Good Fit,Potential Fit,51.86,0.00,0.00,41.49,,C; C++; Project Management; Teamwork
+Good Fit,No Fit,42.03,12.50,3.45,34.32,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,27.99,50.00,35.00,29.39,Excel,Leadership
+Good Fit,Potential Fit,55.67,54.55,63.16,57.17,.NET; C; C#; Java; Microsoft SQL Server; SQL,Agile; AWS; Azure; Critical Thinking; Elasticsearch
+Good Fit,Potential Fit,29.48,100.00,100.00,43.59,C; C++; Linux; Python,
+Good Fit,Potential Fit,77.08,33.33,34.15,68.49,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,59.85,75.00,90.00,65.88,C; C++; Teamwork,Project Management
+Good Fit,No Fit,36.57,16.67,21.13,33.48,REST API; SQL,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; Teamwork
+Good Fit,No Fit,28.02,0.00,0.00,22.41,,Teamwork
+Good Fit,Potential Fit,43.04,25.00,40.00,42.43,C,C++; Project Management; Teamwork
+Good Fit,Potential Fit,63.27,8.33,10.57,52.73,SQL,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,Potential Fit,59.12,66.67,66.67,60.63,AWS; Python,Data Engineering
+Good Fit,Good Fit,86.31,100.00,35.00,76.05,Excel,
+Good Fit,Potential Fit,54.67,62.50,68.97,57.53,CSS; Git; HTML; JavaScript; TypeScript,Angular; Communication; Node.js
+Good Fit,No Fit,39.26,50.00,35.00,38.40,Excel,Leadership
+Good Fit,No Fit,25.43,0.00,0.00,20.35,,Excel; Leadership
+Good Fit,No Fit,26.42,60.00,27.27,26.59,Agile; Communication; Teamwork,AWS; Azure
+Good Fit,No Fit,33.75,50.00,50.00,37.00,Linux,Python
+Good Fit,Potential Fit,51.61,0.00,0.00,41.29,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,77.51,100.00,35.00,69.01,Excel,
+Good Fit,Potential Fit,57.67,0.00,0.00,46.14,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,No Fit,30.26,33.33,33.33,30.88,Python,AWS; Data Engineering
+Good Fit,No Fit,37.09,50.00,35.00,36.67,Excel,Leadership
+Good Fit,No Fit,49.79,0.00,0.00,39.83,,Teamwork
+Good Fit,No Fit,43.22,0.00,0.00,34.58,,Linux; Python
+Good Fit,Potential Fit,52.31,0.00,0.00,41.85,,C; C++; Project Management; Teamwork
+Good Fit,No Fit,44.25,0.00,0.00,35.40,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,74.74,11.11,11.38,62.07,C,AWS; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,No Fit,23.43,100.00,35.00,25.74,Communication,
+Good Fit,Potential Fit,68.73,16.67,16.67,58.32,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,No Fit,33.11,0.00,0.00,26.49,,Linux; Python
+Good Fit,No Fit,28.99,20.00,9.09,25.01,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,No Fit,31.37,54.55,55.63,36.22,CI/CD; Git; NoSQL; Python; Spark; SQL,AWS; Data Science; Docker; Machine Learning; Microservices
+Good Fit,No Fit,39.89,12.50,3.45,32.60,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,19.73,18.18,18.54,19.49,AWS; SQL,CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark
+Good Fit,Potential Fit,78.19,22.22,22.76,67.11,AWS; SQL,C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,46.06,0.00,0.00,36.85,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,62.75,0.00,0.00,50.20,,C; C++; Project Management; Teamwork
+Good Fit,No Fit,44.79,0.00,0.00,35.83,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,42.33,50.00,35.00,40.86,Excel,Leadership
+Good Fit,No Fit,32.69,45.45,46.36,35.42,AWS; Git; Machine Learning; Spark; SQL,CI/CD; Data Science; Docker; Microservices; NoSQL; Python
+Good Fit,No Fit,26.59,50.00,35.00,28.27,Excel,Leadership
+Good Fit,No Fit,22.98,60.00,54.55,29.29,Agile; AWS; Communication,Azure; Teamwork
+Good Fit,No Fit,19.95,50.00,35.00,22.96,Excel,Leadership
+Good Fit,Good Fit,71.16,50.00,80.00,72.93,C; C++,Project Management; Teamwork
+Good Fit,No Fit,33.44,100.00,35.00,33.75,Teamwork,
+Good Fit,No Fit,40.04,0.00,0.00,32.03,,AWS; Data Engineering; Python
+Good Fit,No Fit,37.02,50.00,35.00,36.62,Excel,Leadership
+Good Fit,No Fit,11.87,100.00,35.00,16.49,Agile,
+Good Fit,Potential Fit,55.16,62.50,58.62,55.86,Angular; Communication; CSS; HTML; JavaScript,Git; Node.js; TypeScript
+Good Fit,No Fit,27.45,40.00,45.45,31.05,Agile; AWS,Azure; Communication; Teamwork
+Good Fit,Potential Fit,65.40,9.09,2.69,52.86,Teamwork,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL
+Good Fit,Potential Fit,86.46,0.00,0.00,69.17,,Excel
+Good Fit,Potential Fit,63.45,8.33,10.57,52.88,Java,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Good Fit,Good Fit,78.74,44.44,45.53,72.10,AWS; C; C++; SQL,Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,56.87,22.22,24.24,50.35,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,61.64,0.00,0.00,49.31,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,54.78,25.00,27.59,49.34,CSS; JavaScript,Angular; Communication; Git; HTML; Node.js; TypeScript
+Good Fit,No Fit,5.89,75.00,65.08,17.73,Communication; Excel; Statistics,Data Analysis
+Good Fit,Potential Fit,47.13,27.27,27.81,43.27,AWS; Python; SQL,CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Spark
+Good Fit,Potential Fit,59.00,50.00,55.17,58.24,CSS; Git; HTML; JavaScript,Angular; Communication; Node.js; TypeScript
+Good Fit,No Fit,36.36,0.00,0.00,29.09,,Agile; AWS; Azure; Communication; Teamwork
+Good Fit,No Fit,33.59,0.00,0.00,26.87,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,No Fit,31.77,20.00,13.51,28.12,Agile; SQL,Angular; Docker; Java; JavaScript; MySQL; Natural Language Processing; PHP; Scala
+Good Fit,No Fit,31.82,0.00,0.00,25.45,,Linux; Python
+Good Fit,Potential Fit,57.46,33.33,26.42,51.25,Agile; Java; SQL; Teamwork,Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API
+Good Fit,Potential Fit,59.45,18.18,21.05,51.77,Java; SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+Good Fit,No Fit,6.25,0.00,0.00,5.00,,Agile
+Good Fit,No Fit,37.41,50.00,35.00,36.92,Excel,Leadership
+Good Fit,Potential Fit,51.50,0.00,0.00,41.20,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,20.95,81.82,81.46,33.05,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Python; Spark; SQL,Microservices; NoSQL
+Good Fit,No Fit,10.03,100.00,35.00,15.02,Agile,
+Good Fit,Potential Fit,42.25,100.00,35.00,40.80,Communication,
+Good Fit,Potential Fit,60.98,50.00,80.00,64.78,C; C++,Project Management; Teamwork
+Good Fit,Good Fit,79.58,33.33,34.15,70.49,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,38.69,0.00,0.00,30.95,,Teamwork
+Good Fit,No Fit,40.22,0.00,0.00,32.18,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,71.98,16.67,21.13,61.81,Java; SQL,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,No Fit,21.46,60.00,54.55,28.08,Agile; AWS; Communication,Azure; Teamwork
+Good Fit,Potential Fit,59.17,27.27,23.68,52.08,Agile; AWS; C,.NET; Azure; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Good Fit,Good Fit,81.02,100.00,35.00,71.81,Excel,
+Good Fit,Potential Fit,66.90,0.00,0.00,53.52,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,62.96,50.00,50.00,60.37,C; Teamwork,C++; Project Management
+Good Fit,Potential Fit,51.26,0.00,0.00,41.01,,Excel; Leadership
+Good Fit,No Fit,17.29,100.00,35.00,20.83,Agile,
+Good Fit,Potential Fit,58.08,50.00,50.00,56.46,Data Engineering; Python; SQL,Airflow; AWS; NoSQL
+Good Fit,No Fit,15.95,0.00,0.00,12.76,,Java
+Good Fit,No Fit,44.69,12.50,3.45,36.44,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,Potential Fit,48.87,66.67,66.67,52.43,AWS; Data Engineering,Python
+Good Fit,No Fit,44.88,0.00,0.00,35.91,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,78.09,22.22,22.76,67.03,C; SQL,AWS; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,39.59,50.00,35.00,38.67,Excel,Leadership
+Good Fit,No Fit,35.10,50.00,35.00,35.08,Excel,Leadership
+Good Fit,Potential Fit,65.03,25.00,15.85,55.19,Agile; Communication; SQL,Ansible; AWS; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,No Fit,9.42,100.00,35.00,14.54,Agile,
+Good Fit,Potential Fit,59.34,50.00,55.17,58.51,Angular; CSS; HTML; JavaScript,Communication; Git; Node.js; TypeScript
+Good Fit,No Fit,37.18,0.00,0.00,29.74,,Excel; Leadership
+Good Fit,Potential Fit,76.12,33.33,34.15,67.73,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,59.04,50.00,39.62,55.15,Agile; Communication; Java; REST API; SQL; Teamwork,Ansible; AWS; Jenkins; Kubernetes; Microservices; Recruitment
+Good Fit,No Fit,35.48,20.00,9.09,30.20,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,49.89,50.00,35.00,46.91,Excel,Leadership
+Good Fit,No Fit,31.56,20.00,9.09,27.06,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,Potential Fit,57.52,33.33,36.36,53.29,C; C++; Docker,Computer Vision; Deep Learning; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,53.27,18.18,21.05,46.82,Microsoft SQL Server; SQL,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java
+Good Fit,Potential Fit,65.31,41.67,35.90,59.43,Agile; Bash; Python; REST API; Teamwork,Ansible; CI/CD; Communication; Git; Go; Jenkins; Oracle Database
+Good Fit,No Fit,28.05,0.00,0.00,22.44,,Teamwork
+Good Fit,Potential Fit,50.71,50.00,35.00,47.57,Excel,Leadership
+Good Fit,Potential Fit,60.16,25.00,40.00,56.13,C,C++; Project Management; Teamwork
+Good Fit,No Fit,47.65,20.00,9.09,39.94,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,72.64,33.33,34.15,64.94,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,38.78,0.00,0.00,31.02,,Excel; Leadership
+Good Fit,Potential Fit,60.88,0.00,0.00,48.70,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,66.09,50.00,80.00,68.87,C; C++,Project Management; Teamwork
+Good Fit,Potential Fit,53.17,37.50,41.38,50.81,CSS; HTML; JavaScript,Angular; Communication; Git; Node.js; TypeScript
+Good Fit,Potential Fit,47.56,50.00,35.00,45.05,Excel,Leadership
+Good Fit,Potential Fit,53.44,50.00,35.00,49.75,Excel,Leadership
+Good Fit,Potential Fit,57.89,16.67,16.67,49.65,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,Potential Fit,64.40,0.00,0.00,51.52,,Agile; Ansible; Bash; CI/CD; Communication; Git; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Good Fit,No Fit,30.93,40.00,45.45,33.83,Agile; Azure,AWS; Communication; Teamwork
+Good Fit,Potential Fit,80.82,8.33,10.57,66.77,SQL,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,No Fit,42.31,0.00,0.00,33.85,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,30.69,0.00,0.00,24.55,,Agile
+Good Fit,Good Fit,82.85,33.33,34.15,73.11,C; C++; SQL,AWS; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,43.57,0.00,0.00,34.85,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,26.55,50.00,35.00,28.24,Excel,Leadership
+Good Fit,Potential Fit,54.83,62.50,58.62,55.59,Angular; Communication; CSS; HTML; JavaScript,Git; Node.js; TypeScript
+Good Fit,Potential Fit,65.44,50.00,80.00,68.35,C; C++,Project Management; Teamwork
+Good Fit,No Fit,38.29,0.00,0.00,30.63,,Teamwork
+Good Fit,Potential Fit,69.36,100.00,35.00,62.48,Communication; Excel,
+Good Fit,Potential Fit,53.44,22.22,24.24,47.60,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,31.49,45.45,44.37,34.06,Data Science; Machine Learning; Python; Spark; SQL,AWS; CI/CD; Docker; Git; Microservices; NoSQL
+Good Fit,Potential Fit,43.01,50.00,35.00,41.41,Excel,Leadership
+Good Fit,No Fit,30.05,0.00,0.00,24.04,,Teamwork
+Good Fit,No Fit,39.55,40.00,18.18,35.28,Communication; Teamwork,Agile; AWS; Azure
+Good Fit,No Fit,0.00,75.00,65.08,13.02,Communication; Data Analysis; Excel,Statistics
+Good Fit,Potential Fit,61.56,25.00,40.00,57.24,C,C++; Project Management; Teamwork
+Good Fit,Potential Fit,65.97,33.33,33.33,59.44,Python; SQL,Airflow; AWS; Data Engineering; NoSQL
+Good Fit,No Fit,46.51,0.00,0.00,37.21,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,49.29,22.22,24.24,44.28,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,32.41,0.00,0.00,25.93,,Linux; Python
+Good Fit,Potential Fit,41.20,50.00,50.00,42.96,Python,Linux
+Good Fit,Potential Fit,51.80,37.50,31.03,47.65,Communication; HTML; JavaScript,Angular; CSS; Git; Node.js; TypeScript
+Good Fit,No Fit,22.18,0.00,0.00,17.75,,
+Good Fit,Potential Fit,62.48,16.67,16.67,53.32,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,No Fit,27.54,0.00,0.00,22.03,,Communication
+Good Fit,No Fit,20.41,0.00,0.00,16.33,,Excel; Leadership
+Good Fit,Potential Fit,52.88,0.00,0.00,42.31,,Excel
+Good Fit,Good Fit,78.87,44.44,43.09,71.71,C; Python; SQL; Statistics,AWS; C++; Google Cloud; Machine Learning; TensorFlow
+Good Fit,No Fit,0.34,100.00,35.00,7.27,Agile,
+Good Fit,Potential Fit,56.30,22.22,24.24,49.89,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,75.08,0.00,0.00,60.06,,
+Good Fit,Potential Fit,56.96,33.33,27.27,51.02,C; C++; Teamwork,Computer Vision; Deep Learning; Docker; PyTorch; R; TensorFlow
+Good Fit,No Fit,36.40,0.00,0.00,29.12,,Teamwork
+Good Fit,No Fit,31.38,0.00,0.00,25.11,,Teamwork
+Good Fit,Potential Fit,65.42,0.00,0.00,52.34,,AWS; C; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,Potential Fit,59.24,75.00,90.00,65.39,C; C++; Teamwork,Project Management
+Good Fit,Potential Fit,67.71,8.33,10.57,56.28,SQL,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,No Fit,44.07,16.67,16.67,38.59,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,No Fit,31.53,100.00,35.00,32.23,Communication,
+Good Fit,Potential Fit,48.07,62.50,58.62,50.18,Angular; Communication; Git; HTML; JavaScript,CSS; Node.js; TypeScript
+Good Fit,No Fit,30.48,40.00,18.18,28.02,Communication; Teamwork,Agile; AWS; Azure
+Good Fit,Potential Fit,82.84,0.00,0.00,66.27,,Excel
+Good Fit,Potential Fit,49.91,50.00,44.83,48.89,Communication; CSS; HTML; JavaScript,Angular; Git; Node.js; TypeScript
+Good Fit,Good Fit,84.16,100.00,35.00,74.33,Excel,
+Good Fit,Potential Fit,46.21,70.00,67.57,50.48,Agile; Angular; Java; JavaScript; MySQL; PHP; SQL,Docker; Natural Language Processing; Scala
+Good Fit,Potential Fit,51.61,37.50,31.03,47.49,Communication; HTML; JavaScript,Angular; CSS; Git; Node.js; TypeScript
+Good Fit,No Fit,23.87,50.00,35.00,26.10,Excel,Leadership
+Good Fit,No Fit,9.99,0.00,0.00,7.99,,Agile
+Good Fit,No Fit,47.31,0.00,0.00,37.84,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,No Fit,37.58,50.00,35.00,37.07,Excel,Leadership
+Good Fit,Potential Fit,57.89,16.67,16.67,49.65,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,No Fit,37.36,45.45,45.77,39.04,Agile; Git; NoSQL; Python; SQL,AWS; Data Science; Docker; Machine Learning; Pandas; Teamwork
+Good Fit,No Fit,30.33,20.00,9.09,26.08,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,47.41,16.67,21.13,42.15,Java; SQL,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,Potential Fit,76.86,0.00,0.00,61.49,,
+Good Fit,Potential Fit,52.61,45.45,45.77,51.24,Agile; AWS; Pandas; Python; SQL,Data Science; Docker; Git; Machine Learning; NoSQL; Teamwork
+Good Fit,No Fit,43.54,0.00,0.00,34.84,,Teamwork
+Good Fit,Potential Fit,65.74,50.00,50.00,62.59,C; Project Management,C++; Teamwork
+Good Fit,Potential Fit,41.43,100.00,35.00,40.14,Agile,
+Good Fit,Potential Fit,55.00,22.22,24.24,48.85,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,54.56,50.00,47.55,53.16,Agile; AWS; Communication; Java; Microservices; SQL,Ansible; Jenkins; Kubernetes; Recruitment; REST API; Teamwork
+Good Fit,Potential Fit,46.83,22.22,24.24,42.31,C; C++,Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,51.45,0.00,0.00,41.16,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,82.87,11.11,11.38,68.57,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,32.49,0.00,0.00,25.99,,Linux; Python
+Good Fit,Good Fit,76.15,44.44,45.53,70.02,C; C++; Machine Learning; SQL,AWS; Google Cloud; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,58.29,41.67,35.90,53.81,Agile; Communication; Git; Jenkins; REST API,Ansible; Bash; CI/CD; Go; Oracle Database; Python; Teamwork
+Good Fit,Potential Fit,68.27,41.67,36.98,62.01,Agile; Java; REST API; SQL; Teamwork,Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment
+Good Fit,No Fit,30.30,20.00,9.09,26.06,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,No Fit,35.26,0.00,0.00,28.21,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,43.03,0.00,0.00,34.43,,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,No Fit,41.60,20.00,9.09,35.10,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,No Fit,43.55,0.00,0.00,34.84,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,53.73,0.00,0.00,42.98,,AWS; Data Engineering; Python
+Good Fit,Potential Fit,42.42,100.00,35.00,40.94,Communication,
+Good Fit,No Fit,13.98,0.00,0.00,11.18,,Agile
+Good Fit,No Fit,13.01,0.00,0.00,10.41,,
+Good Fit,Potential Fit,63.30,36.36,35.00,57.64,Agile; AWS; Python; SQL,Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Teamwork
+Good Fit,Potential Fit,54.44,25.00,27.59,49.07,CSS; HTML,Angular; Communication; Git; JavaScript; Node.js; TypeScript
+Good Fit,Potential Fit,50.34,0.00,0.00,40.27,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,52.60,40.00,18.18,45.72,Agile; Communication,AWS; Azure; Teamwork
+Good Fit,Potential Fit,70.93,0.00,0.00,56.75,,
+Good Fit,Good Fit,85.13,100.00,35.00,75.10,Excel,
+Good Fit,Potential Fit,62.20,0.00,0.00,49.76,,AWS; C; C++; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,Potential Fit,56.79,33.33,27.27,50.89,C; C++; Teamwork,Computer Vision; Deep Learning; Docker; PyTorch; R; TensorFlow
+Good Fit,Potential Fit,60.99,36.36,43.08,57.41,AWS; Git; Machine Learning; SQL,Agile; Data Science; Docker; NoSQL; Pandas; Python; Teamwork
+Good Fit,Potential Fit,51.70,54.55,55.26,52.41,Agile; AWS; C; C#; Elasticsearch; Java,.NET; Azure; Critical Thinking; Microsoft SQL Server; SQL
+Good Fit,No Fit,47.95,0.00,0.00,38.36,,Linux; Python
+Good Fit,Potential Fit,58.72,62.50,58.62,58.70,Angular; Communication; CSS; HTML; JavaScript,Git; Node.js; TypeScript
+Good Fit,Potential Fit,74.30,22.22,20.33,63.50,Python; Statistics,AWS; C; C++; Google Cloud; Machine Learning; SQL; TensorFlow
+Good Fit,No Fit,31.82,0.00,0.00,25.45,,Linux; Python
+Good Fit,Potential Fit,66.86,54.55,55.26,64.54,Agile; C; C#; Java; Microsoft SQL Server; SQL,.NET; AWS; Azure; Critical Thinking; Elasticsearch
+Good Fit,No Fit,29.82,0.00,0.00,23.85,,Teamwork
+Good Fit,Potential Fit,82.41,0.00,0.00,65.93,,Excel
+Good Fit,No Fit,14.40,100.00,35.00,18.52,Agile,
+Good Fit,No Fit,32.83,0.00,0.00,26.26,,Excel; Leadership
+Good Fit,No Fit,41.11,50.00,35.00,39.89,Leadership,Excel
+Good Fit,Potential Fit,66.70,36.36,34.21,60.20,Agile; C; C#; Java,.NET; AWS; Azure; Critical Thinking; Elasticsearch; Microsoft SQL Server; SQL
+Good Fit,No Fit,35.03,27.27,27.81,33.59,AWS; Python; SQL,CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Spark
+Good Fit,Potential Fit,56.93,11.11,12.12,47.97,Docker,C; C++; Computer Vision; Deep Learning; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,53.92,0.00,0.00,43.13,,AWS; Data Engineering; Python
+Good Fit,Potential Fit,54.64,11.11,12.12,46.14,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,Potential Fit,82.60,0.00,0.00,66.08,,Excel
+Good Fit,No Fit,27.59,45.45,46.36,31.35,AWS; Git; Machine Learning; Spark; SQL,CI/CD; Data Science; Docker; Microservices; NoSQL; Python
+Good Fit,Good Fit,81.34,100.00,35.00,72.07,Excel,
+Good Fit,Potential Fit,56.71,0.00,0.00,45.37,,AWS; Data Engineering; Python
+Good Fit,Potential Fit,55.85,0.00,0.00,44.68,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,53.96,0.00,0.00,43.17,,C; C++; Project Management; Teamwork
+Good Fit,Potential Fit,79.04,0.00,0.00,63.23,,Excel
+Good Fit,Potential Fit,56.06,25.00,23.08,49.46,Agile; Bash; Git,Ansible; CI/CD; Communication; Go; Jenkins; Oracle Database; Python; REST API; Teamwork
+Good Fit,Potential Fit,79.29,0.00,0.00,63.44,,Excel
+Good Fit,Good Fit,85.68,100.00,35.00,75.55,Excel,
+Good Fit,Potential Fit,71.11,16.67,13.21,59.53,SQL; Teamwork,Agile; Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API
+Good Fit,No Fit,10.69,100.00,35.00,15.55,Agile,
+Good Fit,No Fit,16.11,0.00,0.00,12.89,,Agile
+Good Fit,No Fit,37.66,0.00,0.00,30.13,,Teamwork
+Good Fit,No Fit,40.80,8.33,10.57,34.75,Java,Agile; Ansible; AWS; Communication; Jenkins; Kubernetes; Microservices; Recruitment; REST API; SQL; Teamwork
+Good Fit,Potential Fit,52.88,11.11,11.38,44.58,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Potential Fit,60.15,50.00,50.00,58.12,AWS; Python; SQL,Airflow; Data Engineering; NoSQL
+Good Fit,No Fit,5.88,0.00,0.00,4.70,,Agile
+Good Fit,No Fit,33.33,100.00,35.00,33.66,Excel; Leadership,
+Good Fit,No Fit,40.70,20.00,9.09,34.38,Agile,AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,70.14,41.67,35.90,63.29,Agile; CI/CD; Communication; Git; Jenkins,Ansible; Bash; Go; Oracle Database; Python; REST API; Teamwork
+Good Fit,Potential Fit,70.33,16.67,13.21,58.90,Agile; SQL,Ansible; AWS; Communication; Java; Jenkins; Kubernetes; Microservices; Recruitment; REST API; Teamwork
+Good Fit,Potential Fit,54.69,66.67,66.67,57.09,AWS; Python,Data Engineering
+Good Fit,No Fit,44.13,9.09,9.27,37.16,SQL,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark
+Good Fit,No Fit,40.90,50.00,35.00,39.72,Excel,Leadership
+Good Fit,No Fit,37.35,0.00,0.00,29.88,,Linux; Python
+Good Fit,Potential Fit,56.16,33.33,33.33,51.60,Python,AWS; Data Engineering
+Good Fit,No Fit,48.51,0.00,0.00,38.81,,Linux; Python
+Good Fit,No Fit,46.13,0.00,0.00,36.90,,Linux; Python
+Good Fit,Potential Fit,64.95,16.67,16.67,55.29,SQL,Airflow; AWS; Data Engineering; NoSQL; Python
+Good Fit,No Fit,41.23,0.00,0.00,32.98,,Teamwork
+Good Fit,Potential Fit,42.21,50.00,50.00,43.77,C; Python,C++; Linux
+Good Fit,No Fit,41.17,0.00,0.00,32.94,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Good Fit,85.32,22.22,22.76,72.81,C; C++,AWS; Google Cloud; Machine Learning; Python; SQL; Statistics; TensorFlow
+Good Fit,Potential Fit,76.78,11.11,11.38,63.70,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,29.09,0.00,0.00,23.27,,Agile; AWS; Azure; Communication; Teamwork
+Good Fit,No Fit,44.89,0.00,0.00,35.91,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,Potential Fit,33.50,66.67,66.67,40.14,AWS; Python,Data Engineering
+Good Fit,Potential Fit,56.95,87.50,86.21,62.80,Angular; Communication; CSS; Git; HTML; JavaScript; Node.js,TypeScript
+Good Fit,Potential Fit,42.39,72.73,74.17,48.75,AWS; CI/CD; Git; Machine Learning; NoSQL; Python; Spark; SQL,Data Science; Docker; Microservices
+Good Fit,Potential Fit,54.02,0.00,0.00,43.21,,Agile; AWS; Data Science; Docker; Git; Machine Learning; NoSQL; Pandas; Python; SQL; Teamwork
+Good Fit,Potential Fit,59.29,0.00,0.00,47.43,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,62.66,50.00,80.00,66.13,C; C++,Project Management; Teamwork
+Good Fit,No Fit,15.39,0.00,0.00,12.31,,Excel; Leadership
+Good Fit,No Fit,41.02,20.00,9.09,34.64,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,Potential Fit,63.41,58.33,58.11,62.35,Agile; AWS; Communication; Java; Jenkins; REST API; SQL,Ansible; Kubernetes; Microservices; Recruitment; Teamwork
+Good Fit,No Fit,45.78,0.00,0.00,36.62,,C; C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,23.13,40.00,18.18,22.14,Communication; Teamwork,Agile; AWS; Azure
+Good Fit,Potential Fit,66.59,11.11,11.38,55.54,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,No Fit,32.46,0.00,0.00,25.97,,Linux; Python
+Good Fit,No Fit,46.24,0.00,0.00,36.99,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,No Fit,44.81,12.50,3.45,36.54,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,Potential Fit,71.16,11.11,11.38,59.21,SQL,AWS; C; C++; Google Cloud; Machine Learning; Python; Statistics; TensorFlow
+Good Fit,Good Fit,82.47,33.33,34.15,72.81,C; C++; Machine Learning,AWS; Google Cloud; Python; SQL; Statistics; TensorFlow
+Good Fit,No Fit,10.97,100.00,35.00,15.77,Agile,
+Good Fit,No Fit,13.75,0.00,0.00,11.00,,Excel; Leadership
+Good Fit,Potential Fit,46.31,27.27,31.58,43.37,C; Java; SQL,.NET; Agile; AWS; Azure; C#; Critical Thinking; Elasticsearch; Microsoft SQL Server
+Good Fit,Good Fit,86.91,44.44,45.53,78.64,C; C++; Machine Learning; SQL,AWS; Google Cloud; Python; Statistics; TensorFlow
+Good Fit,No Fit,40.92,0.00,0.00,32.74,,Agile; AWS; Azure; Communication; Teamwork
+Good Fit,Potential Fit,47.98,20.00,9.09,40.20,Communication,Agile; AWS; Azure; Teamwork
+Good Fit,No Fit,0.00,0.00,0.00,0.00,,Linux; Python
+Good Fit,Potential Fit,53.06,11.11,12.12,44.87,C,C++; Computer Vision; Deep Learning; Docker; PyTorch; R; Teamwork; TensorFlow
+Good Fit,No Fit,31.04,0.00,0.00,24.83,,Teamwork
+Good Fit,No Fit,13.39,33.33,33.33,17.38,AWS,Data Engineering; Python
+Good Fit,Potential Fit,65.58,0.00,0.00,52.46,,.NET; Agile; AWS; Azure; C; C#; Critical Thinking; Elasticsearch; Java; Microsoft SQL Server; SQL
+Good Fit,Potential Fit,65.77,63.64,65.79,65.77,.NET; Agile; Azure; C; C#; Microsoft SQL Server; SQL,AWS; Critical Thinking; Elasticsearch; Java
+Good Fit,No Fit,23.17,100.00,100.00,38.54,Java,
+Good Fit,Potential Fit,52.36,45.45,51.54,52.20,Data Science; Machine Learning; Pandas; Python; SQL,Agile; AWS; Docker; Git; NoSQL; Teamwork
+Good Fit,No Fit,46.13,0.00,0.00,36.91,,AWS; CI/CD; Data Science; Docker; Git; Machine Learning; Microservices; NoSQL; Python; Spark; SQL
+Good Fit,No Fit,30.77,0.00,0.00,24.62,,Airflow; AWS; Data Engineering; NoSQL; Python; SQL
+Good Fit,Potential Fit,57.71,0.00,0.00,46.16,,Linux; Python
+Good Fit,Potential Fit,52.14,12.50,3.45,42.40,Communication,Angular; CSS; Git; HTML; JavaScript; Node.js; TypeScript
+Good Fit,Potential Fit,75.29,100.00,35.00,67.23,Excel,
+Good Fit,Potential Fit,41.85,63.64,64.90,46.46,AWS; CI/CD; Docker; NoSQL; Python; Spark; SQL,Data Science; Git; Machine Learning; Microservices
+Good Fit,Potential Fit,50.91,0.00,0.00,40.73,,AWS; Data Engineering; Python
