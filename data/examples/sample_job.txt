@@ -1,0 +1,1 @@
+We are looking for a software developer with Python, SQL, Git, Docker, and AWS experience. The candidate should be able to build REST APIs, work with databases, and collaborate with engineering teams.

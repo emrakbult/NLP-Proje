@@ -1,0 +1,12 @@
+streamlit>=1.35.0
+sentence-transformers>=3.0.0
+datasets>=2.19.0
+accelerate>=0.30.0
+scikit-learn>=1.4.0
+pandas>=2.2.0
+numpy>=1.26.0
+pypdf>=6.0.0
+pytest>=8.0.0
+
+# For GPU training on this Windows machine, install CUDA PyTorch separately:
+# python -m pip install --upgrade --force-reinstall torch --index-url https://download.pytorch.org/whl/cu126
