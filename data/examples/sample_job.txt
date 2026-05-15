@@ -1,1 +1,38 @@
-We are looking for a software developer with Python, SQL, Git, Docker, and AWS experience. The candidate should be able to build REST APIs, work with databases, and collaborate with engineering teams.
+Job Title: Backend Data Platform Engineer
+Department: Data Products and Internal Platforms
+Location: Hybrid
+
+About the Role
+We are hiring a backend-focused software engineer to support internal data products used by finance, operations, and customer success teams. The engineer will build Python services, maintain data pipelines, expose REST APIs, and improve the reliability of reporting workflows.
+
+Responsibilities
+- Build and maintain backend services using Python and FastAPI.
+- Design REST API endpoints for internal dashboards and operational tools.
+- Write efficient SQL queries and work with PostgreSQL databases.
+- Create data processing workflows using Pandas and production-ready ETL practices.
+- Use Git and code review workflows to collaborate with other engineers.
+- Package and run services with Docker for local development and deployment.
+- Deploy or support services on AWS, including basic monitoring and configuration.
+- Coordinate with analysts, product managers, and QA engineers in an Agile team.
+- Improve data reliability, documentation, and incident investigation processes.
+
+Required Skills
+- Strong Python programming experience
+- SQL and PostgreSQL experience
+- REST API development with FastAPI or similar frameworks
+- Git-based version control and code review
+- Data analysis or data engineering experience
+- Docker experience for containerized services
+- AWS experience for cloud deployment or service operation
+- Linux command line familiarity
+- Clear communication and teamwork
+
+Nice To Have
+- Apache Airflow for scheduled data workflows
+- CI/CD experience with GitHub Actions or Jenkins
+- Kafka or event-driven data processing
+- Kubernetes experience
+- Experience working with finance, payments, or reporting systems
+
+Evaluation Focus
+The best candidates should show strong backend and data engineering fundamentals. Missing Docker, AWS, or Airflow experience should be discussed during the interview because these skills are important for this role.

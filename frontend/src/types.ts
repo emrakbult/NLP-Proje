@@ -16,6 +16,24 @@ export type MatchResult = {
   candidate_suggestions: string[];
 };
 
+export type ModelComparisonItem = {
+  model_id: string;
+  model_label: string;
+  description: string;
+  model: string;
+  available: boolean;
+  semantic_score?: number;
+  unweighted_skill_match_score?: number;
+  skill_match_score?: number;
+  overall_score?: number;
+  match_category?: string;
+  error?: string;
+};
+
+export type ModelComparisonPayload = {
+  items: ModelComparisonItem[];
+};
+
 export type SamplePayload = {
   resume_text: string;
   job_description_text: string;

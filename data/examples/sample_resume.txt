@@ -1,1 +1,35 @@
-Software developer with experience in Python, SQL, Git, REST APIs, and data analysis. Worked on web applications, database reporting, and automation scripts. Familiar with Agile teamwork and code review practices.
+Candidate: Elif Demir
+Target Role: Backend / Data-Oriented Software Engineer
+
+Professional Summary
+Software engineer with 3 years of experience building backend services, internal reporting tools, and data automation workflows for finance and operations teams. Strong practical experience with Python, SQL, Git, REST APIs, PostgreSQL, data analysis, Pandas, and Agile software development. Comfortable working with product managers, analysts, and QA engineers to turn business requirements into maintainable backend features.
+
+Work Experience
+Backend Software Engineer, NovaPay Technologies
+March 2023 - Present
+- Developed Python and FastAPI services for payment reconciliation, customer account reporting, and transaction validation.
+- Designed SQL queries and PostgreSQL database views used by finance analysts for daily operational reporting.
+- Built REST API endpoints for internal dashboards and integrated them with authentication, validation, and logging layers.
+- Used Git and GitHub pull requests for version control, code review, and release coordination.
+- Improved a batch reporting script by replacing manual Excel work with automated Python and Pandas processing.
+- Participated in Agile sprint planning, backlog refinement, and technical review meetings.
+
+Junior Software Developer, Orbit Analytics
+July 2021 - February 2023
+- Maintained Python automation scripts for data cleaning, CSV processing, and recurring business reports.
+- Wrote SQL queries for data quality checks and created lightweight ETL jobs for analytics teams.
+- Collaborated with data analysts to debug reporting issues and document data transformation logic.
+- Supported Linux-based deployment environments and basic Bash scripts for scheduled jobs.
+
+Technical Skills
+- Programming: Python, SQL, JavaScript
+- Backend: FastAPI, REST API, Flask
+- Data: PostgreSQL, Pandas, NumPy, Data Analysis, Excel
+- Tools: Git, GitHub, Linux, Bash
+- Practices: Agile, Scrum, Code Review, Problem Solving, Teamwork, Communication
+
+Education
+B.Sc. in Computer Engineering
+
+Notes
+The candidate has worked mostly on backend services and data automation. Her experience is stronger in application development and reporting workflows than in cloud infrastructure or orchestration ownership.

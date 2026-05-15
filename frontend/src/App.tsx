@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { analyzeMatch, getHealth, getSample } from "./api";
-import type { HealthPayload, MatchResult } from "./types";
+import { analyzeMatch, compareModels, getHealth, getSample } from "./api";
+import type { HealthPayload, MatchResult, ModelComparisonItem } from "./types";
 
 const pipelineSteps = [
   "Encoder embeddings",
@@ -38,6 +38,63 @@ function ScoreCard({
       </div>
       <div className="progress-track">
         <div className="progress-fill" style={{ width: `${width}%` }} />
+      </div>
+    </section>
+  );
+}
+
+function CompactScoreBar({ value }: { value?: number }) {
+  if (typeof value !== "number") {
+    return <span className="comparison-muted">Unavailable</span>;
+  }
+
+  const width = Math.max(0, Math.min(100, value));
+  return (
+    <div className="compact-score">
+      <span>{formatNumber(value)}%</span>
+      <div className="compact-track">
+        <div className="compact-fill" style={{ width: `${width}%` }} />
+      </div>
+    </div>
+  );
+}
+
+function ModelComparisonPanel({ items }: { items: ModelComparisonItem[] }) {
+  if (items.length === 0) return null;
+
+  return (
+    <section className="comparison-panel">
+      <div className="comparison-header">
+        <div>
+          <div className="section-title">Model Comparison</div>
+          <p>Same resume and job description, scored with the available encoder versions.</p>
+        </div>
+        <span>Skill scores stay constant; semantic scores show model behavior.</span>
+      </div>
+
+      <div className="comparison-table">
+        <div className="comparison-row comparison-row-head">
+          <span>Model</span>
+          <span>Semantic</span>
+          <span>Weighted Skills</span>
+          <span>Overall</span>
+          <span>Category</span>
+        </div>
+        {items.map((item) => (
+          <div className="comparison-row" key={item.model_id}>
+            <div className="comparison-model">
+              <strong>{item.model_label}</strong>
+              <small>{item.description}</small>
+              <small>{item.model}</small>
+            </div>
+            <CompactScoreBar value={item.semantic_score} />
+            <CompactScoreBar value={item.skill_match_score} />
+            <CompactScoreBar value={item.overall_score} />
+            <div className="comparison-category">
+              {item.available ? item.match_category : item.error ?? "Unavailable"}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -130,14 +187,24 @@ function App() {
   const [resumeText, setResumeText] = useState("");
   const [jobText, setJobText] = useState("");
   const [result, setResult] = useState<MatchResult | null>(null);
+  const [comparison, setComparison] = useState<ModelComparisonItem[]>([]);
   const [health, setHealth] = useState<HealthPayload | null>(null);
   const [loading, setLoading] = useState(false);
+  const [loadingComparison, setLoadingComparison] = useState(false);
   const [loadingSample, setLoadingSample] = useState(false);
   const [error, setError] = useState("");
 
+  const hasInput = useMemo(
+    () => resumeText.trim().length > 0 && jobText.trim().length > 0,
+    [resumeText, jobText]
+  );
   const canAnalyze = useMemo(
-    () => resumeText.trim().length > 0 && jobText.trim().length > 0 && !loading,
-    [resumeText, jobText, loading]
+    () => hasInput && !loading && !loadingComparison && !loadingSample,
+    [hasInput, loading, loadingComparison, loadingSample]
+  );
+  const canCompare = useMemo(
+    () => hasInput && !loading && !loadingComparison && !loadingSample,
+    [hasInput, loading, loadingComparison, loadingSample]
   );
 
   useEffect(() => {
@@ -154,6 +221,7 @@ function App() {
       setResumeText(sample.resume_text);
       setJobText(sample.job_description_text);
       setResult(null);
+      setComparison([]);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not load sample data.");
     } finally {
@@ -171,10 +239,28 @@ function App() {
         job_description_text: jobText
       });
       setResult(analysis);
+      setComparison([]);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Analysis failed.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function compare() {
+    if (!canCompare) return;
+    setLoadingComparison(true);
+    setError("");
+    try {
+      const payload = await compareModels({
+        resume_text: resumeText,
+        job_description_text: jobText
+      });
+      setComparison(payload.items);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Model comparison failed.");
+    } finally {
+      setLoadingComparison(false);
     }
   }
 
@@ -235,11 +321,18 @@ function App() {
       </section>
 
       <section className="action-row">
-        <button className="button button-secondary" onClick={loadExample} disabled={loadingSample || loading}>
+        <button
+          className="button button-secondary"
+          onClick={loadExample}
+          disabled={loadingSample || loading || loadingComparison}
+        >
           {loadingSample ? "Loading..." : "Load Example"}
         </button>
         <button className="button button-primary" onClick={analyze} disabled={!canAnalyze}>
           {loading ? "Analyzing..." : "Analyze Match"}
+        </button>
+        <button className="button button-secondary" onClick={compare} disabled={!canCompare}>
+          {loadingComparison ? "Comparing..." : "Compare Models"}
         </button>
       </section>
 
@@ -249,7 +342,12 @@ function App() {
       </section>
 
       {result ? (
-        <ResultDashboard result={result} />
+        <>
+          <ResultDashboard result={result} />
+          <ModelComparisonPanel items={comparison} />
+        </>
+      ) : comparison.length > 0 ? (
+        <ModelComparisonPanel items={comparison} />
       ) : (
         <section className="empty-result">
           Load the example or paste your own resume and job description, then run the analysis.

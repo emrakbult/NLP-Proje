@@ -41,6 +41,56 @@ def _format_skills(skills: list[str], limit: int = 8) -> str:
     return formatted
 
 
+def _score_band(score: float) -> str:
+    if score >= 80:
+        return "high"
+    if score >= 60:
+        return "moderate"
+    if score >= 40:
+        return "limited"
+    return "low"
+
+
+def _gap_severity(skill_match_score: float, missing_skills: list[str]) -> str:
+    if not missing_skills:
+        return "no explicit skill gap"
+    if skill_match_score >= 75:
+        return "minor skill gap"
+    if skill_match_score >= 50:
+        return "moderate skill gap"
+    return "significant skill gap"
+
+
+def _recommended_hr_action(category: str, missing_skills: list[str]) -> str:
+    if category == "Strong Match":
+        return (
+            "Recommended HR action: move the candidate forward, while still validating "
+            "the depth of the listed experience during the interview."
+        )
+    if category in {"Strong Semantic Match with Skill Gaps", "Good Match with Skill Gaps"}:
+        return (
+            "Recommended HR action: keep the candidate in consideration, but use the interview "
+            "to verify whether the missing skills are true gaps or simply not documented in the CV."
+        )
+    if category == "Partial Match":
+        return (
+            "Recommended HR action: consider the candidate for screening only if the role can tolerate "
+            "some ramp-up time or if the missing requirements are not mandatory."
+        )
+    if category == "Weak Match":
+        return (
+            "Recommended HR action: do not prioritize the candidate unless the applicant pool is limited "
+            "or the role requirements can be adjusted."
+        )
+
+    if missing_skills:
+        return (
+            "Recommended HR action: reject or hold for another role unless there is external evidence "
+            "that addresses the missing requirements."
+        )
+    return "Recommended HR action: review manually before making a screening decision."
+
+
 def generate_hr_evaluation(
     overall_score: float,
     semantic_score: float,
@@ -58,6 +108,9 @@ def generate_hr_evaluation(
     )
     matched_text = _format_skills(matched_skills)
     missing_text = _format_skills(missing_skills)
+    semantic_band = _score_band(semantic_score)
+    skill_band = _score_band(skill_match_score)
+    gap_severity = _gap_severity(skill_match_score, missing_skills)
 
     if category == "Strong Semantic Match with Skill Gaps":
         summary = (
@@ -79,17 +132,27 @@ def generate_hr_evaluation(
         summary = "The candidate is not recommended for this role based on the current resume-job comparison."
 
     explanation = (
-        f"{summary} The semantic similarity score is {semantic_score:.2f}, "
-        f"and the weighted skill match score is {skill_match_score:.2f}. "
-        f"Matched skills include: {matched_text}."
+        f"{summary} Overall suitability is {overall_score:.2f}, which places the candidate in the "
+        f"'{category}' category. The semantic similarity score is {semantic_score:.2f}, indicating a "
+        f"{semantic_band} level of textual and role-context alignment between the CV and the job description. "
+        f"The weighted skill match score is {skill_match_score:.2f}, indicating {skill_band} explicit skill "
+        f"coverage and a {gap_severity} from the extracted job requirements. Matched skills include: "
+        f"{matched_text}."
     )
 
     if missing_skills:
-        explanation += f" Missing or unclear job requirements include: {missing_text}."
+        explanation += (
+            f" Missing or unclear job requirements include: {missing_text}. "
+            "These gaps should be treated as interview validation points rather than automatic rejection "
+            "criteria, because the CV may omit some practical experience."
+        )
     else:
-        explanation += " No explicit missing skills were found in the skill dictionary comparison."
+        explanation += (
+            " No explicit missing skills were found in the skill dictionary comparison, so the interview "
+            "should focus on depth of experience, project ownership, and evidence of real-world usage."
+        )
 
-    return explanation
+    return f"{explanation} {_recommended_hr_action(category, missing_skills)}"
 
 
 def generate_interview_focus(missing_skills: list[str], limit: int = 6) -> list[str]:

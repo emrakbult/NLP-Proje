@@ -1,4 +1,4 @@
-import type { HealthPayload, MatchResult, SamplePayload } from "./types";
+import type { HealthPayload, MatchResult, ModelComparisonPayload, SamplePayload } from "./types";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
 
@@ -37,6 +37,13 @@ export function getSample(): Promise<SamplePayload> {
 
 export function analyzeMatch(payload: SamplePayload): Promise<MatchResult> {
   return request<MatchResult>("/analyze", {
+    method: "POST",
+    body: JSON.stringify(payload)
+  });
+}
+
+export function compareModels(payload: SamplePayload): Promise<ModelComparisonPayload> {
+  return request<ModelComparisonPayload>("/compare", {
     method: "POST",
     body: JSON.stringify(payload)
   });
