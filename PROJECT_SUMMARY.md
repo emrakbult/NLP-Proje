@@ -24,7 +24,8 @@ The final system can:
 - Produce cautious match categories when strong semantic similarity still has missing key skills
 - Generate HR-oriented explanations
 - Suggest technical interview focus areas
-- Run through a Streamlit user interface
+- Run through a React Vite dashboard backed by FastAPI
+- Keep Streamlit as an optional Python-only demo interface
 - Evaluate the model on a real resume-job fit dataset
 
 ## Dataset
@@ -227,7 +228,39 @@ Technical and role-specific skills receive higher weights than broad general ski
 
 ## User Interface
 
-The project includes a Streamlit app:
+The primary user interface is now a React Vite dashboard:
+
+```text
+frontend/
+```
+
+The React frontend communicates with a FastAPI backend:
+
+```text
+api.py
+```
+
+Run the backend:
+
+```bash
+.\.venv\Scripts\python.exe -m uvicorn api:app --reload --port 8000
+```
+
+Run the frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+The project also keeps the original Streamlit app as an optional Python-only demo:
 
 ```text
 app.py

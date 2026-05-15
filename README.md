@@ -106,6 +106,7 @@ NLP-Proje/
 |-- RESULTS.md
 |-- README.md
 |-- requirements.txt
+|-- api.py
 |-- app.py
 |-- data/
 |   |-- raw/
@@ -135,13 +136,21 @@ NLP-Proje/
 |   |-- similarity.py
 |   |-- recommender.py
 |   `-- matcher.py
-`-- tests/
+|-- tests/
     |-- conftest.py
     |-- test_evaluation.py
     |-- test_recommender.py
     |-- test_skill_extractor.py
     |-- test_similarity.py
     `-- test_matcher.py
+`-- frontend/
+    |-- package.json
+    |-- index.html
+    `-- src/
+        |-- App.tsx
+        |-- api.ts
+        |-- styles.css
+        `-- types.ts
 ```
 
 ## Setup
@@ -343,7 +352,43 @@ Use it in existing evaluation scripts by passing the saved model path, or omit `
 .\.venv\Scripts\python.exe scripts/evaluate_matching.py --model models/resume-job-minilm-finetuned-2epoch --split test --limit 300 --sample-mode balanced
 ```
 
+## React Vite App
+
+The primary UI is now a React Vite dashboard backed by FastAPI. The Python NLP pipeline remains unchanged behind the API.
+
+Start the FastAPI backend:
+
+```bash
+.\.venv\Scripts\python.exe -m uvicorn api:app --reload --port 8000
+```
+
+Start the React frontend in a second terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+Backend endpoints:
+
+```text
+GET  /health
+GET  /sample
+POST /analyze
+```
+
+The backend loads the fine-tuned model once and reuses it for analysis requests.
+
 ## Streamlit App
+
+Streamlit is kept as an optional Python-only demo interface.
 
 Run the local interface:
 
