@@ -4,10 +4,11 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from src.document_extraction import extract_document_text
 from src.matcher import match_resume_to_job
 from src.similarity import (
     BASE_MODEL_NAME,
@@ -16,6 +17,7 @@ from src.similarity import (
     FINAL_FINE_TUNED_MODEL_PATH,
     load_model,
 )
+from src.skill_evidence import DEFAULT_SKILL_EVIDENCE_MODEL_PATH, is_skill_evidence_model_available
 from src.skill_extractor import load_skills
 
 
@@ -107,6 +109,8 @@ def health() -> dict[str, object]:
         "status": "ok",
         "model": compact_model_name(DEFAULT_MODEL_NAME),
         "model_path": DEFAULT_MODEL_NAME,
+        "skill_evidence_classifier_available": is_skill_evidence_model_available(),
+        "skill_evidence_classifier_path": str(DEFAULT_SKILL_EVIDENCE_MODEL_PATH),
     }
 
 
@@ -116,6 +120,24 @@ def sample() -> SampleResponse:
         resume_text=SAMPLE_RESUME_PATH.read_text(encoding="utf-8"),
         job_description_text=SAMPLE_JOB_PATH.read_text(encoding="utf-8"),
     )
+
+
+@app.post("/extract-text")
+async def extract_text(file: UploadFile = File(...)) -> dict[str, object]:
+    file_name = file.filename or "uploaded"
+    content = await file.read()
+
+    try:
+        extracted = extract_document_text(file_name, content)
+    except (RuntimeError, ValueError) as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "file_name": extracted.file_name,
+        "extracted_text": extracted.extracted_text,
+        "character_count": extracted.character_count,
+        "converter": extracted.converter,
+    }
 
 
 @app.post("/analyze")

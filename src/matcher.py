@@ -4,7 +4,8 @@ from typing import Any
 
 from src.recommender import generate_recommendation
 from src.similarity import calculate_cosine_similarity, load_model, similarity_to_percentage
-from src.skill_extractor import SkillDictionary, extract_and_compare, load_skills
+from src.skill_evidence import EvidenceClassifier, classify_resume_skill_evidence
+from src.skill_extractor import SkillDictionary, compare_skills, extract_skills, load_skills
 from src.skill_weights import GENERAL_ONLY_SKILL_SCORE_CAP, has_role_specific_skill, total_skill_weight
 
 
@@ -51,6 +52,7 @@ def match_resume_to_job(
     job_description_text: str,
     model: Any | None = None,
     skill_dictionary: SkillDictionary | None = None,
+    evidence_classifier: EvidenceClassifier | None = None,
 ) -> dict[str, Any]:
     """Run the first complete matching pipeline for one resume-job pair."""
 
@@ -60,7 +62,23 @@ def match_resume_to_job(
     raw_similarity = calculate_cosine_similarity(resume_text, job_description_text, model)
     semantic_score = similarity_to_percentage(raw_similarity)
 
-    skill_result = extract_and_compare(resume_text, job_description_text, skill_dictionary)
+    evidence_result = classify_resume_skill_evidence(
+        resume_text,
+        skill_dictionary,
+        classifier=evidence_classifier,
+    )
+    resume_skills = evidence_result["positive_resume_skills"]
+    job_skills = extract_skills(job_description_text, skill_dictionary)
+    comparison = compare_skills(resume_skills, job_skills)
+    skill_result = {
+        "resume_skills": sorted(resume_skills, key=str.casefold),
+        "job_skills": sorted(job_skills, key=str.casefold),
+        **comparison,
+        "negated_resume_skills": evidence_result["negated_resume_skills"],
+        "unclear_resume_skills": evidence_result["unclear_resume_skills"],
+        "skill_evidence": evidence_result["skill_evidence"],
+        "skill_evidence_model_available": evidence_result["skill_evidence_model_available"],
+    }
     unweighted_skill_match_score = calculate_skill_match_score(
         skill_result["matched_skills"],
         skill_result["job_skills"],

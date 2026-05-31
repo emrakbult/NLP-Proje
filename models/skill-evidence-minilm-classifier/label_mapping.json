@@ -1,0 +1,12 @@
+{
+  "label_to_id": {
+    "positive": 0,
+    "negated": 1,
+    "unclear": 2
+  },
+  "id_to_label": {
+    "0": "positive",
+    "1": "negated",
+    "2": "unclear"
+  }
+}

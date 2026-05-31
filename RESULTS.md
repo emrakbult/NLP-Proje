@@ -190,7 +190,51 @@ Skill extraction is evaluated through:
 - Manual qualitative inspection in error analysis
 - Matched and missing skill explanations in the Streamlit app
 
-The current skill extraction module is dictionary-based and explainable. It supports canonical skill normalization, aliases, technical terms such as `C++`, `C#`, `.NET`, and `Node.js`, and weighted scoring for technical versus general skills.
+The current skill extraction module uses dictionary matching for candidate skill spans and a model-based evidence classifier for resume-side validation. This prevents negated or weak mentions from being counted as matched skills.
+
+## Skill Evidence Classifier Result
+
+The skill evidence classifier was trained on a manually curated dataset:
+
+```text
+data/skill_evidence/skill_evidence_dataset.csv
+```
+
+Dataset size:
+
+| Label | Rows |
+|---|---:|
+| Positive | 67 |
+| Negated | 67 |
+| Unclear | 67 |
+| Total | 201 |
+
+Split:
+
+| Split | Rows |
+|---|---:|
+| Train | 165 |
+| Validation | 18 |
+| Test | 18 |
+
+Classifier configuration:
+
+| Setting | Value |
+|---|---|
+| Base model | microsoft/MiniLM-L12-H384-uncased |
+| Output path | models/skill-evidence-minilm-classifier/ |
+| Epochs | 12 |
+| Batch size | 16 |
+| Device | CUDA GPU |
+
+Final result:
+
+| Metric | Value |
+|---|---:|
+| Validation accuracy | 1.0000 |
+| Test accuracy | 0.9444 |
+
+This dataset is intentionally small and controlled, so these metrics should not be interpreted as production-level generalization. The value for the course project is that the pipeline now uses a second encoder-only model to classify sentence-level evidence as `positive`, `negated`, or `unclear`.
 
 ## Final Status
 
@@ -201,12 +245,16 @@ The project now includes:
 - GPU fine-tuned Sentence Transformer
 - Cosine similarity scoring
 - Skill extraction and normalization
+- Model-based skill evidence classification
 - Matched and missing skill explanations
+- Negated and unclear skill explanations
 - Weighted skill scoring
+- MarkItDown file upload for PDF/DOCX/TXT/Markdown inputs
 - HR-oriented recommendations
 - Full test evaluation
 - Ranking evaluation
 - Qualitative error analysis
-- Streamlit user interface
+- React Vite user interface backed by FastAPI
+- Optional Streamlit user interface
 
 The project is ready for demonstration and presentation.

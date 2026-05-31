@@ -1,13 +1,22 @@
-import type { HealthPayload, MatchResult, ModelComparisonPayload, SamplePayload } from "./types";
+import type {
+  ExtractedDocumentPayload,
+  HealthPayload,
+  MatchResult,
+  ModelComparisonPayload,
+  SamplePayload
+} from "./types";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  const isFormData = options?.body instanceof FormData;
   const response = await fetch(`${API_BASE_URL}${path}`, {
-    headers: {
-      "Content-Type": "application/json",
-      ...(options?.headers ?? {})
-    },
+    headers: isFormData
+      ? options?.headers
+      : {
+          "Content-Type": "application/json",
+          ...(options?.headers ?? {})
+        },
     ...options
   });
 
@@ -46,5 +55,15 @@ export function compareModels(payload: SamplePayload): Promise<ModelComparisonPa
   return request<ModelComparisonPayload>("/compare", {
     method: "POST",
     body: JSON.stringify(payload)
+  });
+}
+
+export function extractText(file: File): Promise<ExtractedDocumentPayload> {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  return request<ExtractedDocumentPayload>("/extract-text", {
+    method: "POST",
+    body: formData
   });
 }

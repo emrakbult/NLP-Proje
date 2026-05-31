@@ -1,0 +1,106 @@
+{
+  "base_model": "microsoft/MiniLM-L12-H384-uncased",
+  "dataset": "data\\skill_evidence\\skill_evidence_dataset.csv",
+  "output_dir": "models\\skill-evidence-minilm-classifier",
+  "device": "cuda",
+  "epochs": 12,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "max_length": 160,
+  "split_sizes": {
+    "train": 165,
+    "validation": 18,
+    "test": 18
+  },
+  "label_distribution": {
+    "train": {
+      "positive": 55,
+      "negated": 55,
+      "unclear": 55
+    },
+    "validation": {
+      "positive": 6,
+      "negated": 6,
+      "unclear": 6
+    },
+    "test": {
+      "positive": 6,
+      "negated": 6,
+      "unclear": 6
+    }
+  },
+  "validation_metrics": {
+    "loss": 0.2574310898780823,
+    "accuracy": 1.0,
+    "classification_report": {
+      "positive": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 6.0
+      },
+      "negated": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 6.0
+      },
+      "unclear": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 6.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      }
+    }
+  },
+  "test_metrics": {
+    "loss": 0.38778509199619293,
+    "accuracy": 0.9444444444444444,
+    "classification_report": {
+      "positive": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 6.0
+      },
+      "negated": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1-score": 0.9230769230769231,
+        "support": 6.0
+      },
+      "unclear": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.9090909090909091,
+        "support": 6.0
+      },
+      "accuracy": 0.9444444444444444,
+      "macro avg": {
+        "precision": 0.9523809523809524,
+        "recall": 0.9444444444444445,
+        "f1-score": 0.9440559440559441,
+        "support": 18.0
+      },
+      "weighted avg": {
+        "precision": 0.9523809523809523,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9440559440559441,
+        "support": 18.0
+      }
+    }
+  }
+}

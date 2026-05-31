@@ -13,6 +13,8 @@ It compares a candidate resume with a job description and returns:
 - Interview focus suggestions
 - Candidate improvement suggestions
 - Model comparison against previous encoder versions
+- PDF/DOCX/TXT upload for resume and job description
+- Sentence-level skill evidence validation for positive, negated, and unclear skill mentions
 
 The system is a decision-support prototype. It is not intended to make automated hiring decisions.
 
@@ -78,6 +80,12 @@ Open this address in the browser and use the interface to analyze a resume and j
 ## Main Runtime Flow
 
 ```text
+Uploaded files or pasted text
+        |
+        v
+MarkItDown text extraction for PDF/DOCX
+        |
+        v
 Resume text + job description text
         |
         v
@@ -88,6 +96,9 @@ Cosine similarity score
         |
         v
 Dictionary-based skill extraction
+        |
+        v
+Skill evidence classifier for resume mentions
         |
         v
 Weighted skill match score
@@ -102,6 +113,8 @@ Explainable HR result
 ## Model Approach
 
 The project uses an encoder-only Sentence Transformer model for semantic matching. The local model is fine-tuned for the resume-job matching task, so the system is adapted to compare candidate profiles and job requirements in the same embedding space.
+
+The project also uses a second encoder-only classifier for skill evidence validation. This classifier checks whether a resume sentence provides positive evidence for a skill, negates the skill, or mentions it unclearly.
 
 Fine-tuning is part of the project methodology, but this README focuses on running the completed system. Detailed experiment results are documented in `RESULTS.md`.
 
@@ -124,6 +137,7 @@ GET  /health
 GET  /sample
 POST /analyze
 POST /compare
+POST /extract-text
 ```
 
 Main endpoint:
@@ -145,6 +159,8 @@ The response includes the scores, skill lists, match category, HR evaluation, in
 
 Use `POST /compare` to score the same resume-job pair with the available model versions and compare semantic, skill, and overall scores.
 
+Use `POST /extract-text` with multipart field `file` to extract text from `.pdf`, `.docx`, `.txt`, or `.md` files. The React UI uses this endpoint for both resume and job description uploads.
+
 ## Project Structure
 
 ```text
@@ -160,6 +176,7 @@ NLP-Proje/
 |-- data/
 |   |-- raw/
 |   |-- processed/
+|   |-- skill_evidence/
 |   |-- skills.json
 |   `-- examples/
 |-- frontend/
@@ -177,6 +194,7 @@ NLP-Proje/
 |   |-- skill_extractor.py
 |   |-- skill_weights.py
 |   |-- matcher.py
+|   |-- skill_evidence.py
 |   |-- recommender.py
 |   `-- evaluation.py
 `-- tests/
@@ -188,9 +206,11 @@ NLP-Proje/
 - `frontend/src/App.tsx`: main React UI
 - `src/similarity.py`: encoder-only model loading and cosine similarity
 - `src/skill_extractor.py`: skill detection and alias handling
+- `src/skill_evidence.py`: sentence-level positive, negated, and unclear skill evidence classification
 - `src/skill_weights.py`: role-specific skill weighting
 - `src/matcher.py`: final matching pipeline
 - `src/recommender.py`: match category, HR explanation, interview focus, and candidate suggestions
+- `data/skill_evidence/skill_evidence_dataset.csv`: manually curated skill evidence classifier dataset
 - `data/skills.json`: skill dictionary used for explainability
 - `models/`: local Sentence Transformer model files used by the system
 

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { analyzeMatch, compareModels, getHealth, getSample } from "./api";
-import type { HealthPayload, MatchResult, ModelComparisonItem } from "./types";
+import { analyzeMatch, compareModels, extractText, getHealth, getSample } from "./api";
+import type { ExtractedDocumentPayload, HealthPayload, MatchResult, ModelComparisonItem } from "./types";
 
 const pipelineSteps = [
   "Encoder embeddings",
@@ -8,6 +8,9 @@ const pipelineSteps = [
   "Skill extraction",
   "Explainable HR notes"
 ];
+
+type UploadTarget = "resume" | "job";
+type UploadInfo = ExtractedDocumentPayload | null;
 
 function formatNumber(value: number): string {
   return value.toFixed(2);
@@ -142,6 +145,44 @@ function ListPanel({ title, items }: { title: string; items: string[] }) {
   );
 }
 
+function EvidencePanel({ result }: { result: MatchResult }) {
+  const visibleEvidence = result.skill_evidence.slice(0, 16);
+
+  return (
+    <section className="evidence-panel">
+      <div className="evidence-header">
+        <div>
+          <div className="section-title">Skill Evidence</div>
+          <p>
+            Sentence-level classifier output for detected resume skills.
+            {result.skill_evidence_model_available
+              ? " Model validation is active."
+              : " Dictionary-only fallback is active."}
+          </p>
+        </div>
+        <span>{result.skill_evidence.length} mentions</span>
+      </div>
+
+      {visibleEvidence.length === 0 ? (
+        <div className="empty-evidence">No resume skill evidence found.</div>
+      ) : (
+        <div className="evidence-list">
+          {visibleEvidence.map((item, index) => (
+            <article className={`evidence-item evidence-${item.label}`} key={`${item.skill}-${index}`}>
+              <div className="evidence-meta">
+                <strong>{item.skill}</strong>
+                <span>{item.label}</span>
+                <span>{formatNumber(item.confidence * 100)}%</span>
+              </div>
+              <p>{item.sentence}</p>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function ResultDashboard({ result }: { result: MatchResult }) {
   return (
     <section className="results-dashboard">
@@ -167,7 +208,11 @@ function ResultDashboard({ result }: { result: MatchResult }) {
         <SkillGroup title="Missing Skills" skills={result.missing_skills} tone="missing" />
         <SkillGroup title="Detected in Resume" skills={result.resume_skills} tone="neutral" />
         <SkillGroup title="Required by Job" skills={result.job_skills} tone="neutral" />
+        <SkillGroup title="Negated Mentions" skills={result.negated_resume_skills} tone="missing" />
+        <SkillGroup title="Unclear Mentions" skills={result.unclear_resume_skills} tone="neutral" />
       </div>
+
+      <EvidencePanel result={result} />
 
       <div className="insight-grid">
         <section className="analysis-panel analysis-panel-large">
@@ -192,6 +237,11 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [loadingComparison, setLoadingComparison] = useState(false);
   const [loadingSample, setLoadingSample] = useState(false);
+  const [uploadingTarget, setUploadingTarget] = useState<UploadTarget | null>(null);
+  const [uploadInfo, setUploadInfo] = useState<Record<UploadTarget, UploadInfo>>({
+    resume: null,
+    job: null
+  });
   const [error, setError] = useState("");
 
   const hasInput = useMemo(
@@ -199,12 +249,12 @@ function App() {
     [resumeText, jobText]
   );
   const canAnalyze = useMemo(
-    () => hasInput && !loading && !loadingComparison && !loadingSample,
-    [hasInput, loading, loadingComparison, loadingSample]
+    () => hasInput && !loading && !loadingComparison && !loadingSample && uploadingTarget === null,
+    [hasInput, loading, loadingComparison, loadingSample, uploadingTarget]
   );
   const canCompare = useMemo(
-    () => hasInput && !loading && !loadingComparison && !loadingSample,
-    [hasInput, loading, loadingComparison, loadingSample]
+    () => hasInput && !loading && !loadingComparison && !loadingSample && uploadingTarget === null,
+    [hasInput, loading, loadingComparison, loadingSample, uploadingTarget]
   );
 
   useEffect(() => {
@@ -222,6 +272,7 @@ function App() {
       setJobText(sample.job_description_text);
       setResult(null);
       setComparison([]);
+      setUploadInfo({ resume: null, job: null });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not load sample data.");
     } finally {
@@ -264,6 +315,28 @@ function App() {
     }
   }
 
+  async function uploadDocument(target: UploadTarget, file: File | undefined) {
+    if (!file) return;
+
+    setUploadingTarget(target);
+    setError("");
+    try {
+      const extracted = await extractText(file);
+      if (target === "resume") {
+        setResumeText(extracted.extracted_text);
+      } else {
+        setJobText(extracted.extracted_text);
+      }
+      setUploadInfo((current) => ({ ...current, [target]: extracted }));
+      setResult(null);
+      setComparison([]);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not extract text from the uploaded file.");
+    } finally {
+      setUploadingTarget(null);
+    }
+  }
+
   return (
     <main className="page-shell">
       <header className="topbar">
@@ -298,6 +371,25 @@ function App() {
             <span>Resume Content</span>
             <span>{resumeText.length.toLocaleString()} chars</span>
           </div>
+          <div className="upload-strip">
+            <label className="upload-button">
+              {uploadingTarget === "resume" ? "Extracting..." : "Upload Resume"}
+              <input
+                type="file"
+                accept=".pdf,.docx,.txt,.md"
+                disabled={uploadingTarget !== null || loading || loadingComparison}
+                onChange={(event) => {
+                  void uploadDocument("resume", event.target.files?.[0]);
+                  event.target.value = "";
+                }}
+              />
+            </label>
+            <span>
+              {uploadInfo.resume
+                ? `${uploadInfo.resume.file_name} - ${uploadInfo.resume.character_count.toLocaleString()} chars`
+                : "PDF, DOCX, TXT, or MD"}
+            </span>
+          </div>
           <textarea
             value={resumeText}
             onChange={(event) => setResumeText(event.target.value)}
@@ -310,6 +402,25 @@ function App() {
           <div className="input-heading">
             <span>Job Description</span>
             <span>{jobText.length.toLocaleString()} chars</span>
+          </div>
+          <div className="upload-strip">
+            <label className="upload-button">
+              {uploadingTarget === "job" ? "Extracting..." : "Upload Job File"}
+              <input
+                type="file"
+                accept=".pdf,.docx,.txt,.md"
+                disabled={uploadingTarget !== null || loading || loadingComparison}
+                onChange={(event) => {
+                  void uploadDocument("job", event.target.files?.[0]);
+                  event.target.value = "";
+                }}
+              />
+            </label>
+            <span>
+              {uploadInfo.job
+                ? `${uploadInfo.job.file_name} - ${uploadInfo.job.character_count.toLocaleString()} chars`
+                : "PDF, DOCX, TXT, or MD"}
+            </span>
           </div>
           <textarea
             value={jobText}
@@ -324,7 +435,7 @@ function App() {
         <button
           className="button button-secondary"
           onClick={loadExample}
-          disabled={loadingSample || loading || loadingComparison}
+          disabled={loadingSample || loading || loadingComparison || uploadingTarget !== null}
         >
           {loadingSample ? "Loading..." : "Load Example"}
         </button>

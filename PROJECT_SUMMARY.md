@@ -13,9 +13,12 @@ The project is designed as an NLP project first. The HR scenario is the applicat
 The final system can:
 
 - Accept resume text and job description text
+- Accept PDF, DOCX, TXT, and Markdown uploads for both resume and job description
 - Encode both texts with a fine-tuned Sentence Transformer
 - Calculate cosine similarity between resume and job embeddings
 - Extract skills from resume and job description text
+- Validate resume skill mentions with a model-based evidence classifier
+- Separate positive, negated, and unclear resume skill evidence
 - Normalize skill aliases into canonical skill names
 - Identify matched skills
 - Identify missing or unclear required skills
@@ -90,6 +93,22 @@ Final model path:
 ```text
 models/resume-job-minilm-finetuned-2epoch/
 ```
+
+The system also includes a second encoder-only classifier for sentence-level skill evidence validation.
+
+Skill evidence classifier path:
+
+```text
+models/skill-evidence-minilm-classifier/
+```
+
+It classifies resume skill mentions as:
+
+- `positive`
+- `negated`
+- `unclear`
+
+This prevents statements such as `I do not have AWS experience` from being counted as positive AWS evidence.
 
 ## Fine-Tuning
 
@@ -192,6 +211,9 @@ For each resume-job pair, it reports:
 - Job description skills
 - Matched skills
 - Missing skills
+- Negated skill mentions
+- Unclear skill mentions
+- Evidence sentence for each detected resume skill mention
 - Weighted skill match score
 - HR evaluation
 - Interview focus suggestions
@@ -280,6 +302,7 @@ http://localhost:8501
 
 The app provides:
 
+- PDF/DOCX/TXT/Markdown upload for resume and job description
 - Resume text input
 - Job description text input
 - Example loading
@@ -290,6 +313,8 @@ The app provides:
 - Match category
 - HR explanation
 - Matched and missing skills
+- Negated and unclear skill mentions
+- Skill evidence sentences
 - Interview focus
 - Candidate suggestions
 
@@ -306,11 +331,13 @@ The app provides:
 | `src/similarity.py` | Model loading, embeddings, cosine similarity |
 | `src/matcher.py` | Final matching pipeline |
 | `src/skill_extractor.py` | Skill extraction and normalization |
+| `src/skill_evidence.py` | Sentence-level skill evidence classification |
 | `src/skill_weights.py` | Weighted skill scoring |
 | `src/recommender.py` | HR-oriented explanations |
 | `src/evaluation.py` | Evaluation metrics |
 | `src/fine_tuning.py` | Fine-tuning helpers |
 | `scripts/train_sentence_transformer.py` | Encoder fine-tuning script |
+| `scripts/train_skill_evidence_classifier.py` | Skill evidence classifier training script |
 | `scripts/evaluate_matching.py` | Full evaluation script |
 | `scripts/evaluate_ranking.py` | Top-k ranking evaluation |
 | `scripts/analyze_errors.py` | Qualitative error analysis |
@@ -326,6 +353,8 @@ Completed work:
 - Skill extraction implemented
 - Weighted skill scoring implemented
 - HR explanations implemented
+- MarkItDown upload implemented for resume and job description files
+- Skill evidence classifier trained and integrated
 - Streamlit app implemented
 - GPU-enabled PyTorch configured
 - Sentence Transformer fine-tuned on the full dataset
@@ -340,5 +369,6 @@ Final verification:
 
 ```text
 Default model: models/resume-job-minilm-finetuned-2epoch
-Tests: 39 passed
+Skill evidence model: models/skill-evidence-minilm-classifier
+Tests: 50 passed
 ```
