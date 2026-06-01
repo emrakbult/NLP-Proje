@@ -14,6 +14,12 @@ Base model:
 sentence-transformers/all-MiniLM-L6-v2
 ```
 
+The base encoder is stored locally for runtime comparison:
+
+```text
+models/base-minilm/
+```
+
 Fine-tuning objective:
 
 ```text

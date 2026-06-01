@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 from src.document_extraction import extract_document_text
 from src.matcher import match_resume_to_job
 from src.similarity import (
-    BASE_MODEL_NAME,
+    BASE_MODEL_PATH,
     DEFAULT_MODEL_NAME,
     FALLBACK_FINE_TUNED_MODEL_PATH,
     FINAL_FINE_TUNED_MODEL_PATH,
@@ -42,9 +42,9 @@ MODEL_COMPARISON_SPECS = [
     {
         "model_id": "baseline",
         "model_label": "Base MiniLM",
-        "description": "Original pretrained encoder before task adaptation",
-        "model_name": BASE_MODEL_NAME,
-        "requires_path": False,
+        "description": "Local pretrained MiniLM encoder before task adaptation",
+        "model_name": str(BASE_MODEL_PATH),
+        "requires_path": True,
     },
 ]
 

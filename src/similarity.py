@@ -7,16 +7,25 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-BASE_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+BASE_MODEL_PATH = PROJECT_ROOT / "models" / "base-minilm"
 FINAL_FINE_TUNED_MODEL_PATH = PROJECT_ROOT / "models" / "resume-job-minilm-finetuned-2epoch"
 FALLBACK_FINE_TUNED_MODEL_PATH = PROJECT_ROOT / "models" / "resume-job-minilm-finetuned"
-DEFAULT_MODEL_NAME = (
-    str(FINAL_FINE_TUNED_MODEL_PATH)
-    if FINAL_FINE_TUNED_MODEL_PATH.exists()
-    else str(FALLBACK_FINE_TUNED_MODEL_PATH)
-    if FALLBACK_FINE_TUNED_MODEL_PATH.exists()
-    else BASE_MODEL_NAME
-)
+
+
+def resolve_default_model_name() -> str:
+    """Return the local fine-tuned model used at runtime."""
+
+    if FINAL_FINE_TUNED_MODEL_PATH.exists():
+        return str(FINAL_FINE_TUNED_MODEL_PATH)
+    if FALLBACK_FINE_TUNED_MODEL_PATH.exists():
+        return str(FALLBACK_FINE_TUNED_MODEL_PATH)
+    raise FileNotFoundError(
+        "No local fine-tuned Sentence Transformer model was found. "
+        f"Expected {FINAL_FINE_TUNED_MODEL_PATH} or {FALLBACK_FINE_TUNED_MODEL_PATH}."
+    )
+
+
+DEFAULT_MODEL_NAME = resolve_default_model_name()
 
 
 def load_model(model_name: str = DEFAULT_MODEL_NAME) -> Any:
@@ -29,6 +38,10 @@ def load_model(model_name: str = DEFAULT_MODEL_NAME) -> Any:
             "sentence-transformers is required for model loading. "
             "Install dependencies with: pip install -r requirements.txt"
         ) from error
+
+    model_path = Path(model_name)
+    if model_path.is_absolute() and not model_path.exists():
+        raise FileNotFoundError(f"Local model path not found: {model_path}")
 
     return SentenceTransformer(model_name)
 

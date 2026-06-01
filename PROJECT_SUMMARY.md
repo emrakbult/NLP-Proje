@@ -86,6 +86,12 @@ The first baseline used:
 sentence-transformers/all-MiniLM-L6-v2
 ```
 
+The baseline encoder is also stored locally for offline model comparison:
+
+```text
+models/base-minilm/
+```
+
 The final model is a supervised fine-tuned version of this encoder.
 
 Final model path:

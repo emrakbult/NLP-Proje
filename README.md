@@ -116,6 +116,8 @@ The project uses an encoder-only Sentence Transformer model for semantic matchin
 
 The project also uses a second encoder-only classifier for skill evidence validation. This classifier checks whether a resume sentence provides positive evidence for a skill, negates the skill, or mentions it unclearly.
 
+At runtime, the backend uses local model folders under `models/`. The comparison baseline is stored at `models/base-minilm/`, so the app does not need to download `sentence-transformers/all-MiniLM-L6-v2` from Hugging Face when another user runs the project.
+
 Fine-tuning is part of the project methodology, but this README focuses on running the completed system. Detailed experiment results are documented in `RESULTS.md`.
 
 The final score combines semantic similarity and weighted skill matching:
@@ -188,6 +190,10 @@ NLP-Proje/
 |       |-- styles.css
 |       `-- types.ts
 |-- models/
+|   |-- base-minilm/
+|   |-- resume-job-minilm-finetuned/
+|   |-- resume-job-minilm-finetuned-2epoch/
+|   `-- skill-evidence-minilm-classifier/
 |-- scripts/
 |-- src/
 |   |-- similarity.py
