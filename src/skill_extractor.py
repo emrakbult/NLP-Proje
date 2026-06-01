@@ -37,7 +37,11 @@ def load_skills(path: str | Path = DEFAULT_SKILL_PATH) -> SkillDictionary:
         if not all(isinstance(alias, str) and alias.strip() for alias in aliases):
             raise ValueError(f"All aliases for {canonical_name!r} must be non-empty strings.")
 
-        unique_aliases = list(dict.fromkeys([canonical_name, *aliases]))
+        normalized_canonical_name = normalize_for_matching(canonical_name)
+        if len(normalized_canonical_name) == 1:
+            unique_aliases = list(dict.fromkeys(aliases))
+        else:
+            unique_aliases = list(dict.fromkeys([canonical_name, *aliases]))
         skills[canonical_name] = unique_aliases
 
     return skills

@@ -1,38 +1,38 @@
-Job Title: Backend Data Platform Engineer
-Department: Data Products and Internal Platforms
-Location: Hybrid
+İş Başlığı: Backend Veri Platformu Mühendisi
+Departman: Veri Ürünleri ve İç Platformlar
+Konum: Hibrit
 
-About the Role
-We are hiring a backend-focused software engineer to support internal data products used by finance, operations, and customer success teams. The engineer will build Python services, maintain data pipelines, expose REST APIs, and improve the reliability of reporting workflows.
+Rol Hakkında
+Finans, operasyon ve müşteri başarısı ekiplerinin kullandığı iç veri ürünlerini desteklemek için backend odaklı bir yazılım mühendisi arıyoruz. Mühendis Python servisleri geliştirecek, veri pipeline'larını sürdürecek, REST API'ler sunacak ve raporlama iş akışlarının güvenilirliğini artıracak.
 
-Responsibilities
-- Build and maintain backend services using Python and FastAPI.
-- Design REST API endpoints for internal dashboards and operational tools.
-- Write efficient SQL queries and work with PostgreSQL databases.
-- Create data processing workflows using Pandas and production-ready ETL practices.
-- Use Git and code review workflows to collaborate with other engineers.
-- Package and run services with Docker for local development and deployment.
-- Deploy or support services on AWS, including basic monitoring and configuration.
-- Coordinate with analysts, product managers, and QA engineers in an Agile team.
-- Improve data reliability, documentation, and incident investigation processes.
+Sorumluluklar
+- Python ve FastAPI kullanarak backend servisleri geliştirmek ve bakımını yapmak.
+- İç paneller ve operasyonel araçlar için REST API uç noktaları tasarlamak.
+- Verimli SQL sorguları yazmak ve PostgreSQL veritabanlarıyla çalışmak.
+- Pandas ve üretime hazır ETL pratikleriyle veri işleme iş akışları oluşturmak.
+- Diğer mühendislerle iş birliği için Git ve kod inceleme süreçlerini kullanmak.
+- Yerel geliştirme ve dağıtım için servisleri Docker ile paketlemek ve çalıştırmak.
+- Temel izleme ve konfigürasyon dahil AWS üzerinde servisleri dağıtmak veya desteklemek.
+- Agile bir ekipte analistler, ürün yöneticileri ve QA mühendisleriyle koordinasyon sağlamak.
+- Veri güvenilirliği, dokümantasyon ve olay inceleme süreçlerini iyileştirmek.
 
-Required Skills
-- Strong Python programming experience
-- SQL and PostgreSQL experience
-- REST API development with FastAPI or similar frameworks
-- Git-based version control and code review
-- Data analysis or data engineering experience
-- Docker experience for containerized services
-- AWS experience for cloud deployment or service operation
-- Linux command line familiarity
-- Clear communication and teamwork
+Gerekli Beceriler
+- Güçlü Python programlama deneyimi
+- SQL ve PostgreSQL deneyimi
+- FastAPI veya benzeri frameworklerle REST API geliştirme
+- Git tabanlı sürüm kontrolü ve kod inceleme
+- Veri analizi veya veri mühendisliği deneyimi
+- Konteyner servisler için Docker deneyimi
+- Bulut dağıtımı veya servis operasyonu için AWS deneyimi
+- Linux komut satırı aşinalığı
+- Açık iletişim ve takım çalışması
 
-Nice To Have
-- Apache Airflow for scheduled data workflows
-- CI/CD experience with GitHub Actions or Jenkins
-- Kafka or event-driven data processing
-- Kubernetes experience
-- Experience working with finance, payments, or reporting systems
+Tercih Sebebi
+- Zamanlanmış veri iş akışları için Apache Airflow
+- GitHub Actions veya Jenkins ile CI/CD deneyimi
+- Kafka veya olay güdümlü veri işleme
+- Kubernetes deneyimi
+- Finans, ödeme veya raporlama sistemleriyle çalışma deneyimi
 
-Evaluation Focus
-The best candidates should show strong backend and data engineering fundamentals. Missing Docker, AWS, or Airflow experience should be discussed during the interview because these skills are important for this role.
+Değerlendirme Odakları
+En iyi adaylar güçlü backend ve veri mühendisliği temelleri göstermelidir. Docker, AWS veya Airflow deneyimi eksikse bu beceriler rol için önemli olduğundan mülakatta ele alınmalıdır.

@@ -7,6 +7,17 @@ from src.document_extraction import MAX_UPLOAD_BYTES
 client = TestClient(app)
 
 
+def test_sample_endpoint_returns_turkish_examples() -> None:
+    response = client.get("/sample")
+
+    assert response.status_code == 200
+    body = response.json()
+    assert "Aday: Elif Demir" in body["resume_text"]
+    assert "İş Başlığı: Backend Veri Platformu Mühendisi" in body["job_description_text"]
+    assert "Candidate:" not in body["resume_text"]
+    assert "Job Title:" not in body["job_description_text"]
+
+
 def test_extract_text_uploads_txt_file() -> None:
     response = client.post(
         "/extract-text",

@@ -27,6 +27,12 @@ def test_split_sentences_splits_contrastive_clauses() -> None:
     assert sentences == ["I have experience with Python", "I do not have AWS experience."]
 
 
+def test_split_sentences_splits_turkish_contrastive_clauses() -> None:
+    sentences = split_sentences("Python deneyimim var ancak AWS deneyimim yok.")
+
+    assert sentences == ["Python deneyimim var", "AWS deneyimim yok."]
+
+
 def test_linguistic_safeguard_corrects_obvious_evidence_patterns() -> None:
     assert apply_linguistic_safeguard("I have experience with Python.", "unclear", 0.3) == (
         "positive",
@@ -40,11 +46,40 @@ def test_linguistic_safeguard_corrects_obvious_evidence_patterns() -> None:
         "unclear",
         0.99,
     )
+    assert apply_linguistic_safeguard("Python ile servisler geliştirdim.", "unclear", 0.3) == (
+        "positive",
+        0.99,
+    )
+    assert apply_linguistic_safeguard("AWS deneyimim yok.", "positive", 0.3) == (
+        "negated",
+        0.99,
+    )
+    assert apply_linguistic_safeguard("Kubernetes öğreniyorum.", "positive", 0.3) == (
+        "unclear",
+        0.99,
+    )
 
 
 def test_skill_evidence_classifies_positive_negated_and_unclear_mentions() -> None:
     result = classify_resume_skill_evidence(
         "I built APIs with Python. I do not have AWS experience. I am learning Kubernetes.",
+        load_skills(),
+        classifier=StubEvidenceClassifier(),
+    )
+
+    assert result["positive_resume_skills"] == ["Python"]
+    assert result["negated_resume_skills"] == ["AWS"]
+    assert result["unclear_resume_skills"] == ["Kubernetes"]
+    assert {item["label"] for item in result["skill_evidence"]} == {
+        "positive",
+        "negated",
+        "unclear",
+    }
+
+
+def test_skill_evidence_classifies_turkish_mentions() -> None:
+    result = classify_resume_skill_evidence(
+        "Python ile servisler geliştirdim. AWS deneyimim yok. Kubernetes öğreniyorum.",
         load_skills(),
         classifier=StubEvidenceClassifier(),
     )

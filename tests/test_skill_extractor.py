@@ -12,6 +12,24 @@ def test_extract_skills_normalizes_aliases() -> None:
     assert "AWS" in extracted
 
 
+def test_extract_skills_supports_turkish_aliases() -> None:
+    skills = load_skills()
+    text = (
+        "Python programlama, PostgreSQL veritabanı, REST API uç noktaları, "
+        "veri analizi, çevik yazılım, iletişim ve takım çalışması deneyimi."
+    )
+
+    extracted = extract_skills(text, skills)
+
+    assert "Python" in extracted
+    assert "PostgreSQL" in extracted
+    assert "REST API" in extracted
+    assert "Data Analysis" in extracted
+    assert "Agile" in extracted
+    assert "Communication" in extracted
+    assert "Teamwork" in extracted
+
+
 def test_extract_skills_preserves_technical_terms() -> None:
     skills = load_skills()
     text = "Experience with C++, C#, .NET, Node.js, and React."
@@ -33,6 +51,20 @@ def test_extract_skills_does_not_match_partial_words() -> None:
 
     assert "JavaScript" in extracted
     assert "Java" not in extracted
+
+
+def test_extract_skills_does_not_auto_match_single_letter_skill_names() -> None:
+    skills = load_skills()
+    text = "REST APIs, CI/CD workflows, C++, and C# are listed, but R is not named as a skill."
+
+    extracted = extract_skills(text, skills)
+
+    assert "REST API" in extracted
+    assert "CI/CD" in extracted
+    assert "C++" in extracted
+    assert "C#" in extracted
+    assert "C" not in extracted
+    assert "R" not in extracted
 
 
 def test_compare_skills_returns_matched_missing_and_extra() -> None:
