@@ -8,10 +8,10 @@ from src.recommender import (
 
 
 def test_classify_match() -> None:
-    assert classify_match(85) == "Strong Match"
-    assert classify_match(65) == "Partial Match"
-    assert classify_match(45) == "Weak Match"
-    assert classify_match(20) == "Not Recommended"
+    assert classify_match(85) == "Güçlü Eşleşme"
+    assert classify_match(65) == "Kısmi Eşleşme"
+    assert classify_match(45) == "Zayıf Eşleşme"
+    assert classify_match(20) == "Önerilmez"
 
 
 def test_classify_match_reports_skill_gaps_for_high_semantic_match() -> None:
@@ -22,7 +22,7 @@ def test_classify_match_reports_skill_gaps_for_high_semantic_match() -> None:
             skill_match_score=60,
             missing_skills=["AWS", "Docker"],
         )
-        == "Strong Semantic Match with Skill Gaps"
+        == "Semantik Eşleşme Güçlü, Beceri Açıkları Var"
     )
 
 
@@ -35,7 +35,7 @@ def test_generate_hr_evaluation_mentions_scores_and_skills() -> None:
         missing_skills=["Docker", "AWS"],
     )
 
-    assert "partial match" in text.casefold()
+    assert "kısmi" in text.casefold()
     assert "70.00" in text
     assert "45.00" in text
     assert "Python, SQL" in text
@@ -51,23 +51,23 @@ def test_generate_hr_evaluation_explains_high_semantic_skill_gap() -> None:
         missing_skills=["AWS", "Docker"],
     )
 
-    assert "strong semantic alignment" in text.casefold()
-    assert "missing or unclear" in text.casefold()
+    assert "semantik uyumu güçlü" in text.casefold()
+    assert "eksik veya belirsiz" in text.casefold()
 
 
 def test_generate_interview_focus_from_missing_skills() -> None:
     focus = generate_interview_focus(["Docker", "AWS"])
 
     assert focus == [
-        "Verify practical experience with Docker.",
-        "Verify practical experience with AWS.",
+        "Docker konusunda pratik deneyimi doğrulayın.",
+        "AWS konusunda pratik deneyimi doğrulayın.",
     ]
 
 
 def test_generate_candidate_suggestions_without_missing_skills() -> None:
     suggestions = generate_candidate_suggestions([])
 
-    assert suggestions == ["Keep the resume specific by describing projects, tools, and measurable outcomes."]
+    assert suggestions == ["Projeleri, araçları ve ölçülebilir sonuçları anlatarak özgeçmişi somut tutun."]
 
 
 def test_generate_recommendation() -> None:
@@ -79,7 +79,7 @@ def test_generate_recommendation() -> None:
         missing_skills=["Docker"],
     )
 
-    assert recommendation["match_category"] == "Not Recommended"
+    assert recommendation["match_category"] == "Önerilmez"
     assert "hr_evaluation" in recommendation
-    assert recommendation["interview_focus"] == ["Verify practical experience with Docker."]
+    assert recommendation["interview_focus"] == ["Docker konusunda pratik deneyimi doğrulayın."]
     assert recommendation["candidate_suggestions"]

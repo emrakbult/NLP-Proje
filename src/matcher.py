@@ -41,7 +41,7 @@ def calculate_final_score(
 
     total_weight = semantic_weight + skill_weight
     if total_weight <= 0:
-        raise ValueError("Score weights must have a positive total.")
+        raise ValueError("Skor ağırlıklarının toplamı pozitif olmalıdır.")
 
     weighted_score = (semantic_weight * semantic_score) + (skill_weight * skill_match_score)
     return weighted_score / total_weight

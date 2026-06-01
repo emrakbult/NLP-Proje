@@ -142,8 +142,8 @@ class TransformerSkillEvidenceClassifier:
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
         except ImportError as error:
             raise ImportError(
-                "transformers and torch are required for skill evidence classification. "
-                "Install dependencies with: pip install -r requirements.txt"
+                "Beceri kanıtı sınıflandırması için transformers ve torch gereklidir. "
+                "Bağımlılıkları şu komutla kurun: pip install -r requirements.txt"
             ) from error
 
         self.torch = torch

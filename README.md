@@ -1,30 +1,30 @@
-# HR-Oriented Explainable Resume-Job Matching System
+# İK Odaklı Açıklanabilir Özgeçmiş-İş Eşleştirme Sistemi
 
-This project is an explainable NLP-based resume and job description matching system for human resources use cases.
+Bu proje, insan kaynakları senaryoları için geliştirilmiş açıklanabilir NLP tabanlı bir özgeçmiş ve iş ilanı eşleştirme sistemidir.
 
-It compares a candidate resume with a job description and returns:
+Sistem bir aday özgeçmişini iş ilanı metniyle karşılaştırır ve şu çıktıları üretir:
 
-- Overall suitability score
-- Semantic similarity score
-- Weighted skill match score
-- Matched skills
-- Missing or unclear required skills
-- HR-oriented evaluation text
-- Interview focus suggestions
-- Candidate improvement suggestions
-- Model comparison against previous encoder versions
-- PDF/DOCX/TXT upload for resume and job description
-- Sentence-level skill evidence validation for positive, negated, and unclear skill mentions
+- Genel uygunluk skoru
+- Semantik benzerlik skoru
+- Ağırlıklı beceri eşleşme skoru
+- Eşleşen beceriler
+- Eksik veya belirsiz zorunlu beceriler
+- İK odaklı değerlendirme metni
+- Mülakat odak noktaları
+- Aday geliştirme önerileri
+- Önceki encoder sürümleriyle model karşılaştırması
+- Özgeçmiş ve iş ilanı için PDF/DOCX/TXT yükleme desteği
+- Pozitif, olumsuz ve belirsiz beceri ifadeleri için cümle düzeyinde beceri kanıtı doğrulaması
 
-The system is a decision-support prototype. It is not intended to make automated hiring decisions.
+Bu sistem bir karar destek prototipidir. Otomatik işe alım kararı vermek için tasarlanmamıştır.
 
-## How To Start The Project
+## Projeyi Çalıştırma
 
-Use two terminals: one for the FastAPI backend and one for the React Vite frontend.
+FastAPI backend ve React Vite frontend için iki ayrı terminal kullanın.
 
-### 1. Create And Activate The Python Environment
+### 1. Python Ortamını Oluşturma ve Aktifleştirme
 
-From the project root:
+Proje kök dizininde:
 
 ```powershell
 python -m venv .venv
@@ -33,35 +33,35 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If the virtual environment already exists, only activate it:
+Sanal ortam zaten varsa yalnızca aktifleştirin:
 
 ```powershell
 .\.venv\Scripts\activate
 ```
 
-### 2. Start The Backend
+### 2. Backend'i Başlatma
 
-From the project root:
+Proje kök dizininde:
 
 ```powershell
 .\.venv\Scripts\python.exe -m uvicorn api:app --reload --port 8000
 ```
 
-The backend should run at:
+Backend şu adreste çalışır:
 
 ```text
 http://localhost:8000
 ```
 
-Health check:
+Sağlık kontrolü:
 
 ```text
 http://localhost:8000/health
 ```
 
-### 3. Start The Frontend
+### 3. Frontend'i Başlatma
 
-Open a second terminal and run:
+İkinci bir terminal açın ve çalıştırın:
 
 ```powershell
 cd frontend
@@ -69,58 +69,58 @@ npm install
 npm run dev
 ```
 
-The React UI should run at:
+React arayüzü şu adreste çalışır:
 
 ```text
 http://localhost:5173
 ```
 
-Open this address in the browser and use the interface to analyze a resume and job description.
+Tarayıcıda bu adresi açıp özgeçmiş ve iş ilanı analizini kullanabilirsiniz.
 
-## Main Runtime Flow
+## Ana Çalışma Akışı
 
 ```text
-Uploaded files or pasted text
+Yüklenen dosyalar veya yapıştırılan metin
         |
         v
-MarkItDown text extraction for PDF/DOCX
+PDF/DOCX için MarkItDown metin çıkarımı
         |
         v
-Resume text + job description text
+Özgeçmiş metni + iş ilanı metni
         |
         v
 Encoder-only Sentence Transformer
         |
         v
-Cosine similarity score
+Kosinüs benzerlik skoru
         |
         v
-Dictionary-based skill extraction
+Sözlük tabanlı beceri çıkarımı
         |
         v
-Skill evidence classifier for resume mentions
+Özgeçmişteki beceri ifadeleri için beceri kanıtı sınıflandırıcısı
         |
         v
-Weighted skill match score
+Ağırlıklı beceri eşleşme skoru
         |
         v
-Overall suitability score
+Genel uygunluk skoru
         |
         v
-Explainable HR result
+Açıklanabilir İK sonucu
 ```
 
-## Model Approach
+## Model Yaklaşımı
 
-The project uses an encoder-only Sentence Transformer model for semantic matching. The local model is fine-tuned for the resume-job matching task, so the system is adapted to compare candidate profiles and job requirements in the same embedding space.
+Proje semantik eşleştirme için encoder-only Sentence Transformer modeli kullanır. Yerel model, özgeçmiş-iş eşleştirme görevi için fine-tune edilmiştir; bu nedenle aday profilleri ve iş gereksinimleri aynı embedding uzayında karşılaştırılır.
 
-The project also uses a second encoder-only classifier for skill evidence validation. This classifier checks whether a resume sentence provides positive evidence for a skill, negates the skill, or mentions it unclearly.
+Proje ayrıca beceri kanıtı doğrulaması için ikinci bir encoder-only sınıflandırıcı kullanır. Bu sınıflandırıcı, özgeçmişteki bir cümlenin ilgili beceri için pozitif kanıt sağlayıp sağlamadığını, beceriyi olumsuzlayıp olumsuzlamadığını veya belirsiz şekilde bahsedip bahsetmediğini kontrol eder.
 
-At runtime, the backend uses local model folders under `models/`. The comparison baseline is stored at `models/base-minilm/`, so the app does not need to download `sentence-transformers/all-MiniLM-L6-v2` from Hugging Face when another user runs the project.
+Çalışma zamanında backend `models/` altındaki yerel model klasörlerini kullanır. Karşılaştırma baseline modeli `models/base-minilm/` altında tutulur; bu sayede proje başka bir bilgisayarda çalıştırıldığında `sentence-transformers/all-MiniLM-L6-v2` modelini Hugging Face üzerinden indirmek zorunda kalmaz.
 
-Fine-tuning is part of the project methodology, but this README focuses on running the completed system. Detailed experiment results are documented in `RESULTS.md`.
+Fine-tuning proje metodolojisinin bir parçasıdır, ancak bu README tamamlanmış sistemi çalıştırmaya odaklanır. Deney sonuçları `RESULTS.md` dosyasında belgelenmiştir.
 
-The final score combines semantic similarity and weighted skill matching:
+Final skor semantik benzerlik ve ağırlıklı beceri eşleşmesini birleştirir:
 
 ```text
 overall_score =
@@ -128,11 +128,11 @@ overall_score =
   0.20 * weighted_skill_match_score
 ```
 
-The model gives more weight to technical and role-specific skills than broad general skills. This prevents generic skills such as communication or teamwork from making a weak candidate look too strong.
+Model, genel sosyal becerilere kıyasla teknik ve role özgü becerilere daha fazla ağırlık verir. Böylece communication veya teamwork gibi genel beceriler zayıf bir adayı olduğundan güçlü göstermez.
 
 ## Backend API
 
-The FastAPI backend provides:
+FastAPI backend şu endpoint'leri sağlar:
 
 ```text
 GET  /health
@@ -142,28 +142,28 @@ POST /compare
 POST /extract-text
 ```
 
-Main endpoint:
+Ana endpoint:
 
 ```text
 POST /analyze
 ```
 
-Expected JSON body:
+Beklenen JSON gövdesi:
 
 ```json
 {
-  "resume_text": "Candidate resume text...",
-  "job_description_text": "Job description text..."
+  "resume_text": "Aday özgeçmiş metni...",
+  "job_description_text": "İş ilanı metni..."
 }
 ```
 
-The response includes the scores, skill lists, match category, HR evaluation, interview focus, and candidate suggestions.
+Cevap; skorları, beceri listelerini, eşleşme kategorisini, İK değerlendirmesini, mülakat odak noktalarını ve aday önerilerini içerir.
 
-Use `POST /compare` to score the same resume-job pair with the available model versions and compare semantic, skill, and overall scores.
+`POST /compare`, aynı özgeçmiş-iş ilanı çiftini mevcut model sürümleriyle skorlar ve semantik, beceri ve genel skorları karşılaştırır.
 
-Use `POST /extract-text` with multipart field `file` to extract text from `.pdf`, `.docx`, `.txt`, or `.md` files. The React UI uses this endpoint for both resume and job description uploads.
+`POST /extract-text`, multipart `file` alanıyla `.pdf`, `.docx`, `.txt` veya `.md` dosyalarından metin çıkarır. React arayüzü hem özgeçmiş hem de iş ilanı yüklemeleri için bu endpoint'i kullanır.
 
-## Project Structure
+## Proje Yapısı
 
 ```text
 NLP-Proje/
@@ -206,39 +206,39 @@ NLP-Proje/
 `-- tests/
 ```
 
-## Important Files
+## Önemli Dosyalar
 
-- `api.py`: FastAPI backend used by the React interface
-- `frontend/src/App.tsx`: main React UI
-- `src/similarity.py`: encoder-only model loading and cosine similarity
-- `src/skill_extractor.py`: skill detection and alias handling
-- `src/skill_evidence.py`: sentence-level positive, negated, and unclear skill evidence classification
-- `src/skill_weights.py`: role-specific skill weighting
-- `src/matcher.py`: final matching pipeline
-- `src/recommender.py`: match category, HR explanation, interview focus, and candidate suggestions
-- `data/skill_evidence/skill_evidence_dataset.csv`: manually curated skill evidence classifier dataset
-- `data/skills.json`: skill dictionary used for explainability
-- `models/`: local Sentence Transformer model files used by the system
+- `api.py`: React arayüzünün kullandığı FastAPI backend
+- `frontend/src/App.tsx`: ana React arayüzü
+- `src/similarity.py`: encoder-only model yükleme ve kosinüs benzerliği
+- `src/skill_extractor.py`: beceri tespiti ve alias eşleştirme
+- `src/skill_evidence.py`: pozitif, olumsuz ve belirsiz beceri kanıtı sınıflandırması
+- `src/skill_weights.py`: role özgü beceri ağırlıkları
+- `src/matcher.py`: final eşleştirme pipeline'ı
+- `src/recommender.py`: eşleşme kategorisi, İK açıklaması, mülakat odağı ve aday önerileri
+- `data/skill_evidence/skill_evidence_dataset.csv`: elle hazırlanmış beceri kanıtı sınıflandırıcı veri seti
+- `data/skills.json`: açıklanabilirlik için kullanılan beceri sözlüğü
+- `models/`: sistemin kullandığı yerel Sentence Transformer model dosyaları
 
-## Run Tests
+## Testleri Çalıştırma
 
-From the project root:
+Proje kök dizininde:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-## Optional Streamlit Demo
+## Opsiyonel Streamlit Demo
 
-The main UI is the React Vite app. A Streamlit version is still available as a secondary Python-only demo:
+Ana arayüz React Vite uygulamasıdır. İkincil Python-only demo olarak Streamlit sürümü de bulunur:
 
 ```powershell
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-## Notes
+## Notlar
 
-- Use `http://localhost:5173` for the main demo.
-- Keep the backend running while using the frontend.
-- The backend loads the local model once and reuses it for analysis requests.
-- Detailed experiment results are documented in `RESULTS.md`.
+- Ana demo için `http://localhost:5173` adresini kullanın.
+- Frontend'i kullanırken backend çalışır durumda olmalıdır.
+- Backend yerel modeli bir kez yükler ve analiz isteklerinde yeniden kullanır.
+- Detaylı deney sonuçları `RESULTS.md` dosyasında belgelenmiştir.

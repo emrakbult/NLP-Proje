@@ -19,7 +19,7 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-@st.cache_resource(show_spinner="Loading fine-tuned encoder...")
+@st.cache_resource(show_spinner="Fine-tuned encoder yükleniyor...")
 def get_model():
     return load_model(DEFAULT_MODEL_NAME)
 
@@ -76,7 +76,7 @@ def chip_group_html(title: str, skills: list[str], tone: str = "neutral") -> str
         for skill in skills
     )
     if not chips:
-        chips = "<span class='empty-state'>No skills found</span>"
+        chips = "<span class='empty-state'>Beceri bulunamadı</span>"
 
     return f"""
     <section class="evidence-section">
@@ -106,7 +106,7 @@ def list_panel_html(title: str, items: list[str]) -> str:
     if items:
         list_items = "".join(f"<li>{escape(item)}</li>" for item in items)
     else:
-        list_items = "<li>No items generated.</li>"
+        list_items = "<li>Öğe oluşturulmadı.</li>"
 
     return f"""
     <section class="analysis-panel">
@@ -119,22 +119,22 @@ def list_panel_html(title: str, items: list[str]) -> str:
 def result_dashboard_html(result: dict[str, object]) -> str:
     score_cards = "".join(
         [
-            score_card_html("Overall Suitability", float(result["overall_score"])),
-            score_card_html("Semantic Similarity", float(result["semantic_score"]), "#0f766e"),
-            score_card_html("Weighted Skills", float(result["skill_match_score"])),
-            score_card_html("Raw Skills", float(result["unweighted_skill_match_score"])),
+            score_card_html("Genel Uygunluk", float(result["overall_score"])),
+            score_card_html("Semantik Benzerlik", float(result["semantic_score"]), "#0f766e"),
+            score_card_html("Ağırlıklı Beceriler", float(result["skill_match_score"])),
+            score_card_html("Ham Beceri Skoru", float(result["unweighted_skill_match_score"])),
         ]
     )
     skill_cards = "".join(
         [
-            chip_group_html("Matched Skills", result["matched_skills"], "match"),
-            chip_group_html("Missing Skills", result["missing_skills"], "missing"),
-            chip_group_html("Detected in Resume", result["resume_skills"], "neutral"),
-            chip_group_html("Required by Job", result["job_skills"], "neutral"),
+            chip_group_html("Eşleşen Beceriler", result["matched_skills"], "match"),
+            chip_group_html("Eksik Beceriler", result["missing_skills"], "missing"),
+            chip_group_html("Özgeçmişte Tespit Edilenler", result["resume_skills"], "neutral"),
+            chip_group_html("İlanda İstenenler", result["job_skills"], "neutral"),
         ]
     )
-    right_panels = list_panel_html("Interview Focus", result["interview_focus"])
-    right_panels += list_panel_html("Candidate Suggestions", result["candidate_suggestions"])
+    right_panels = list_panel_html("Mülakat Odak Noktaları", result["interview_focus"])
+    right_panels += list_panel_html("Aday İçin Öneriler", result["candidate_suggestions"])
 
     return f"""
     <section class="results-dashboard">
@@ -144,11 +144,11 @@ def result_dashboard_html(result: dict[str, object]) -> str:
             </div>
             <section class="category-panel">
                 <div>
-                    <div class="category-label">Result Category</div>
+                    <div class="category-label">Sonuç Kategorisi</div>
                     <div class="category-value">{escape(str(result["match_category"]))}</div>
                 </div>
                 <div class="category-caption">
-                    Category combines semantic alignment with role-specific skill evidence.
+                    Kategori, semantik uyumu role özgü beceri kanıtıyla birlikte değerlendirir.
                 </div>
             </section>
         </div>
@@ -159,7 +159,7 @@ def result_dashboard_html(result: dict[str, object]) -> str:
 
         <div class="insight-grid">
             <section class="analysis-panel analysis-panel-large">
-                <div class="section-title">HR Evaluation</div>
+                <div class="section-title">İK Değerlendirmesi</div>
                 <p>{escape(str(result["hr_evaluation"]))}</p>
             </section>
             <div class="side-insights">
@@ -172,16 +172,16 @@ def result_dashboard_html(result: dict[str, object]) -> str:
 
 def render_methodology_strip() -> None:
     steps = [
-        "Encoder embeddings",
-        "Cosine similarity",
-        "Skill extraction",
-        "Explainable HR notes",
+        "Encoder vektörleri",
+        "Kosinüs benzerliği",
+        "Beceri çıkarımı",
+        "Açıklanabilir İK notları",
     ]
     step_html = "".join(render_badge(step, "method-badge") for step in steps)
     st.markdown(
         f"""
         <div class="method-strip">
-            <span class="method-label">Pipeline</span>
+            <span class="method-label">İş Akışı</span>
             {step_html}
         </div>
         """,
@@ -190,7 +190,7 @@ def render_methodology_strip() -> None:
 
 
 st.set_page_config(
-    page_title="Resume-Job Match Analysis",
+    page_title="Özgeçmiş-İş Uygunluk Analizi",
     page_icon=None,
     layout="wide",
 )
@@ -627,8 +627,8 @@ if "job_text" not in st.session_state:
 if "analysis_result" not in st.session_state:
     st.session_state.analysis_result = None
 
-model_badge = render_badge("Fine-tuned MiniLM encoder", "badge badge-primary")
-prototype_badge = render_badge("Decision-support prototype", "badge badge-neutral")
+model_badge = render_badge("İnce ayarlı MiniLM encoder", "badge badge-primary")
+prototype_badge = render_badge("Karar destek prototipi", "badge badge-neutral")
 model_name_badge = render_badge(compact_model_name(DEFAULT_MODEL_NAME), "badge")
 
 st.markdown(
@@ -636,10 +636,10 @@ st.markdown(
     <header class="topbar">
         <div class="topbar-inner">
             <div>
-                <h1>Resume-Job Match Analysis</h1>
+                <h1>Özgeçmiş-İş Uygunluk Analizi</h1>
                 <p class="subtitle">
-                    Explainable NLP dashboard for semantic resume-job matching, skill gap analysis,
-                    and HR screening support.
+                    Semantik özgeçmiş-iş eşleştirme, beceri açığı analizi ve İK ön eleme desteği için
+                    açıklanabilir NLP paneli.
                 </p>
             </div>
             <div class="badge-row">
@@ -661,14 +661,14 @@ with input_left:
     st.markdown(
         f"""
         <div class="input-heading">
-            <span class="input-title">Resume Content</span>
-            <span class="input-meta">{len(resume_text):,} chars</span>
+            <span class="input-title">Özgeçmiş İçeriği</span>
+            <span class="input-meta">{len(resume_text):,} karakter</span>
         </div>
         """,
         unsafe_allow_html=True,
     )
     resume_text = st.text_area(
-        "Resume Content",
+        "Özgeçmiş İçeriği",
         key="resume_text",
         height=360,
         label_visibility="collapsed",
@@ -679,14 +679,14 @@ with input_right:
     st.markdown(
         f"""
         <div class="input-heading">
-            <span class="input-title">Job Description</span>
-            <span class="input-meta">{len(job_text):,} chars</span>
+            <span class="input-title">İş İlanı Metni</span>
+            <span class="input-meta">{len(job_text):,} karakter</span>
         </div>
         """,
         unsafe_allow_html=True,
     )
     job_text = st.text_area(
-        "Job Description",
+        "İş İlanı Metni",
         key="job_text",
         height=360,
         label_visibility="collapsed",
@@ -695,9 +695,9 @@ with input_right:
 st.markdown("<div class='action-row'>", unsafe_allow_html=True)
 action_left, action_right = st.columns([0.28, 0.72])
 with action_left:
-    load_example = st.button("Load Example", use_container_width=True)
+    load_example = st.button("Örneği Yükle", use_container_width=True)
 with action_right:
-    analyze = st.button("Analyze Match", type="primary", use_container_width=True)
+    analyze = st.button("Uyumluluğu Analiz Et", type="primary", use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 if load_example:
@@ -708,9 +708,9 @@ if load_example:
 
 if analyze:
     if not resume_text.strip() or not job_text.strip():
-        st.error("Resume and job description must not be empty.")
+        st.error("Özgeçmiş ve iş ilanı metni boş olamaz.")
     else:
-        with st.spinner("Analyzing resume-job match with the fine-tuned encoder..."):
+        with st.spinner("Özgeçmiş-iş uyumu fine-tuned encoder ile analiz ediliyor..."):
             st.session_state.analysis_result = match_resume_to_job(
                 resume_text=resume_text,
                 job_description_text=job_text,
@@ -723,8 +723,8 @@ result = st.session_state.analysis_result
 st.markdown(
     """
     <div class="result-header">
-        <h2>Analysis Result</h2>
-        <span class="result-note">Scores are decision-support signals, not automated hiring decisions.</span>
+        <h2>Analiz Sonucu</h2>
+        <span class="result-note">Skorlar karar destek sinyalidir; otomatik işe alım kararı değildir.</span>
     </div>
     """,
     unsafe_allow_html=True,
@@ -736,7 +736,7 @@ else:
     st.markdown(
         """
         <section class="empty-result">
-            Load the example or paste your own resume and job description, then run the analysis.
+            Örneği yükleyin veya kendi özgeçmiş ve iş ilanı metninizi yapıştırıp analizi çalıştırın.
         </section>
         """,
         unsafe_allow_html=True,

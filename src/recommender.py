@@ -17,78 +17,78 @@ def classify_match(
     has_key_skill_gaps = bool(missing_skills) and has_role_specific_skill(missing_skills)
 
     if overall_score >= 80 and semantic_score >= 80 and skill_match_score < 75 and has_key_skill_gaps:
-        return "Strong Semantic Match with Skill Gaps"
+        return "Semantik Eşleşme Güçlü, Beceri Açıkları Var"
     if overall_score >= 70 and semantic_score >= 75 and skill_match_score < 70 and has_key_skill_gaps:
-        return "Good Match with Skill Gaps"
+        return "İyi Eşleşme, Beceri Açıkları Var"
     if overall_score >= 80:
-        return "Strong Match"
+        return "Güçlü Eşleşme"
     if overall_score >= 60:
-        return "Partial Match"
+        return "Kısmi Eşleşme"
     if overall_score >= 40:
-        return "Weak Match"
-    return "Not Recommended"
+        return "Zayıf Eşleşme"
+    return "Önerilmez"
 
 
 def _format_skills(skills: list[str], limit: int = 8) -> str:
     if not skills:
-        return "none"
+        return "yok"
 
     visible_skills = skills[:limit]
     formatted = ", ".join(visible_skills)
     remaining_count = len(skills) - len(visible_skills)
     if remaining_count > 0:
-        formatted += f", and {remaining_count} more"
+        formatted += f" ve {remaining_count} tane daha"
     return formatted
 
 
 def _score_band(score: float) -> str:
     if score >= 80:
-        return "high"
+        return "yüksek"
     if score >= 60:
-        return "moderate"
+        return "orta"
     if score >= 40:
-        return "limited"
-    return "low"
+        return "sınırlı"
+    return "düşük"
 
 
 def _gap_severity(skill_match_score: float, missing_skills: list[str]) -> str:
     if not missing_skills:
-        return "no explicit skill gap"
+        return "belirgin beceri açığı yok"
     if skill_match_score >= 75:
-        return "minor skill gap"
+        return "küçük beceri açığı"
     if skill_match_score >= 50:
-        return "moderate skill gap"
-    return "significant skill gap"
+        return "orta düzey beceri açığı"
+    return "önemli beceri açığı"
 
 
 def _recommended_hr_action(category: str, missing_skills: list[str]) -> str:
-    if category == "Strong Match":
+    if category == "Güçlü Eşleşme":
         return (
-            "Recommended HR action: move the candidate forward, while still validating "
-            "the depth of the listed experience during the interview."
+            "Önerilen İK aksiyonu: adayı bir sonraki aşamaya taşıyın; yine de listelenen "
+            "deneyimin derinliğini mülakatta doğrulayın."
         )
-    if category in {"Strong Semantic Match with Skill Gaps", "Good Match with Skill Gaps"}:
+    if category in {"Semantik Eşleşme Güçlü, Beceri Açıkları Var", "İyi Eşleşme, Beceri Açıkları Var"}:
         return (
-            "Recommended HR action: keep the candidate in consideration, but use the interview "
-            "to verify whether the missing skills are true gaps or simply not documented in the CV."
+            "Önerilen İK aksiyonu: adayı değerlendirmede tutun; ancak eksik becerilerin gerçek "
+            "açık mı yoksa sadece CV'de belgelenmemiş deneyim mi olduğunu mülakatta doğrulayın."
         )
-    if category == "Partial Match":
+    if category == "Kısmi Eşleşme":
         return (
-            "Recommended HR action: consider the candidate for screening only if the role can tolerate "
-            "some ramp-up time or if the missing requirements are not mandatory."
+            "Önerilen İK aksiyonu: rol belirli bir adaptasyon süresini kaldırabiliyorsa veya "
+            "eksik gereksinimler zorunlu değilse adayı ön elemede değerlendirin."
         )
-    if category == "Weak Match":
+    if category == "Zayıf Eşleşme":
         return (
-            "Recommended HR action: do not prioritize the candidate unless the applicant pool is limited "
-            "or the role requirements can be adjusted."
+            "Önerilen İK aksiyonu: aday havuzu sınırlı değilse veya rol gereksinimleri "
+            "esnetilemiyorsa adayı önceliklendirmeyin."
         )
 
     if missing_skills:
         return (
-            "Recommended HR action: reject or hold for another role unless there is external evidence "
-            "that addresses the missing requirements."
+            "Önerilen İK aksiyonu: eksik gereksinimleri karşılayan ek bir kanıt yoksa adayı "
+            "reddedin veya başka bir rol için bekletin."
         )
-    return "Recommended HR action: review manually before making a screening decision."
+    return "Önerilen İK aksiyonu: ön eleme kararı vermeden önce sonucu manuel olarak inceleyin."
 
 
 def generate_hr_evaluation(
@@ -112,44 +112,44 @@ def generate_hr_evaluation(
     skill_band = _score_band(skill_match_score)
     gap_severity = _gap_severity(skill_match_score, missing_skills)
 
-    if category == "Strong Semantic Match with Skill Gaps":
+    if category == "Semantik Eşleşme Güçlü, Beceri Açıkları Var":
         summary = (
-            "The candidate has strong semantic alignment with this role, "
-            "but important required skills are missing or unclear."
+            "Adayın bu rolle semantik uyumu güçlü, "
+            "ancak bazı önemli zorunlu beceriler eksik veya belirsiz."
         )
-    elif category == "Good Match with Skill Gaps":
+    elif category == "İyi Eşleşme, Beceri Açıkları Var":
         summary = (
-            "The candidate appears to be a good match overall, "
-            "but the resume still has notable skill gaps for this role."
+            "Aday genel olarak iyi bir eşleşme gibi görünüyor, "
+            "ancak özgeçmişte bu rol için dikkate değer beceri açıkları var."
         )
-    elif category == "Strong Match":
-        summary = "The candidate appears to be a strong match for this role."
-    elif category == "Partial Match":
-        summary = "The candidate appears to be a partial match for this role."
-    elif category == "Weak Match":
-        summary = "The candidate shows some limited alignment with this role."
+    elif category == "Güçlü Eşleşme":
+        summary = "Aday bu rol için güçlü bir eşleşme gibi görünüyor."
+    elif category == "Kısmi Eşleşme":
+        summary = "Aday bu rol için kısmi bir eşleşme gibi görünüyor."
+    elif category == "Zayıf Eşleşme":
+        summary = "Aday bu rolle sınırlı düzeyde uyum gösteriyor."
     else:
-        summary = "The candidate is not recommended for this role based on the current resume-job comparison."
+        summary = "Mevcut özgeçmiş-iş ilanı karşılaştırmasına göre aday bu rol için önerilmez."
 
     explanation = (
-        f"{summary} Overall suitability is {overall_score:.2f}, which places the candidate in the "
-        f"'{category}' category. The semantic similarity score is {semantic_score:.2f}, indicating a "
-        f"{semantic_band} level of textual and role-context alignment between the CV and the job description. "
-        f"The weighted skill match score is {skill_match_score:.2f}, indicating {skill_band} explicit skill "
-        f"coverage and a {gap_severity} from the extracted job requirements. Matched skills include: "
+        f"{summary} Genel uygunluk skoru {overall_score:.2f}; bu skor adayı "
+        f"'{category}' kategorisine yerleştirir. Semantik benzerlik skoru {semantic_score:.2f}; bu değer "
+        f"CV ile iş ilanı arasında {semantic_band} düzeyde metinsel ve rol bağlamı uyumu olduğunu gösterir. "
+        f"Ağırlıklı beceri eşleşme skoru {skill_match_score:.2f}; bu skor {skill_band} düzeyde açık beceri "
+        f"kapsamı ve çıkarılan iş gereksinimlerine göre {gap_severity} olduğunu gösterir. Eşleşen beceriler: "
         f"{matched_text}."
     )
 
     if missing_skills:
         explanation += (
-            f" Missing or unclear job requirements include: {missing_text}. "
-            "These gaps should be treated as interview validation points rather than automatic rejection "
-            "criteria, because the CV may omit some practical experience."
+            f" Eksik veya belirsiz iş gereksinimleri: {missing_text}. "
+            "Bu açıklar otomatik ret kriteri yerine mülakatta doğrulanacak noktalar olarak ele alınmalıdır; "
+            "çünkü CV bazı pratik deneyimleri içermiyor olabilir."
         )
     else:
         explanation += (
-            " No explicit missing skills were found in the skill dictionary comparison, so the interview "
-            "should focus on depth of experience, project ownership, and evidence of real-world usage."
+            " Beceri sözlüğü karşılaştırmasında açık bir eksik beceri bulunmadı; bu nedenle mülakat "
+            "deneyim derinliğine, proje sahipliğine ve gerçek kullanım kanıtlarına odaklanmalıdır."
         )
 
     return f"{explanation} {_recommended_hr_action(category, missing_skills)}"
@@ -159,7 +159,7 @@ def generate_interview_focus(missing_skills: list[str], limit: int = 6) -> list[
     """Generate interview topics from missing skills."""
 
     return [
-        f"Verify practical experience with {skill}."
+        f"{skill} konusunda pratik deneyimi doğrulayın."
         for skill in missing_skills[:limit]
     ]
 
@@ -168,10 +168,10 @@ def generate_candidate_suggestions(missing_skills: list[str], limit: int = 6) ->
     """Generate candidate-facing improvement suggestions."""
 
     if not missing_skills:
-        return ["Keep the resume specific by describing projects, tools, and measurable outcomes."]
+        return ["Projeleri, araçları ve ölçülebilir sonuçları anlatarak özgeçmişi somut tutun."]
 
     return [
-        f"Add clear evidence of {skill} if the candidate has this experience, or develop this skill for similar roles."
+        f"Aday bu deneyime sahipse {skill} için net kanıt ekleyin; değilse benzer roller için bu beceriyi geliştirin."
         for skill in missing_skills[:limit]
     ]
 

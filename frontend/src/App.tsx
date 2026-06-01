@@ -3,10 +3,10 @@ import { analyzeMatch, compareModels, extractText, getHealth, getSample } from "
 import type { ExtractedDocumentPayload, HealthPayload, MatchResult, ModelComparisonItem } from "./types";
 
 const pipelineSteps = [
-  "Encoder embeddings",
-  "Cosine similarity",
-  "Skill extraction",
-  "Explainable HR notes"
+  "Encoder vektörleri",
+  "Kosinüs benzerliği",
+  "Beceri çıkarımı",
+  "Açıklanabilir İK notları"
 ];
 
 type UploadTarget = "resume" | "job";
@@ -14,6 +14,15 @@ type UploadInfo = ExtractedDocumentPayload | null;
 
 function formatNumber(value: number): string {
   return value.toFixed(2);
+}
+
+function formatEvidenceLabel(label: string): string {
+  const labels: Record<string, string> = {
+    positive: "Pozitif",
+    negated: "Olumsuz",
+    unclear: "Belirsiz"
+  };
+  return labels[label] ?? label;
 }
 
 function scoreTone(score: number): "good" | "warning" | "bad" {
@@ -48,7 +57,7 @@ function ScoreCard({
 
 function CompactScoreBar({ value }: { value?: number }) {
   if (typeof value !== "number") {
-    return <span className="comparison-muted">Unavailable</span>;
+    return <span className="comparison-muted">Kullanılamıyor</span>;
   }
 
   const width = Math.max(0, Math.min(100, value));
@@ -69,19 +78,19 @@ function ModelComparisonPanel({ items }: { items: ModelComparisonItem[] }) {
     <section className="comparison-panel">
       <div className="comparison-header">
         <div>
-          <div className="section-title">Model Comparison</div>
-          <p>Same resume and job description, scored with the available encoder versions.</p>
+          <div className="section-title">Model Karşılaştırması</div>
+          <p>Aynı özgeçmiş ve iş ilanı mevcut encoder sürümleriyle skorlanır.</p>
         </div>
-        <span>Skill scores stay constant; semantic scores show model behavior.</span>
+        <span>Beceri skorları sabit kalır; semantik skorlar model davranışını gösterir.</span>
       </div>
 
       <div className="comparison-table">
         <div className="comparison-row comparison-row-head">
           <span>Model</span>
-          <span>Semantic</span>
-          <span>Weighted Skills</span>
-          <span>Overall</span>
-          <span>Category</span>
+          <span>Semantik</span>
+          <span>Ağırlıklı Beceriler</span>
+          <span>Genel</span>
+          <span>Kategori</span>
         </div>
         {items.map((item) => (
           <div className="comparison-row" key={item.model_id}>
@@ -94,7 +103,7 @@ function ModelComparisonPanel({ items }: { items: ModelComparisonItem[] }) {
             <CompactScoreBar value={item.skill_match_score} />
             <CompactScoreBar value={item.overall_score} />
             <div className="comparison-category">
-              {item.available ? item.match_category : item.error ?? "Unavailable"}
+              {item.available ? item.match_category : item.error ?? "Kullanılamıyor"}
             </div>
           </div>
         ))}
@@ -117,7 +126,7 @@ function SkillGroup({
       <div className="section-title">{title}</div>
       <div className="chip-row">
         {skills.length === 0 ? (
-          <span className="empty-state">No skills found</span>
+          <span className="empty-state">Beceri bulunamadı</span>
         ) : (
           skills.map((skill) => (
             <span className={`chip chip-${tone}`} key={`${title}-${skill}`}>
@@ -136,7 +145,7 @@ function ListPanel({ title, items }: { title: string; items: string[] }) {
       <div className="section-title">{title}</div>
       <ul>
         {items.length === 0 ? (
-          <li>No items generated.</li>
+          <li>Öğe oluşturulmadı.</li>
         ) : (
           items.map((item) => <li key={`${title}-${item}`}>{item}</li>)
         )}
@@ -152,26 +161,26 @@ function EvidencePanel({ result }: { result: MatchResult }) {
     <section className="evidence-panel">
       <div className="evidence-header">
         <div>
-          <div className="section-title">Skill Evidence</div>
+          <div className="section-title">Beceri Kanıtı</div>
           <p>
-            Sentence-level classifier output for detected resume skills.
+            Özgeçmişte tespit edilen beceriler için cümle düzeyinde sınıflandırıcı çıktısı.
             {result.skill_evidence_model_available
-              ? " Model validation is active."
-              : " Dictionary-only fallback is active."}
+              ? " Model doğrulama aktif durumda."
+              : " Yalnızca sözlük tabanlı yedek yöntem aktif."}
           </p>
         </div>
-        <span>{result.skill_evidence.length} mentions</span>
+        <span>{result.skill_evidence.length} bahsetme</span>
       </div>
 
       {visibleEvidence.length === 0 ? (
-        <div className="empty-evidence">No resume skill evidence found.</div>
+        <div className="empty-evidence">Özgeçmişte beceri kanıtı bulunamadı.</div>
       ) : (
         <div className="evidence-list">
           {visibleEvidence.map((item, index) => (
             <article className={`evidence-item evidence-${item.label}`} key={`${item.skill}-${index}`}>
               <div className="evidence-meta">
                 <strong>{item.skill}</strong>
-                <span>{item.label}</span>
+                <span>{formatEvidenceLabel(item.label)}</span>
                 <span>{formatNumber(item.confidence * 100)}%</span>
               </div>
               <p>{item.sentence}</p>
@@ -188,40 +197,40 @@ function ResultDashboard({ result }: { result: MatchResult }) {
     <section className="results-dashboard">
       <div className="summary-grid">
         <div className="score-grid">
-          <ScoreCard title="Overall Suitability" value={result.overall_score} />
-          <ScoreCard title="Semantic Similarity" value={result.semantic_score} accent="semantic" />
-          <ScoreCard title="Weighted Skills" value={result.skill_match_score} />
-          <ScoreCard title="Raw Skills" value={result.unweighted_skill_match_score} />
+          <ScoreCard title="Genel Uygunluk" value={result.overall_score} />
+          <ScoreCard title="Semantik Benzerlik" value={result.semantic_score} accent="semantic" />
+          <ScoreCard title="Ağırlıklı Beceriler" value={result.skill_match_score} />
+          <ScoreCard title="Ham Beceri Skoru" value={result.unweighted_skill_match_score} />
         </div>
 
         <section className="category-panel">
           <div>
-            <div className="category-label">Result Category</div>
+            <div className="category-label">Sonuç Kategorisi</div>
             <div className="category-value">{result.match_category}</div>
           </div>
-          <p>Category combines semantic alignment with role-specific skill evidence.</p>
+          <p>Kategori, semantik uyumu role özgü beceri kanıtıyla birlikte değerlendirir.</p>
         </section>
       </div>
 
       <div className="skill-grid">
-        <SkillGroup title="Matched Skills" skills={result.matched_skills} tone="match" />
-        <SkillGroup title="Missing Skills" skills={result.missing_skills} tone="missing" />
-        <SkillGroup title="Detected in Resume" skills={result.resume_skills} tone="neutral" />
-        <SkillGroup title="Required by Job" skills={result.job_skills} tone="neutral" />
-        <SkillGroup title="Negated Mentions" skills={result.negated_resume_skills} tone="missing" />
-        <SkillGroup title="Unclear Mentions" skills={result.unclear_resume_skills} tone="neutral" />
+        <SkillGroup title="Eşleşen Beceriler" skills={result.matched_skills} tone="match" />
+        <SkillGroup title="Eksik Beceriler" skills={result.missing_skills} tone="missing" />
+        <SkillGroup title="Özgeçmişte Tespit Edilenler" skills={result.resume_skills} tone="neutral" />
+        <SkillGroup title="İlanda İstenenler" skills={result.job_skills} tone="neutral" />
+        <SkillGroup title="Olumsuz İfadeler" skills={result.negated_resume_skills} tone="missing" />
+        <SkillGroup title="Belirsiz İfadeler" skills={result.unclear_resume_skills} tone="neutral" />
       </div>
 
       <EvidencePanel result={result} />
 
       <div className="insight-grid">
         <section className="analysis-panel analysis-panel-large">
-          <div className="section-title">HR Evaluation</div>
+          <div className="section-title">İK Değerlendirmesi</div>
           <p>{result.hr_evaluation}</p>
         </section>
         <div className="side-insights">
-          <ListPanel title="Interview Focus" items={result.interview_focus} />
-          <ListPanel title="Candidate Suggestions" items={result.candidate_suggestions} />
+          <ListPanel title="Mülakat Odak Noktaları" items={result.interview_focus} />
+          <ListPanel title="Aday İçin Öneriler" items={result.candidate_suggestions} />
         </div>
       </div>
     </section>
@@ -260,7 +269,7 @@ function App() {
   useEffect(() => {
     getHealth()
       .then(setHealth)
-      .catch((err: Error) => setError(`Backend is not reachable: ${err.message}`));
+      .catch((err: Error) => setError(`Backend'e ulaşılamıyor: ${err.message}`));
   }, []);
 
   async function loadExample() {
@@ -274,7 +283,7 @@ function App() {
       setComparison([]);
       setUploadInfo({ resume: null, job: null });
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not load sample data.");
+      setError(err instanceof Error ? err.message : "Örnek veri yüklenemedi.");
     } finally {
       setLoadingSample(false);
     }
@@ -292,7 +301,7 @@ function App() {
       setResult(analysis);
       setComparison([]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Analysis failed.");
+      setError(err instanceof Error ? err.message : "Analiz başarısız oldu.");
     } finally {
       setLoading(false);
     }
@@ -309,7 +318,7 @@ function App() {
       });
       setComparison(payload.items);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Model comparison failed.");
+      setError(err instanceof Error ? err.message : "Model karşılaştırması başarısız oldu.");
     } finally {
       setLoadingComparison(false);
     }
@@ -331,7 +340,7 @@ function App() {
       setResult(null);
       setComparison([]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not extract text from the uploaded file.");
+      setError(err instanceof Error ? err.message : "Yüklenen dosyadan metin çıkarılamadı.");
     } finally {
       setUploadingTarget(null);
     }
@@ -341,21 +350,21 @@ function App() {
     <main className="page-shell">
       <header className="topbar">
         <div>
-          <h1>Resume-Job Match Analysis</h1>
+          <h1>Özgeçmiş-İş Uygunluk Analizi</h1>
           <p>
-            Explainable NLP dashboard for semantic resume-job matching, skill gap analysis,
-            and HR screening support.
+            Semantik özgeçmiş-iş eşleştirme, beceri açığı analizi ve İK ön eleme desteği için
+            açıklanabilir NLP paneli.
           </p>
         </div>
         <div className="badge-row">
-          <span className="badge badge-primary">Fine-tuned MiniLM encoder</span>
-          <span className="badge badge-neutral">Decision-support prototype</span>
-          <span className="badge">{health?.model ?? "Backend pending"}</span>
+          <span className="badge badge-primary">İnce ayarlı MiniLM encoder</span>
+          <span className="badge badge-neutral">Karar destek prototipi</span>
+          <span className="badge">{health?.model ?? "Backend bekleniyor"}</span>
         </div>
       </header>
 
       <section className="method-strip">
-        <span className="method-label">Pipeline</span>
+        <span className="method-label">İş Akışı</span>
         {pipelineSteps.map((step) => (
           <span className="method-badge" key={step}>
             {step}
@@ -368,12 +377,12 @@ function App() {
       <section className="input-grid">
         <div className="input-panel">
           <div className="input-heading">
-            <span>Resume Content</span>
-            <span>{resumeText.length.toLocaleString()} chars</span>
+            <span>Özgeçmiş İçeriği</span>
+            <span>{resumeText.length.toLocaleString()} karakter</span>
           </div>
           <div className="upload-strip">
             <label className="upload-button">
-              {uploadingTarget === "resume" ? "Extracting..." : "Upload Resume"}
+              {uploadingTarget === "resume" ? "Çıkarılıyor..." : "Özgeçmiş Yükle"}
               <input
                 type="file"
                 accept=".pdf,.docx,.txt,.md"
@@ -386,26 +395,26 @@ function App() {
             </label>
             <span>
               {uploadInfo.resume
-                ? `${uploadInfo.resume.file_name} - ${uploadInfo.resume.character_count.toLocaleString()} chars`
-                : "PDF, DOCX, TXT, or MD"}
+                ? `${uploadInfo.resume.file_name} - ${uploadInfo.resume.character_count.toLocaleString()} karakter`
+                : "PDF, DOCX, TXT veya MD"}
             </span>
           </div>
           <textarea
             value={resumeText}
             onChange={(event) => setResumeText(event.target.value)}
             spellCheck={false}
-            placeholder="Paste the candidate resume text here..."
+            placeholder="Adayın özgeçmiş metnini buraya yapıştırın..."
           />
         </div>
 
         <div className="input-panel">
           <div className="input-heading">
-            <span>Job Description</span>
-            <span>{jobText.length.toLocaleString()} chars</span>
+            <span>İş İlanı Metni</span>
+            <span>{jobText.length.toLocaleString()} karakter</span>
           </div>
           <div className="upload-strip">
             <label className="upload-button">
-              {uploadingTarget === "job" ? "Extracting..." : "Upload Job File"}
+              {uploadingTarget === "job" ? "Çıkarılıyor..." : "İş Dosyası Yükle"}
               <input
                 type="file"
                 accept=".pdf,.docx,.txt,.md"
@@ -418,15 +427,15 @@ function App() {
             </label>
             <span>
               {uploadInfo.job
-                ? `${uploadInfo.job.file_name} - ${uploadInfo.job.character_count.toLocaleString()} chars`
-                : "PDF, DOCX, TXT, or MD"}
+                ? `${uploadInfo.job.file_name} - ${uploadInfo.job.character_count.toLocaleString()} karakter`
+                : "PDF, DOCX, TXT veya MD"}
             </span>
           </div>
           <textarea
             value={jobText}
             onChange={(event) => setJobText(event.target.value)}
             spellCheck={false}
-            placeholder="Paste the job description text here..."
+            placeholder="İş ilanı metnini buraya yapıştırın..."
           />
         </div>
       </section>
@@ -437,19 +446,19 @@ function App() {
           onClick={loadExample}
           disabled={loadingSample || loading || loadingComparison || uploadingTarget !== null}
         >
-          {loadingSample ? "Loading..." : "Load Example"}
+          {loadingSample ? "Yükleniyor..." : "Örneği Yükle"}
         </button>
         <button className="button button-primary" onClick={analyze} disabled={!canAnalyze}>
-          {loading ? "Analyzing..." : "Analyze Match"}
+          {loading ? "Analiz ediliyor..." : "Uyumluluğu Analiz Et"}
         </button>
         <button className="button button-secondary" onClick={compare} disabled={!canCompare}>
-          {loadingComparison ? "Comparing..." : "Compare Models"}
+          {loadingComparison ? "Karşılaştırılıyor..." : "Modelleri Karşılaştır"}
         </button>
       </section>
 
       <section className="result-heading">
-        <h2>Analysis Result</h2>
-        <span>Scores are decision-support signals, not automated hiring decisions.</span>
+        <h2>Analiz Sonucu</h2>
+        <span>Skorlar karar destek sinyalidir; otomatik işe alım kararı değildir.</span>
       </section>
 
       {result ? (
@@ -461,7 +470,7 @@ function App() {
         <ModelComparisonPanel items={comparison} />
       ) : (
         <section className="empty-result">
-          Load the example or paste your own resume and job description, then run the analysis.
+          Örneği yükleyin veya kendi özgeçmiş ve iş ilanı metninizi yapıştırıp analizi çalıştırın.
         </section>
       )}
     </main>

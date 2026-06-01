@@ -27,7 +27,7 @@ def test_extract_text_rejects_unsupported_extension() -> None:
     )
 
     assert response.status_code == 400
-    assert "Unsupported file type" in response.json()["detail"]
+    assert "Desteklenmeyen dosya türü" in response.json()["detail"]
 
 
 def test_extract_text_rejects_empty_file() -> None:
@@ -37,7 +37,7 @@ def test_extract_text_rejects_empty_file() -> None:
     )
 
     assert response.status_code == 400
-    assert "empty" in response.json()["detail"].casefold()
+    assert "boş" in response.json()["detail"].casefold()
 
 
 def test_extract_text_rejects_oversized_file() -> None:

@@ -27,22 +27,22 @@ SAMPLE_JOB_PATH = PROJECT_ROOT / "data" / "examples" / "sample_job.txt"
 MODEL_COMPARISON_SPECS = [
     {
         "model_id": "final",
-        "model_label": "Final Model",
-        "description": "Selected local fine-tuned MiniLM model",
+        "model_label": "Son Model",
+        "description": "Seçilen yerel fine-tuned MiniLM modeli",
         "model_name": str(FINAL_FINE_TUNED_MODEL_PATH),
         "requires_path": True,
     },
     {
         "model_id": "previous",
-        "model_label": "Previous Model",
-        "description": "Earlier local fine-tuned MiniLM model",
+        "model_label": "Önceki Model",
+        "description": "Daha önce eğitilmiş yerel fine-tuned MiniLM modeli",
         "model_name": str(FALLBACK_FINE_TUNED_MODEL_PATH),
         "requires_path": True,
     },
     {
         "model_id": "baseline",
-        "model_label": "Base MiniLM",
-        "description": "Local pretrained MiniLM encoder before task adaptation",
+        "model_label": "Temel MiniLM",
+        "description": "Göreve uyarlanmadan önceki yerel pretrained MiniLM encoder",
         "model_name": str(BASE_MODEL_PATH),
         "requires_path": True,
     },
@@ -86,8 +86,8 @@ def get_skill_dictionary() -> Any:
 
 
 app = FastAPI(
-    title="Resume-Job Match Analysis API",
-    description="FastAPI backend for the explainable NLP resume-job matching system.",
+    title="Özgeçmiş-İş Uygunluk Analizi API",
+    description="Açıklanabilir NLP tabanlı özgeçmiş-iş eşleştirme sistemi için FastAPI backend.",
     version="1.0.0",
 )
 
@@ -148,7 +148,7 @@ def analyze(request: AnalyzeRequest) -> dict[str, object]:
     if not resume_text or not job_description_text:
         raise HTTPException(
             status_code=400,
-            detail="Resume text and job description text must not be empty.",
+            detail="Özgeçmiş metni ve iş ilanı metni boş olamaz.",
         )
 
     model, skill_dictionary = get_resources()
@@ -173,7 +173,7 @@ def compare_models(request: AnalyzeRequest) -> dict[str, object]:
     if not resume_text or not job_description_text:
         raise HTTPException(
             status_code=400,
-            detail="Resume text and job description text must not be empty.",
+            detail="Özgeçmiş metni ve iş ilanı metni boş olamaz.",
         )
 
     skill_dictionary = get_skill_dictionary()
@@ -189,7 +189,7 @@ def compare_models(request: AnalyzeRequest) -> dict[str, object]:
                     "description": spec["description"],
                     "model": compact_model_name(model_name),
                     "available": False,
-                    "error": "Local model path was not found.",
+                    "error": "Yerel model yolu bulunamadı.",
                 }
             )
             continue

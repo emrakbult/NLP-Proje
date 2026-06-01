@@ -21,14 +21,14 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   });
 
   if (!response.ok) {
-    let message = `Request failed with status ${response.status}`;
+    let message = `İstek ${response.status} durum koduyla başarısız oldu`;
     try {
       const body = await response.json();
       if (typeof body.detail === "string") {
         message = body.detail;
       }
     } catch {
-      // Keep the generic message if the response is not JSON.
+      // Yanıt JSON değilse genel hata mesajını koru.
     }
     throw new Error(message);
   }

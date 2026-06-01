@@ -20,8 +20,8 @@ def resolve_default_model_name() -> str:
     if FALLBACK_FINE_TUNED_MODEL_PATH.exists():
         return str(FALLBACK_FINE_TUNED_MODEL_PATH)
     raise FileNotFoundError(
-        "No local fine-tuned Sentence Transformer model was found. "
-        f"Expected {FINAL_FINE_TUNED_MODEL_PATH} or {FALLBACK_FINE_TUNED_MODEL_PATH}."
+        "Yerel fine-tuned Sentence Transformer modeli bulunamadı. "
+        f"Beklenen yollar: {FINAL_FINE_TUNED_MODEL_PATH} veya {FALLBACK_FINE_TUNED_MODEL_PATH}."
     )
 
 
@@ -35,13 +35,13 @@ def load_model(model_name: str = DEFAULT_MODEL_NAME) -> Any:
         from sentence_transformers import SentenceTransformer
     except ImportError as error:
         raise ImportError(
-            "sentence-transformers is required for model loading. "
-            "Install dependencies with: pip install -r requirements.txt"
+            "Model yükleme için sentence-transformers gereklidir. "
+            "Bağımlılıkları şu komutla kurun: pip install -r requirements.txt"
         ) from error
 
     model_path = Path(model_name)
     if model_path.is_absolute() and not model_path.exists():
-        raise FileNotFoundError(f"Local model path not found: {model_path}")
+        raise FileNotFoundError(f"Yerel model yolu bulunamadı: {model_path}")
 
     return SentenceTransformer(model_name)
 
@@ -53,11 +53,11 @@ def _as_float_vector(vector: Any) -> list[float]:
         vector = vector.tolist()
 
     if not isinstance(vector, Sequence) or isinstance(vector, str):
-        raise TypeError("Embedding vector must be a numeric sequence.")
+        raise TypeError("Embedding vektörü sayısal bir dizi olmalıdır.")
 
     if vector and isinstance(vector[0], Sequence) and not isinstance(vector[0], str):
         if len(vector) != 1:
-            raise ValueError("Expected a single embedding vector, received multiple vectors.")
+            raise ValueError("Tek bir embedding vektörü bekleniyordu, birden fazla vektör alındı.")
         vector = vector[0]
 
     return [float(value) for value in vector]
@@ -92,7 +92,7 @@ def encode_texts(
         embeddings = embeddings.tolist()
 
     if not isinstance(embeddings, Sequence) or isinstance(embeddings, str):
-        raise TypeError("Batch embeddings must be a sequence of embedding vectors.")
+        raise TypeError("Toplu embedding çıktısı embedding vektörlerinden oluşan bir dizi olmalıdır.")
 
     return [_as_float_vector(embedding) for embedding in embeddings]
 
@@ -104,7 +104,7 @@ def cosine_similarity(vector_a: Any, vector_b: Any) -> float:
     b = _as_float_vector(vector_b)
 
     if len(a) != len(b):
-        raise ValueError("Embedding vectors must have the same length.")
+        raise ValueError("Embedding vektörleri aynı uzunlukta olmalıdır.")
 
     dot_product = sum(left * right for left, right in zip(a, b))
     norm_a = math.sqrt(sum(value * value for value in a))
