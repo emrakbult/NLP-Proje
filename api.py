@@ -10,13 +10,7 @@ from pydantic import BaseModel, Field
 
 from src.document_extraction import extract_document_text
 from src.matcher import match_resume_to_job
-from src.similarity import (
-    BASE_MODEL_PATH,
-    DEFAULT_MODEL_NAME,
-    FALLBACK_FINE_TUNED_MODEL_PATH,
-    FINAL_FINE_TUNED_MODEL_PATH,
-    load_model,
-)
+from src.similarity import DEFAULT_MODEL_NAME, load_model
 from src.skill_evidence import DEFAULT_SKILL_EVIDENCE_MODEL_PATH, is_skill_evidence_model_available
 from src.skill_extractor import load_skills
 
@@ -24,29 +18,6 @@ from src.skill_extractor import load_skills
 PROJECT_ROOT = Path(__file__).resolve().parent
 SAMPLE_RESUME_PATH = PROJECT_ROOT / "data" / "examples" / "sample_resume.txt"
 SAMPLE_JOB_PATH = PROJECT_ROOT / "data" / "examples" / "sample_job.txt"
-MODEL_COMPARISON_SPECS = [
-    {
-        "model_id": "final",
-        "model_label": "Final Model",
-        "description": "Selected local fine-tuned MiniLM model",
-        "model_name": str(FINAL_FINE_TUNED_MODEL_PATH),
-        "requires_path": True,
-    },
-    {
-        "model_id": "previous",
-        "model_label": "Previous Model",
-        "description": "Earlier local fine-tuned MiniLM model",
-        "model_name": str(FALLBACK_FINE_TUNED_MODEL_PATH),
-        "requires_path": True,
-    },
-    {
-        "model_id": "baseline",
-        "model_label": "Base MiniLM",
-        "description": "Local pretrained MiniLM encoder before task adaptation",
-        "model_name": str(BASE_MODEL_PATH),
-        "requires_path": True,
-    },
-]
 
 
 class AnalyzeRequest(BaseModel):
@@ -68,14 +39,14 @@ def compact_model_name(model_name: str) -> str:
 def get_resources() -> tuple[Any, Any]:
     """Load model and skill dictionary once for the API process."""
 
-    return get_model(DEFAULT_MODEL_NAME), get_skill_dictionary()
+    return get_model(), get_skill_dictionary()
 
 
-@lru_cache(maxsize=None)
-def get_model(model_name: str) -> Any:
-    """Load and cache a specific model for comparison requests."""
+@lru_cache(maxsize=1)
+def get_model() -> Any:
+    """Load and cache the selected optimal runtime model."""
 
-    return load_model(model_name)
+    return load_model(DEFAULT_MODEL_NAME)
 
 
 @lru_cache(maxsize=1)
@@ -86,8 +57,8 @@ def get_skill_dictionary() -> Any:
 
 
 app = FastAPI(
-    title="Resume-Job Match Analysis API",
-    description="FastAPI backend for the explainable NLP resume-job matching system.",
+    title="CV-İş İlanı Eşleşme Analizi API",
+    description="Açıklanabilir NLP tabanlı CV-iş ilanı eşleştirme sistemi için FastAPI backend.",
     version="1.0.0",
 )
 
@@ -148,7 +119,7 @@ def analyze(request: AnalyzeRequest) -> dict[str, object]:
     if not resume_text or not job_description_text:
         raise HTTPException(
             status_code=400,
-            detail="Resume text and job description text must not be empty.",
+            detail="CV metni ve iş ilanı metni boş olmamalıdır.",
         )
 
     model, skill_dictionary = get_resources()
@@ -163,69 +134,3 @@ def analyze(request: AnalyzeRequest) -> dict[str, object]:
         "model": compact_model_name(DEFAULT_MODEL_NAME),
         **result,
     }
-
-
-@app.post("/compare")
-def compare_models(request: AnalyzeRequest) -> dict[str, object]:
-    resume_text = request.resume_text.strip()
-    job_description_text = request.job_description_text.strip()
-
-    if not resume_text or not job_description_text:
-        raise HTTPException(
-            status_code=400,
-            detail="Resume text and job description text must not be empty.",
-        )
-
-    skill_dictionary = get_skill_dictionary()
-    items: list[dict[str, object]] = []
-
-    for spec in MODEL_COMPARISON_SPECS:
-        model_name = str(spec["model_name"])
-        if spec["requires_path"] and not Path(model_name).exists():
-            items.append(
-                {
-                    "model_id": spec["model_id"],
-                    "model_label": spec["model_label"],
-                    "description": spec["description"],
-                    "model": compact_model_name(model_name),
-                    "available": False,
-                    "error": "Local model path was not found.",
-                }
-            )
-            continue
-
-        try:
-            model = get_model(model_name)
-            result = match_resume_to_job(
-                resume_text=resume_text,
-                job_description_text=job_description_text,
-                model=model,
-                skill_dictionary=skill_dictionary,
-            )
-            items.append(
-                {
-                    "model_id": spec["model_id"],
-                    "model_label": spec["model_label"],
-                    "description": spec["description"],
-                    "model": compact_model_name(model_name),
-                    "available": True,
-                    "semantic_score": result["semantic_score"],
-                    "overall_score": result["overall_score"],
-                    "skill_match_score": result["skill_match_score"],
-                    "unweighted_skill_match_score": result["unweighted_skill_match_score"],
-                    "match_category": result["match_category"],
-                }
-            )
-        except Exception as error:
-            items.append(
-                {
-                    "model_id": spec["model_id"],
-                    "model_label": spec["model_label"],
-                    "description": spec["description"],
-                    "model": compact_model_name(model_name),
-                    "available": False,
-                    "error": str(error),
-                }
-            )
-
-    return {"items": items}

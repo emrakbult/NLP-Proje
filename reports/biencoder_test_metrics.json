@@ -1,0 +1,39 @@
+{
+  "model": "models\\resume-job-biencoder-optimal",
+  "records": 1759,
+  "label_distribution": {
+    "No Fit": 857,
+    "Potential Fit": 444,
+    "Good Fit": 458
+  },
+  "semantic_pearson": 0.20238120746023466,
+  "semantic_spearman": 0.2150492205413826,
+  "classification_accuracy": 0.5224559408754974,
+  "confusion_matrix_labels": [
+    "No Fit",
+    "Potential Fit",
+    "Good Fit"
+  ],
+  "confusion_matrix": [
+    [
+      667,
+      74,
+      116
+    ],
+    [
+      236,
+      83,
+      125
+    ],
+    [
+      215,
+      74,
+      169
+    ]
+  ],
+  "average_semantic_score_by_label": {
+    "No Fit": 48.755855119631754,
+    "Potential Fit": 54.02383427576976,
+    "Good Fit": 56.022565341932804
+  }
+}

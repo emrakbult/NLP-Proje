@@ -2,7 +2,6 @@ import type {
   ExtractedDocumentPayload,
   HealthPayload,
   MatchResult,
-  ModelComparisonPayload,
   SamplePayload
 } from "./types";
 
@@ -21,7 +20,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   });
 
   if (!response.ok) {
-    let message = `Request failed with status ${response.status}`;
+    let message = `İstek ${response.status} durum koduyla başarısız oldu`;
     try {
       const body = await response.json();
       if (typeof body.detail === "string") {
@@ -46,13 +45,6 @@ export function getSample(): Promise<SamplePayload> {
 
 export function analyzeMatch(payload: SamplePayload): Promise<MatchResult> {
   return request<MatchResult>("/analyze", {
-    method: "POST",
-    body: JSON.stringify(payload)
-  });
-}
-
-export function compareModels(payload: SamplePayload): Promise<ModelComparisonPayload> {
-  return request<ModelComparisonPayload>("/compare", {
     method: "POST",
     body: JSON.stringify(payload)
   });

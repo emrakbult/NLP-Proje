@@ -1,34 +1,56 @@
 # Results: HR-Oriented Explainable Resume-Job Matching System
 
-## Final Model
+## Final Runtime Model
 
-The final semantic encoder is the fine-tuned Sentence Transformer model:
-
-```text
-models/resume-job-minilm-finetuned-2epoch/
-```
-
-Base model:
+The final runtime model is the custom bi-encoder:
 
 ```text
-sentence-transformers/all-MiniLM-L6-v2
+models/resume-job-biencoder-optimal/
 ```
 
-The base encoder is stored locally for runtime comparison:
+It was initialized from local pretrained MiniLM weights:
 
 ```text
 models/base-minilm/
 ```
 
-Fine-tuning objective:
+The old fine-tuned SentenceTransformer model is preserved for historical comparison, but it is not used by the runtime UI:
 
 ```text
-No Fit        -> 0.0 cosine similarity target
-Potential Fit -> 0.5 cosine similarity target
-Good Fit      -> 1.0 cosine similarity target
+models/resume-job-minilm-finetuned-2epoch/
 ```
 
-The model was fine-tuned with `CosineSimilarityLoss`, keeping the project focused on encoder-only semantic representation and cosine similarity.
+## Architecture
+
+```mermaid
+flowchart LR
+    R["Resume text"] --> RT["Tokenizer"]
+    J["Job description text"] --> JT["Tokenizer"]
+    RT --> E["Shared MiniLM encoder"]
+    JT --> E
+    E --> RP["Mean pooling"]
+    E --> JP["Mean pooling"]
+    RP --> RH["Projection head: 384 -> 256 -> 128"]
+    JP --> JH["Projection head: 384 -> 256 -> 128"]
+    RH --> RN["L2 normalization"]
+    JH --> JN["L2 normalization"]
+    RN --> C["Cosine similarity + learnable temperature"]
+    JN --> C
+    RN --> F["Pair features: resume, job, abs diff, product"]
+    JN --> F
+    F --> H["Classification head"]
+    C --> S["Cosine-based fit score"]
+    H --> P["No Fit / Potential Fit / Good Fit"]
+```
+
+Main components:
+
+- Shared encoder-only MiniLM backbone
+- Mean pooling over token embeddings
+- Projection head: `Linear(384 -> 256) + GELU + Dropout + Linear(256 -> 128)`
+- L2-normalized resume and job embeddings
+- Cosine similarity with a learnable temperature parameter
+- Classification head over `[resume_emb, job_emb, abs(resume_emb - job_emb), resume_emb * job_emb]`
 
 ## Dataset
 
@@ -53,214 +75,200 @@ Dataset size:
 | Test | 1,759 |
 | Total | 8,000 |
 
-Test label distribution:
+The train split was divided into stratified training and validation subsets with seed `42`. The original test split was kept untouched for final evaluation.
 
-| Label | Count |
+| Subset | Rows |
 |---|---:|
-| No Fit | 857 |
-| Potential Fit | 444 |
-| Good Fit | 458 |
+| Train subset | 5,306 |
+| Validation subset | 935 |
+| Test split | 1,759 |
 
-## Fine-Tuning Result
-
-Training configuration:
+## Training Configuration
 
 | Setting | Value |
 |---|---|
-| Device | CUDA GPU |
-| GPU | NVIDIA GeForce GTX 1060 |
-| Epochs | 2 |
+| Architecture | ResumeJobBiEncoder |
+| Base model | `models/base-minilm/` |
+| Epoch limit | 25 |
 | Batch size | 8 |
 | Learning rate | 2e-5 |
 | Max sequence length | 256 |
+| Validation ratio | 0.15 |
+| Seed | 42 |
+| Device | CUDA GPU |
+| Loss | `0.6 * cosine_mse_loss + 0.4 * classification_cross_entropy` |
+| Selection metric | Lowest validation total loss |
 
-Full fine-tuning evaluator result:
-
-| Metric | Before Fine-Tuning | After Fine-Tuning |
-|---|---:|---:|
-| Pearson correlation | 0.1110 | 0.4075 |
-| Spearman correlation | 0.1065 | 0.3994 |
-
-This shows that supervised fine-tuning significantly improved alignment between cosine similarity and the dataset fit labels.
-
-The 2-epoch model was selected over the 1-epoch model because it improved the overall evaluation metrics and threshold-based accuracy while keeping the same architecture and training objective.
-
-| Model | Pearson Semantic | Spearman Semantic | Pearson Overall | Spearman Overall | Accuracy |
-|---|---:|---:|---:|---:|---:|
-| 1 epoch | 0.4029 | 0.3780 | 0.3734 | 0.3480 | 0.4741 |
-| 2 epochs | 0.4022 | 0.3993 | 0.3815 | 0.3766 | 0.4821 |
-
-## Full Test Evaluation
-
-Command:
-
-```bash
-.\.venv\Scripts\python.exe scripts\evaluate_matching.py --split test --limit 0 --sample-mode balanced --batch-size 32 --save-csv data\processed\final_test_evaluation.csv
-```
-
-Evaluation output:
-
-| Metric | Value |
-|---|---:|
-| Pearson semantic | 0.4022 |
-| Spearman semantic | 0.3993 |
-| Pearson overall | 0.3815 |
-| Spearman overall | 0.3766 |
-| Threshold-based accuracy | 0.4821 |
-
-Average semantic score by label:
-
-| Label | Average Score |
-|---|---:|
-| No Fit | 26.76 |
-| Potential Fit | 45.79 |
-| Good Fit | 48.17 |
-
-Average weighted skill match score by label:
-
-| Label | Average Score |
-|---|---:|
-| No Fit | 20.82 |
-| Potential Fit | 20.49 |
-| Good Fit | 24.19 |
-
-Average overall score by label:
-
-| Label | Average Score |
-|---|---:|
-| No Fit | 25.57 |
-| Potential Fit | 40.73 |
-| Good Fit | 43.37 |
-
-Interpretation:
-
-- The fine-tuned semantic encoder separates `No Fit` from the other labels clearly.
-- `Potential Fit` and `Good Fit` are closer to each other, which is expected because both can share many relevant resume-job signals.
-- The skill score is useful for explanation, but it is less predictive than the fine-tuned semantic score on this dataset.
-- The overall score combines semantic similarity and skill evidence, but semantic similarity remains the strongest quantitative signal.
-
-## Ranking Evaluation
-
-Command:
-
-```bash
-.\.venv\Scripts\python.exe scripts\evaluate_ranking.py --csv data\processed\final_test_evaluation.csv
-```
-
-Ranking by semantic score:
-
-| K | Precision@K Good Fit | Precision@K Potential-or-Good Fit |
-|---:|---:|---:|
-| 50 | 0.6400 | 0.9600 |
-| 100 | 0.4900 | 0.8600 |
-| 200 | 0.3850 | 0.7850 |
-
-Ranking by overall score:
-
-| K | Precision@K Good Fit | Precision@K Potential-or-Good Fit |
-|---:|---:|---:|
-| 50 | 0.5200 | 0.8400 |
-| 100 | 0.4700 | 0.8000 |
-| 200 | 0.4100 | 0.7450 |
-
-Interpretation:
-
-- The semantic encoder is effective for ranking strong candidate-job pairs near the top.
-- In the top 50 semantic results, 96% are either `Potential Fit` or `Good Fit`.
-- The overall score is more explainable because it includes skills, but semantic ranking performs better for pure retrieval.
-
-## Qualitative Error Analysis
-
-Command:
-
-```bash
-.\.venv\Scripts\python.exe scripts\analyze_errors.py --split test --limit 0 --sample-mode balanced --batch-size 32 --top-n 2
-```
-
-Main findings:
-
-1. Some `Good Fit` examples receive low scores when the resume and job posting use different wording and the explicit skill dictionary finds few or no shared skills.
-2. Some `No Fit` examples receive high scores when the candidate has many overlapping technical keywords with the job posting, such as Java, JavaScript, HTML, and CSS.
-3. Some `Potential Fit` examples receive high semantic scores because the resume and job are in the same professional domain, even when the fit label is not `Good Fit`.
-4. Broad tools such as Excel can still create strong skill overlap in non-technical roles, so skill weighting should remain conservative.
-
-These errors are useful for the project because they show why explainability is necessary. The score alone is not enough; HR should also inspect matched skills, missing skills, and the generated evaluation notes.
-
-## Skill Extraction Evaluation
-
-The dataset provides resume-job fit labels, but it does not provide gold-standard skill annotations. Because of this, dataset-level Precision, Recall, and F1 for skill extraction cannot be calculated directly from the main dataset.
-
-Skill extraction is evaluated through:
-
-- Unit tests for alias matching and partial-word false positive prevention
-- Manual qualitative inspection in error analysis
-- Matched and missing skill explanations in the Streamlit app
-
-The current skill extraction module uses dictionary matching for candidate skill spans and a model-based evidence classifier for resume-side validation. This prevents negated or weak mentions from being counted as matched skills.
-
-## Skill Evidence Classifier Result
-
-The skill evidence classifier was trained on a manually curated dataset:
+Training artifacts:
 
 ```text
-data/skill_evidence/skill_evidence_dataset.csv
+reports/biencoder_training_config.json
+reports/biencoder_training_history.csv
+reports/biencoder_optimal_selection.json
 ```
 
-Dataset size:
+## Optimal Epoch Selection
 
-| Label | Rows |
-|---|---:|
-| Positive | 67 |
-| Negated | 67 |
-| Unclear | 67 |
-| Total | 201 |
+The best checkpoint was selected by minimum validation total loss:
 
-Split:
+| Selected Epoch | Validation Total Loss |
+|---:|---:|
+| 22 | 0.2558 |
 
-| Split | Rows |
-|---|---:|
-| Train | 165 |
-| Validation | 18 |
-| Test | 18 |
+Best validation rows:
 
-Classifier configuration:
+| Epoch | Train Loss | Validation Loss | Validation Accuracy | Validation Pearson | Validation Spearman |
+|---:|---:|---:|---:|---:|---:|
+| 22 | 0.1810 | 0.2558 | 0.8342 | 0.7236 | 0.7242 |
+| 20 | 0.1901 | 0.2583 | 0.8278 | 0.7153 | 0.7086 |
+| 21 | 0.1861 | 0.2585 | 0.8353 | 0.7287 | 0.7303 |
+| 24 | 0.1719 | 0.2612 | 0.8321 | 0.7249 | 0.7205 |
+| 25 | 0.1646 | 0.2619 | 0.8289 | 0.7256 | 0.7247 |
 
-| Setting | Value |
-|---|---|
-| Base model | microsoft/MiniLM-L12-H384-uncased |
-| Output path | models/skill-evidence-minilm-classifier/ |
-| Epochs | 12 |
-| Batch size | 16 |
-| Device | CUDA GPU |
+Interpretation:
 
-Final result:
+- Training loss continued to decrease until epoch 25.
+- Validation loss improved strongly until the low-20 epoch range.
+- Epochs 23-25 did not improve validation loss, so selecting epoch 22 avoids using the last and more overfit checkpoint.
+- This gives the project a proper validation-based model selection process instead of manually picking an arbitrary number of epochs.
+
+## Training Plots
+
+![Train vs validation total loss](reports/figures/loss_total.png)
+
+![Cosine loss curve](reports/figures/loss_cosine.png)
+
+![Classification loss curve](reports/figures/loss_classification.png)
+
+![Validation accuracy](reports/figures/validation_accuracy.png)
+
+![Validation correlations](reports/figures/validation_correlations.png)
+
+## Final Test Evaluation
+
+Final evaluation was run on the untouched test split:
+
+```text
+records: 1,759
+```
 
 | Metric | Value |
 |---|---:|
-| Validation accuracy | 1.0000 |
-| Test accuracy | 0.9444 |
+| Classification accuracy | 0.5225 |
+| Semantic Pearson | 0.2024 |
+| Semantic Spearman | 0.2150 |
 
-This dataset is intentionally small and controlled, so these metrics should not be interpreted as production-level generalization. The value for the course project is that the pipeline now uses a second encoder-only model to classify sentence-level evidence as `positive`, `negated`, or `unclear`.
+Confusion matrix labels:
+
+```text
+No Fit, Potential Fit, Good Fit
+```
+
+| True \ Predicted | No Fit | Potential Fit | Good Fit |
+|---|---:|---:|---:|
+| No Fit | 667 | 74 | 116 |
+| Potential Fit | 236 | 83 | 125 |
+| Good Fit | 215 | 74 | 169 |
+
+Average cosine-based semantic score by label:
+
+| Label | Average Score |
+|---|---:|
+| No Fit | 48.76 |
+| Potential Fit | 54.02 |
+| Good Fit | 56.02 |
+
+Interpretation:
+
+- The classification head improves discrete fit prediction compared with the old threshold-only setup.
+- The cosine-based semantic score separates the labels only weakly on the test set.
+- This means the custom architecture should be presented as a multi-output model: cosine score is useful, but the classification head is the stronger supervised signal.
+- The model is suitable for an NLP course prototype and analysis workflow, not for production hiring decisions.
+
+## Test Plots
+
+![Score distribution by label](reports/figures/score_distribution_by_label.png)
+
+![Confusion matrix](reports/figures/confusion_matrix.png)
+
+## Model Comparison
+
+Model comparison is now reported in experiment files, not in the application UI.
+
+Source file:
+
+```text
+reports/model_comparison_metrics.csv
+```
+
+| Model | Semantic Pearson | Semantic Spearman | Accuracy Metric |
+|---|---:|---:|---:|
+| Baseline local MiniLM | 0.1121 | 0.1078 | 0.4139 |
+| Old fine-tuned SentenceTransformer | 0.4022 | 0.3993 | 0.4741 |
+| New optimal custom bi-encoder | 0.2024 | 0.2150 | 0.5225 |
+
+Notes:
+
+- The old SentenceTransformer remains stronger as a pure semantic-correlation model.
+- The new custom bi-encoder is stronger on the direct 3-class prediction metric.
+- This tradeoff is useful for the final report because it shows why model comparison belongs in experiment analysis, while the UI should only expose the selected final workflow.
+
+## Skill Evidence Classifier
+
+The skill evidence classifier remains part of the final system:
+
+```text
+models/skill-evidence-minilm-classifier/
+```
+
+It classifies resume-side skill mentions as:
+
+- `positive`
+- `negated`
+- `unclear`
+
+This prevents sentences such as:
+
+```text
+I do not have AWS experience.
+```
+
+from being counted as positive AWS evidence.
+
+## Explainability Layer
+
+The final system combines neural matching with explainable extraction:
+
+- Resume skills
+- Job skills
+- Matched skills
+- Missing skills
+- Negated resume skill mentions
+- Unclear resume skill mentions
+- Sentence-level evidence
+- Weighted skill score
+
+This keeps the project aligned with the original goal: the system should not only produce a score, but explain why the score was produced.
 
 ## Final Status
 
 The project now includes:
 
 - Real dataset loading
-- Encoder-only semantic matching
-- GPU fine-tuned Sentence Transformer
-- Cosine similarity scoring
-- Skill extraction and normalization
-- Model-based skill evidence classification
-- Matched and missing skill explanations
-- Negated and unclear skill explanations
-- Weighted skill scoring
+- Local pretrained MiniLM weights
+- Custom encoder-only bi-encoder architecture
+- Projection head and classification head
+- Learnable temperature for similarity scaling
+- 25-epoch GPU training
+- Per-epoch train/validation loss logging
+- Validation-loss-based optimal checkpoint selection
+- Final local runtime model
+- Test evaluation with confusion matrix
+- Training and evaluation plots
+- Historical model comparison in reports
 - MarkItDown file upload for PDF/DOCX/TXT/Markdown inputs
-- HR-oriented recommendations
-- Full test evaluation
-- Ranking evaluation
-- Qualitative error analysis
-- React Vite user interface backed by FastAPI
-- Optional Streamlit user interface
+- Model-based skill evidence classification
+- React Vite UI backed by FastAPI
+- Optional Streamlit demo
 
-The project is ready for demonstration and presentation.
+The application UI now demonstrates only the final selected model. Model comparisons are documented in reports and plots.

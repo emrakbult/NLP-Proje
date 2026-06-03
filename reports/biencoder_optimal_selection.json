@@ -1,0 +1,6 @@
+{
+  "best_epoch": 22,
+  "selection_metric": "validation_total_loss",
+  "best_validation_total_loss": 0.25581911148871966,
+  "optimal_model_dir": "models\\resume-job-biencoder-optimal"
+}

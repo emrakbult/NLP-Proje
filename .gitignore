@@ -9,3 +9,5 @@ logs/
 frontend/node_modules/
 frontend/dist/
 frontend/tsconfig.tsbuildinfo
+models/resume-job-biencoder-checkpoints/
+data/demo_uploads/*.pdf

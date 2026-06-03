@@ -25,7 +25,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run real encoder-based matching on dataset samples.")
     parser.add_argument("--split", default="test", choices=["train", "test"], help="Dataset split to sample.")
     parser.add_argument("--limit", type=int, default=3, help="Number of rows to evaluate.")
-    parser.add_argument("--model", default=DEFAULT_MODEL_NAME, help="Sentence Transformer model name.")
+    parser.add_argument("--model", default=DEFAULT_MODEL_NAME, help="Local runtime model path.")
     return parser.parse_args()
 
 
@@ -55,8 +55,6 @@ def main() -> None:
         print(f"  match category: {result['match_category']}")
         print(f"  matched skills: {', '.join(result['matched_skills']) or '-'}")
         print(f"  missing skills: {', '.join(result['missing_skills']) or '-'}")
-        print(f"  HR evaluation: {result['hr_evaluation']}")
-        print(f"  interview focus: {' | '.join(result['interview_focus']) or '-'}")
         print(f"  resume preview: {shorten(record['resume_text'])}")
         print(f"  job preview: {shorten(record['job_description_text'])}")
         print()

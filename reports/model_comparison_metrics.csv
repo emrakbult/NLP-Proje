@@ -1,0 +1,4 @@
+model_label,model_path,semantic_pearson,semantic_spearman,threshold_accuracy,records
+Baseline local MiniLM,models\base-minilm,0.11210927082182222,0.10784322229606533,0.4138715179079022,1759
+Old fine-tuned SentenceTransformer,models\resume-job-minilm-finetuned-2epoch,0.40220346070531243,0.39934698617425785,0.47413303013075614,1759
+New optimal custom bi-encoder,models\resume-job-biencoder-optimal,0.20238120746023466,0.2150492205413826,0.5224559408754974,1759

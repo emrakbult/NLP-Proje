@@ -1,0 +1,27 @@
+{
+  "architecture": "ResumeJobBiEncoder",
+  "base_model": "models\\base-minilm",
+  "output_dir": "models\\resume-job-biencoder-optimal",
+  "checkpoint_dir": "models\\resume-job-biencoder-checkpoints",
+  "epochs": 25,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "max_length": 256,
+  "validation_ratio": 0.15,
+  "seed": 42,
+  "cosine_weight": 0.6,
+  "classification_weight": 0.4,
+  "device": "cuda",
+  "train_records": 5306,
+  "validation_records": 935,
+  "train_label_distribution": {
+    "No Fit": 2672,
+    "Good Fit": 1311,
+    "Potential Fit": 1323
+  },
+  "validation_label_distribution": {
+    "No Fit": 471,
+    "Potential Fit": 233,
+    "Good Fit": 231
+  }
+}

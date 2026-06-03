@@ -1,5 +1,27 @@
 # Project Plan: HR-Oriented Explainable Resume-Job Matching System
 
+## Current Implementation Update
+
+The project has been rebuilt from the initial SentenceTransformer-only plan into a proper NLP training system.
+
+Final runtime model:
+
+```text
+models/resume-job-biencoder-optimal/
+```
+
+Current architecture:
+
+- Local pretrained MiniLM weights from `models/base-minilm/`
+- Custom shared bi-encoder architecture
+- Mean pooling
+- Projection head: `384 -> 256 -> 128`
+- L2-normalized embeddings
+- Cosine similarity with learnable temperature
+- Pair classification head for `No Fit`, `Potential Fit`, and `Good Fit`
+
+Training now runs for 25 epochs and selects the optimal checkpoint by lowest validation total loss. The selected checkpoint is epoch 22. Model comparison is no longer part of the application UI; it is reported in `RESULTS.md` and `reports/model_comparison_metrics.csv`.
+
 ## 1. Project Definition
 
 This project is an explainable Natural Language Processing system designed for human resources use cases.
@@ -349,8 +371,8 @@ The explanation should include:
 - Why the candidate is suitable
 - Which skills support the match
 - Which skills are missing
-- What HR should pay attention to
-- Which topics should be checked during the technical interview
+- Which required skills are missing or unclear
+- Which evidence sentences support or weaken skill matches
 
 Example explanation:
 
@@ -361,9 +383,9 @@ The candidate may still be suitable for junior or mid-level software development
 but cloud and container experience should be checked during the technical interview.
 ```
 
-## 15. HR Evaluation Logic
+## 15. Match Category Logic
 
-The first version will use rule-based HR evaluation.
+The system uses deterministic category rules. It does not generate free-form HR evaluation text.
 
 Example rules:
 
@@ -371,7 +393,7 @@ Example rules:
 - If the overall score is between 60% and 79%, the candidate is a partial match.
 - If the overall score is between 40% and 59%, the candidate is a weak match.
 - If the overall score is below 40%, the candidate is not recommended for this role.
-- If critical missing skills exist, they should be clearly mentioned in the explanation.
+- If critical missing skills exist, they should affect the match category and missing-skill list.
 
 Example categories:
 
@@ -396,15 +418,16 @@ The interface will include:
 - Skill match score
 - Matched skills section
 - Missing skills section
-- HR evaluation section
-- Technical interview focus section
+- Skill evidence section
+- Negated and unclear skill mention sections
 
-Streamlit is preferred because it enables fast development, simple execution, and clear demonstration for NLP projects.
+The final interface uses React Vite with a FastAPI backend.
 
 Run command:
 
 ```text
-.\.venv\Scripts\python.exe -m streamlit run app.py
+cd frontend
+npm run dev
 ```
 
 ## 17. Suggested File Structure
@@ -415,7 +438,7 @@ NLP-Proje/
 |-- PLAN.md
 |-- README.md
 |-- requirements.txt
-|-- app.py
+|-- api.py
 |-- data/
 |   |-- raw/
 |   |   `-- cnamuangtoun_resume_job_description_fit/
@@ -429,8 +452,9 @@ NLP-Proje/
 |-- scripts/
 |   |-- inspect_dataset.py
 |   |-- run_sample_matching.py
-|   |-- analyze_errors.py
-|   `-- evaluate_matching.py
+|   |-- train_biencoder.py
+|   |-- evaluate_biencoder.py
+|   `-- plot_training_history.py
 |-- src/
 |   |-- __init__.py
 |   |-- data_loader.py
@@ -527,18 +551,16 @@ Planned functions:
 
 ### `src/recommender.py`
 
-Responsible for generating HR-oriented explanations and recommendations.
+Responsible for deterministic match category rules.
 
 Planned functions:
 
 - `classify_match(overall_score)`
 - `generate_recommendation(overall_score, semantic_score, skill_match_score, matched_skills, missing_skills)`
-- `generate_hr_evaluation(final_score, matched_skills, missing_skills)`
-- `generate_interview_focus(missing_skills)`
 
-### `app.py`
+### `api.py`
 
-Responsible for the Streamlit user interface.
+Responsible for the FastAPI backend used by the React user interface.
 
 ## 19. Development Steps
 
@@ -555,14 +577,17 @@ Create the main folders and starter files:
 - `tests/`
 - `requirements.txt`
 - `README.md`
-- `app.py`
+- `api.py`
 
 ### Step 2: Define Requirements
 
 Initial Python libraries:
 
 ```text
-streamlit
+fastapi
+uvicorn
+react
+vite
 sentence-transformers
 scikit-learn
 pandas
@@ -803,7 +828,7 @@ Expected result:
 - High overall score
 - Many matched skills
 - Few missing skills
-- Positive HR evaluation
+- Strong match category
 
 ### Partial Match
 
@@ -814,7 +839,7 @@ Expected result:
 - Medium overall score
 - Some matched skills
 - Some missing skills
-- Suggestion to check missing areas during the interview
+- Missing required skills are visible in the result
 
 ### Weak Match
 
@@ -841,7 +866,7 @@ After the first working version, the following features can be added:
 - Turkish-English mixed language support
 - More advanced named entity recognition
 - Cross-encoder reranking
-- Exportable HR evaluation report
+- Exportable score and evidence report
 
 ## 23. Minimum Successful Version
 
@@ -892,7 +917,7 @@ The final project should include:
 
 ### Week 4
 
-- Implement the HR explanation module
+- Implement the match category and evidence output module
 - Build the Streamlit interface
 - Test the system with example scenarios
 
@@ -1025,7 +1050,7 @@ Each pair will be labeled as:
 - Partial match
 - Weak match
 
-This manual set will be used to check whether the system's score and HR explanation are reasonable.
+This manual set will be used to check whether the system's score, category, and evidence outputs are reasonable.
 
 ### Final Dataset Strategy
 

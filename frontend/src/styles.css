@@ -43,14 +43,12 @@ textarea {
 .topbar,
 .method-strip,
 .action-row,
-.score-card,
-.category-panel,
-.skill-card,
-.analysis-panel,
-.comparison-panel,
-.evidence-panel,
-.empty-result,
-.error-banner {
+  .score-card,
+  .category-panel,
+  .skill-card,
+  .evidence-panel,
+  .empty-result,
+  .error-banner {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
@@ -243,7 +241,7 @@ textarea:focus {
 
 .action-row {
   display: grid;
-  grid-template-columns: 220px 1fr 220px;
+  grid-template-columns: 220px 1fr;
   gap: 10px;
   margin-top: 14px;
   padding: 12px;
@@ -443,13 +441,6 @@ textarea:focus {
   font-size: 13px;
 }
 
-.insight-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 12px;
-  align-items: start;
-}
-
 .evidence-panel {
   overflow: hidden;
 }
@@ -471,11 +462,24 @@ textarea:focus {
   line-height: 1.45;
 }
 
-.evidence-header > span {
+.evidence-count {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
   color: var(--muted);
   font-size: 13px;
-  font-weight: 800;
+  line-height: 1.35;
   white-space: nowrap;
+}
+
+.evidence-count strong {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.evidence-count span {
+  font-size: 12px;
 }
 
 .evidence-list {
@@ -540,147 +544,27 @@ textarea:focus {
   font-size: 13px;
 }
 
-.comparison-panel {
-  margin-top: 12px;
-  overflow: hidden;
-}
-
-.comparison-header {
+.evidence-actions {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface-soft);
+  justify-content: center;
+  padding: 0 12px 14px;
 }
 
-.comparison-header p {
-  margin: 6px 0 0;
-  color: #243041;
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.comparison-header > span {
-  max-width: 360px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: right;
-}
-
-.comparison-table {
-  display: grid;
-}
-
-.comparison-row {
-  display: grid;
-  grid-template-columns: minmax(220px, 1.5fr) minmax(130px, 0.8fr) minmax(130px, 0.8fr) minmax(130px, 0.8fr) minmax(190px, 1fr);
-  gap: 14px;
-  align-items: center;
-  padding: 13px 16px;
-  border-top: 1px solid var(--border);
-}
-
-.comparison-row:first-child {
-  border-top: 0;
-}
-
-.comparison-row-head {
+.evidence-toggle {
+  min-height: 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
   background: #ffffff;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.comparison-model {
-  display: grid;
-  gap: 3px;
-  min-width: 0;
-}
-
-.comparison-model strong {
-  color: var(--text);
-  font-size: 14px;
-}
-
-.comparison-model small {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
-}
-
-.compact-score {
-  display: grid;
-  gap: 6px;
-}
-
-.compact-score span {
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.compact-track {
-  height: 6px;
-  border-radius: 999px;
-  background: #e5e7eb;
-  overflow: hidden;
-}
-
-.compact-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: var(--primary);
-}
-
-.comparison-category {
   color: #243041;
+  padding: 0 14px;
   font-size: 13px;
-  line-height: 1.35;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.comparison-muted {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.side-insights {
-  display: grid;
-  gap: 12px;
-}
-
-.analysis-panel {
-  min-height: 0;
-  padding: 16px 18px;
-}
-
-.analysis-panel-large {
-  min-height: 220px;
-}
-
-.analysis-panel p,
-.analysis-panel li {
-  color: #243041;
-  font-size: 15px;
-  line-height: 1.58;
-}
-
-.analysis-panel p {
-  margin: 12px 0 0;
-}
-
-.analysis-panel ul {
-  margin: 12px 0 0;
-  padding-left: 18px;
-}
-
-.analysis-panel li + li {
-  margin-top: 8px;
+.evidence-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .empty-result {
@@ -690,8 +574,7 @@ textarea:focus {
 }
 
 @media (max-width: 1100px) {
-  .summary-grid,
-  .insight-grid {
+  .summary-grid {
     grid-template-columns: 1fr;
   }
 
@@ -728,26 +611,6 @@ textarea:focus {
 
   .evidence-header {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 980px) {
-  .comparison-header {
-    flex-direction: column;
-  }
-
-  .comparison-header > span {
-    max-width: none;
-    text-align: left;
-  }
-
-  .comparison-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .comparison-row-head {
-    display: none;
   }
 }
 

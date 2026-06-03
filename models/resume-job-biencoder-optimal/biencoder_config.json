@@ -1,0 +1,12 @@
+{
+  "base_model_path": "models\\base-minilm",
+  "projection_dim": 128,
+  "hidden_projection_dim": 256,
+  "dropout": 0.1,
+  "labels": [
+    "No Fit",
+    "Potential Fit",
+    "Good Fit"
+  ],
+  "architecture": "ResumeJobBiEncoder"
+}

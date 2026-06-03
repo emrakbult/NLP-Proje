@@ -5,6 +5,9 @@ export type MatchResult = {
   unweighted_skill_match_score: number;
   skill_match_score: number;
   overall_score: number;
+  predicted_fit_label?: string | null;
+  fit_class_probabilities?: Record<string, number>;
+  model_temperature?: number | null;
   resume_skills: string[];
   job_skills: string[];
   matched_skills: string[];
@@ -15,9 +18,6 @@ export type MatchResult = {
   skill_evidence: SkillEvidenceItem[];
   skill_evidence_model_available: boolean;
   match_category: string;
-  hr_evaluation: string;
-  interview_focus: string[];
-  candidate_suggestions: string[];
 };
 
 export type SkillEvidenceItem = {
@@ -25,24 +25,6 @@ export type SkillEvidenceItem = {
   label: "positive" | "negated" | "unclear" | string;
   confidence: number;
   sentence: string;
-};
-
-export type ModelComparisonItem = {
-  model_id: string;
-  model_label: string;
-  description: string;
-  model: string;
-  available: boolean;
-  semantic_score?: number;
-  unweighted_skill_match_score?: number;
-  skill_match_score?: number;
-  overall_score?: number;
-  match_category?: string;
-  error?: string;
-};
-
-export type ModelComparisonPayload = {
-  items: ModelComparisonItem[];
 };
 
 export type SamplePayload = {

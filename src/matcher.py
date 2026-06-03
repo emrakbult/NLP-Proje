@@ -59,8 +59,14 @@ def match_resume_to_job(
     model = model or load_model()
     skill_dictionary = skill_dictionary or load_skills()
 
-    raw_similarity = calculate_cosine_similarity(resume_text, job_description_text, model)
-    semantic_score = similarity_to_percentage(raw_similarity)
+    neural_prediction: dict[str, Any] = {}
+    if hasattr(model, "predict_pair"):
+        neural_prediction = model.predict_pair(resume_text, job_description_text)
+        raw_similarity = float(neural_prediction["cosine_similarity"])
+        semantic_score = float(neural_prediction["semantic_score"])
+    else:
+        raw_similarity = calculate_cosine_similarity(resume_text, job_description_text, model)
+        semantic_score = similarity_to_percentage(raw_similarity)
 
     evidence_result = classify_resume_skill_evidence(
         resume_text,
@@ -103,6 +109,9 @@ def match_resume_to_job(
         "unweighted_skill_match_score": round(unweighted_skill_match_score, 2),
         "skill_match_score": round(skill_match_score, 2),
         "overall_score": round(final_score, 2),
+        "predicted_fit_label": neural_prediction.get("predicted_fit_label"),
+        "fit_class_probabilities": neural_prediction.get("fit_class_probabilities", {}),
+        "model_temperature": neural_prediction.get("temperature"),
         **skill_result,
         **recommendation,
     }

@@ -5,16 +5,13 @@ This project is an explainable NLP-based resume and job description matching sys
 It compares a candidate resume with a job description and returns:
 
 - Overall suitability score
-- Semantic similarity score
+- Neural fit prediction: `No Fit`, `Potential Fit`, or `Good Fit`
+- Cosine-based semantic similarity score
 - Weighted skill match score
 - Matched skills
 - Missing or unclear required skills
-- HR-oriented evaluation text
-- Interview focus suggestions
-- Candidate improvement suggestions
-- Model comparison against previous encoder versions
-- PDF/DOCX/TXT upload for resume and job description
-- Sentence-level skill evidence validation for positive, negated, and unclear skill mentions
+- Negated and unclear resume skill evidence
+- PDF/DOCX/TXT/Markdown upload for resume and job description
 
 The system is a decision-support prototype. It is not intended to make automated hiring decisions.
 
@@ -75,9 +72,7 @@ The React UI should run at:
 http://localhost:5173
 ```
 
-Open this address in the browser and use the interface to analyze a resume and job description.
-
-## Main Runtime Flow
+## Runtime Flow
 
 ```text
 Uploaded files or pasted text
@@ -89,46 +84,56 @@ MarkItDown text extraction for PDF/DOCX
 Resume text + job description text
         |
         v
-Encoder-only Sentence Transformer
+Custom ResumeJobBiEncoder
+        |
+        +--> Cosine-based semantic score
+        |
+        +--> 3-class fit prediction
         |
         v
-Cosine similarity score
-        |
-        v
-Dictionary-based skill extraction
-        |
-        v
-Skill evidence classifier for resume mentions
+Skill extraction + skill evidence classifier
         |
         v
 Weighted skill match score
         |
         v
-Overall suitability score
-        |
-        v
-Explainable HR result
+Explainable score, category, skill gaps, and evidence
 ```
 
 ## Model Approach
 
-The project uses an encoder-only Sentence Transformer model for semantic matching. The local model is fine-tuned for the resume-job matching task, so the system is adapted to compare candidate profiles and job requirements in the same embedding space.
-
-The project also uses a second encoder-only classifier for skill evidence validation. This classifier checks whether a resume sentence provides positive evidence for a skill, negates the skill, or mentions it unclearly.
-
-At runtime, the backend uses local model folders under `models/`. The comparison baseline is stored at `models/base-minilm/`, so the app does not need to download `sentence-transformers/all-MiniLM-L6-v2` from Hugging Face when another user runs the project.
-
-Fine-tuning is part of the project methodology, but this README focuses on running the completed system. Detailed experiment results are documented in `RESULTS.md`.
-
-The final score combines semantic similarity and weighted skill matching:
+The final runtime model is a custom encoder-only bi-encoder:
 
 ```text
-overall_score =
-  0.80 * semantic_similarity_score +
-  0.20 * weighted_skill_match_score
+models/resume-job-biencoder-optimal/
 ```
 
-The model gives more weight to technical and role-specific skills than broad general skills. This prevents generic skills such as communication or teamwork from making a weak candidate look too strong.
+It uses local pretrained MiniLM weights from:
+
+```text
+models/base-minilm/
+```
+
+The architecture uses:
+
+- Shared MiniLM encoder for resume and job text
+- Mean pooling over token embeddings
+- Projection head: `384 -> 256 -> 128`
+- L2-normalized projected embeddings
+- Cosine similarity with a learnable temperature parameter
+- Pair classification head over `[resume, job, abs diff, elementwise product]`
+
+The optimal model was selected from a 25-epoch training run by lowest validation total loss. The selected checkpoint is epoch 22.
+
+Older SentenceTransformer fine-tuned models are kept only for historical comparison in `reports/`. They are no longer exposed in the application UI.
+
+The project also uses a second encoder-only classifier for sentence-level skill evidence validation:
+
+```text
+models/skill-evidence-minilm-classifier/
+```
+
+This classifier checks whether a resume sentence provides positive evidence for a skill, negates the skill, or mentions it unclearly.
 
 ## Backend API
 
@@ -138,7 +143,6 @@ The FastAPI backend provides:
 GET  /health
 GET  /sample
 POST /analyze
-POST /compare
 POST /extract-text
 ```
 
@@ -157,11 +161,36 @@ Expected JSON body:
 }
 ```
 
-The response includes the scores, skill lists, match category, HR evaluation, interview focus, and candidate suggestions.
-
-Use `POST /compare` to score the same resume-job pair with the available model versions and compare semantic, skill, and overall scores.
+The response includes scores, neural fit prediction, skill lists, match category, and skill evidence. It does not generate free-form HR evaluation text.
 
 Use `POST /extract-text` with multipart field `file` to extract text from `.pdf`, `.docx`, `.txt`, or `.md` files. The React UI uses this endpoint for both resume and job description uploads.
+
+## Reports
+
+Training and evaluation artifacts are stored under:
+
+```text
+reports/
+reports/figures/
+```
+
+Important files:
+
+- `reports/biencoder_training_config.json`
+- `reports/biencoder_training_history.csv`
+- `reports/biencoder_optimal_selection.json`
+- `reports/biencoder_test_metrics.json`
+- `reports/biencoder_test_predictions.csv`
+- `reports/model_comparison_metrics.csv`
+- `reports/figures/loss_total.png`
+- `reports/figures/loss_cosine.png`
+- `reports/figures/loss_classification.png`
+- `reports/figures/validation_accuracy.png`
+- `reports/figures/validation_correlations.png`
+- `reports/figures/score_distribution_by_label.png`
+- `reports/figures/confusion_matrix.png`
+
+Detailed experiment interpretation is documented in `RESULTS.md`.
 
 ## Project Structure
 
@@ -174,7 +203,6 @@ NLP-Proje/
 |-- RESULTS.md
 |-- requirements.txt
 |-- api.py
-|-- app.py
 |-- data/
 |   |-- raw/
 |   |-- processed/
@@ -191,11 +219,15 @@ NLP-Proje/
 |       `-- types.ts
 |-- models/
 |   |-- base-minilm/
+|   |-- resume-job-biencoder-optimal/
 |   |-- resume-job-minilm-finetuned/
 |   |-- resume-job-minilm-finetuned-2epoch/
 |   `-- skill-evidence-minilm-classifier/
+|-- reports/
 |-- scripts/
 |-- src/
+|   |-- neural_matcher.py
+|   |-- neural_training.py
 |   |-- similarity.py
 |   |-- skill_extractor.py
 |   |-- skill_weights.py
@@ -210,15 +242,17 @@ NLP-Proje/
 
 - `api.py`: FastAPI backend used by the React interface
 - `frontend/src/App.tsx`: main React UI
-- `src/similarity.py`: encoder-only model loading and cosine similarity
+- `src/neural_matcher.py`: custom bi-encoder architecture and runtime wrapper
+- `src/neural_training.py`: dataset, loss, epoch metrics, and checkpoint selection helpers
+- `src/similarity.py`: runtime model loading and cosine utilities
+- `src/matcher.py`: final matching pipeline
 - `src/skill_extractor.py`: skill detection and alias handling
 - `src/skill_evidence.py`: sentence-level positive, negated, and unclear skill evidence classification
 - `src/skill_weights.py`: role-specific skill weighting
-- `src/matcher.py`: final matching pipeline
-- `src/recommender.py`: match category, HR explanation, interview focus, and candidate suggestions
-- `data/skill_evidence/skill_evidence_dataset.csv`: manually curated skill evidence classifier dataset
-- `data/skills.json`: skill dictionary used for explainability
-- `models/`: local Sentence Transformer model files used by the system
+- `src/recommender.py`: deterministic match category rules
+- `scripts/train_biencoder.py`: custom bi-encoder training pipeline
+- `scripts/evaluate_biencoder.py`: final test evaluation and model comparison report
+- `scripts/plot_training_history.py`: training and evaluation plot generation
 
 ## Run Tests
 
@@ -228,17 +262,9 @@ From the project root:
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-## Optional Streamlit Demo
-
-The main UI is the React Vite app. A Streamlit version is still available as a secondary Python-only demo:
-
-```powershell
-.\.venv\Scripts\python.exe -m streamlit run app.py
-```
-
 ## Notes
 
 - Use `http://localhost:5173` for the main demo.
 - Keep the backend running while using the frontend.
-- The backend loads the local model once and reuses it for analysis requests.
-- Detailed experiment results are documented in `RESULTS.md`.
+- Runtime uses the local optimal bi-encoder model.
+- Model comparison belongs to `RESULTS.md` and `reports/`, not the UI.

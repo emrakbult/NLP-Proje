@@ -23,13 +23,13 @@ def validate_upload(file_name: str, content: bytes) -> str:
     extension = Path(file_name).suffix.casefold()
     if extension not in SUPPORTED_DOCUMENT_EXTENSIONS:
         supported = ", ".join(sorted(SUPPORTED_DOCUMENT_EXTENSIONS))
-        raise ValueError(f"Unsupported file type. Supported extensions: {supported}.")
+        raise ValueError(f"Desteklenmeyen dosya türü. Desteklenen uzantılar: {supported}.")
 
     if not content:
-        raise ValueError("Uploaded file is empty.")
+        raise ValueError("Yüklenen dosya boş.")
 
     if len(content) > MAX_UPLOAD_BYTES:
-        raise ValueError("Uploaded file is larger than the 10 MB limit.")
+        raise ValueError("Yüklenen dosya 10 MB sınırından büyük.")
 
     return extension
 
@@ -46,8 +46,8 @@ def _convert_with_markitdown(file_name: str, content: bytes) -> str:
         from markitdown import MarkItDown
     except ImportError as error:
         raise RuntimeError(
-            "MarkItDown is required for PDF/DOCX extraction. "
-            "Install dependencies with: pip install -r requirements.txt"
+            "PDF/DOCX metin çıkarımı için MarkItDown gereklidir. "
+            "Bağımlılıkları şu komutla kurun: pip install -r requirements.txt"
         ) from error
 
     suffix = Path(file_name).suffix
@@ -73,7 +73,7 @@ def extract_document_text(file_name: str, content: bytes) -> ExtractedDocument:
 
     extracted_text = extracted_text.strip()
     if not extracted_text:
-        raise ValueError("No readable text could be extracted from the uploaded file.")
+        raise ValueError("Yüklenen dosyadan okunabilir metin çıkarılamadı.")
 
     return ExtractedDocument(
         file_name=Path(file_name).name,
