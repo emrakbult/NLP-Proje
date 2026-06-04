@@ -149,14 +149,12 @@ Historical comparison:
 | Model | Semantic Pearson | Semantic Spearman | Accuracy Metric |
 |---|---:|---:|---:|
 | Baseline local MiniLM | 0.1121 | 0.1078 | 0.4139 |
-| Old fine-tuned SentenceTransformer | 0.4022 | 0.3993 | 0.4741 |
 | New optimal custom bi-encoder | 0.2024 | 0.2150 | 0.5225 |
 
 Interpretation:
 
-- The old SentenceTransformer is stronger as a pure semantic-correlation model.
 - The new custom bi-encoder is stronger on direct 3-class fit prediction.
-- This is why the UI now uses only the selected final model, while model comparison is documented in reports and plots.
+- The UI uses only the selected final model, while model comparison is documented in reports and plots.
 
 ## Explainability
 

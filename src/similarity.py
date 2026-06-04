@@ -9,7 +9,6 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 BASE_MODEL_PATH = PROJECT_ROOT / "models" / "base-minilm"
 OPTIMAL_BIENCODER_MODEL_PATH = PROJECT_ROOT / "models" / "resume-job-biencoder-optimal"
-FINAL_FINE_TUNED_MODEL_PATH = PROJECT_ROOT / "models" / "resume-job-minilm-finetuned-2epoch"
 
 
 def resolve_default_model_name() -> str:

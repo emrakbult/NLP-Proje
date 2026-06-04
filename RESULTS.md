@@ -14,12 +14,6 @@ It was initialized from local pretrained MiniLM weights:
 models/base-minilm/
 ```
 
-The old fine-tuned SentenceTransformer model is preserved for historical comparison, but it is not used by the runtime UI:
-
-```text
-models/resume-job-minilm-finetuned-2epoch/
-```
-
 ## Architecture
 
 ```mermaid
@@ -204,14 +198,12 @@ reports/model_comparison_metrics.csv
 | Model | Semantic Pearson | Semantic Spearman | Accuracy Metric |
 |---|---:|---:|---:|
 | Baseline local MiniLM | 0.1121 | 0.1078 | 0.4139 |
-| Old fine-tuned SentenceTransformer | 0.4022 | 0.3993 | 0.4741 |
 | New optimal custom bi-encoder | 0.2024 | 0.2150 | 0.5225 |
 
 Notes:
 
-- The old SentenceTransformer remains stronger as a pure semantic-correlation model.
 - The new custom bi-encoder is stronger on the direct 3-class prediction metric.
-- This tradeoff is useful for the final report because it shows why model comparison belongs in experiment analysis, while the UI should only expose the selected final workflow.
+- Model comparison belongs in experiment analysis, while the UI exposes only the selected final workflow.
 
 ## Skill Evidence Classifier
 
@@ -269,6 +261,5 @@ The project now includes:
 - MarkItDown file upload for PDF/DOCX/TXT/Markdown inputs
 - Model-based skill evidence classification
 - React Vite UI backed by FastAPI
-- Optional Streamlit demo
 
 The application UI now demonstrates only the final selected model. Model comparisons are documented in reports and plots.

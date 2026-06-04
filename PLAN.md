@@ -162,14 +162,14 @@ Fine-tuning workflow:
 1. Load `train.csv` and `test.csv`.
 2. Convert each row into a resume-job text pair.
 3. Convert dataset labels into numeric similarity targets.
-4. Fine-tune `sentence-transformers/all-MiniLM-L6-v2`.
-5. Evaluate baseline vs fine-tuned model with Pearson/Spearman correlation and score distribution by label.
-6. Use the fine-tuned model path in the existing matcher and evaluation scripts.
+4. Train the custom `ResumeJobBiEncoder` initialized from `models/base-minilm/`.
+5. Evaluate baseline vs optimal bi-encoder with validation loss, accuracy, Pearson/Spearman correlation, and score distribution by label.
+6. Use the optimal model path in the matcher and evaluation scripts.
 
-The fine-tuned model will be saved locally under:
+The selected optimal model is saved locally under:
 
 ```text
-models/resume-job-minilm-finetuned-2epoch/
+models/resume-job-biencoder-optimal/
 ```
 
 GPU training is preferred. On the current Windows environment, the venv should use CUDA PyTorch instead of CPU-only PyTorch:
@@ -406,7 +406,7 @@ Example categories:
 
 ## 16. User Interface
 
-The first interface is built with Streamlit.
+The interface is built with React Vite and a FastAPI backend.
 
 The interface will include:
 
@@ -657,7 +657,7 @@ Core software development skills are suitable, but Docker and AWS experience are
 These topics should be checked during the technical interview.
 ```
 
-### Step 9: Build Streamlit Interface
+### Step 9: Build React Interface
 
 Create the user interface.
 
@@ -887,7 +887,7 @@ The project can be considered successful if it can:
 The final project should include:
 
 - Working Python application
-- Streamlit interface
+- React Vite interface with FastAPI backend
 - Skill dictionary
 - Example resume and job posting texts
 - Explanation of the model and method
@@ -918,7 +918,7 @@ The final project should include:
 ### Week 4
 
 - Implement the match category and evidence output module
-- Build the Streamlit interface
+- Build the React interface
 - Test the system with example scenarios
 
 ### Week 5

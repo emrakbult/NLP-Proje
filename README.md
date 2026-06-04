@@ -19,7 +19,24 @@ The system is a decision-support prototype. It is not intended to make automated
 
 Use two terminals: one for the FastAPI backend and one for the React Vite frontend.
 
-### 1. Create And Activate The Python Environment
+### 1. Pull Git LFS Model Files
+
+Model weights are part of the project and are stored with Git LFS. After cloning the repository, run:
+
+```powershell
+git lfs install
+git lfs pull
+```
+
+The application expects these local model folders to exist:
+
+```text
+models/base-minilm/
+models/resume-job-biencoder-optimal/
+models/skill-evidence-minilm-classifier/
+```
+
+### 2. Create And Activate The Python Environment
 
 From the project root:
 
@@ -36,7 +53,7 @@ If the virtual environment already exists, only activate it:
 .\.venv\Scripts\activate
 ```
 
-### 2. Start The Backend
+### 3. Start The Backend
 
 From the project root:
 
@@ -56,7 +73,7 @@ Health check:
 http://localhost:8000/health
 ```
 
-### 3. Start The Frontend
+### 4. Start The Frontend
 
 Open a second terminal and run:
 
@@ -124,8 +141,6 @@ The architecture uses:
 - Pair classification head over `[resume, job, abs diff, elementwise product]`
 
 The optimal model was selected from a 25-epoch training run by lowest validation total loss. The selected checkpoint is epoch 22.
-
-Older SentenceTransformer fine-tuned models are kept only for historical comparison in `reports/`. They are no longer exposed in the application UI.
 
 The project also uses a second encoder-only classifier for sentence-level skill evidence validation:
 
@@ -197,6 +212,7 @@ Detailed experiment interpretation is documented in `RESULTS.md`.
 ```text
 NLP-Proje/
 |-- README.md
+|-- LICENSE
 |-- IDEA.md
 |-- PLAN.md
 |-- PROJECT_SUMMARY.md
@@ -220,8 +236,6 @@ NLP-Proje/
 |-- models/
 |   |-- base-minilm/
 |   |-- resume-job-biencoder-optimal/
-|   |-- resume-job-minilm-finetuned/
-|   |-- resume-job-minilm-finetuned-2epoch/
 |   `-- skill-evidence-minilm-classifier/
 |-- reports/
 |-- scripts/
@@ -268,3 +282,16 @@ From the project root:
 - Keep the backend running while using the frontend.
 - Runtime uses the local optimal bi-encoder model.
 - Model comparison belongs to `RESULTS.md` and `reports/`, not the UI.
+- Demo upload PDFs and local logs are ignored and should not be committed.
+
+## License And Attribution
+
+This project code is released under the MIT License. See `LICENSE`.
+
+External resources used by the project:
+
+- Base encoder: `sentence-transformers/all-MiniLM-L6-v2` from Hugging Face, licensed as Apache-2.0.
+- Main dataset: `cnamuangtoun/resume-job-description-fit` from Hugging Face. Local CSV copies are included for reproducible coursework; use them according to the source dataset terms.
+- Document extraction: Microsoft MarkItDown, licensed as MIT.
+
+The system is an educational decision-support prototype. It should not be used as an automated hiring decision system.

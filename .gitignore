@@ -5,6 +5,8 @@ __pycache__/
 venv/
 env/
 .env
+.streamlit/
+checkpoints/
 logs/
 frontend/node_modules/
 frontend/dist/

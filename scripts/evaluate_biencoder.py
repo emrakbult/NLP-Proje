@@ -32,7 +32,6 @@ from src.neural_matcher import (
 )
 from src.similarity import (
     BASE_MODEL_PATH,
-    FINAL_FINE_TUNED_MODEL_PATH,
     encode_texts,
     load_model,
     pairwise_cosine_similarities,
@@ -239,7 +238,6 @@ def main() -> None:
 
     comparison_rows = [
         evaluate_embedding_model(records, BASE_MODEL_PATH, "Baseline local MiniLM", args.batch_size),
-        evaluate_embedding_model(records, FINAL_FINE_TUNED_MODEL_PATH, "Old fine-tuned SentenceTransformer", args.batch_size),
         {
             "model_label": "New optimal custom bi-encoder",
             "model_path": str(model_dir.relative_to(PROJECT_ROOT)),
