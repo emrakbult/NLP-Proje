@@ -2,16 +2,18 @@
 
 This project is an explainable NLP-based resume and job description matching system for human resources use cases.
 
+It was developed as part of an NLP course project.
+
 It compares a candidate resume with a job description and returns:
 
-- Overall suitability score
-- Neural fit prediction: `No Fit`, `Potential Fit`, or `Good Fit`
-- Cosine-based semantic similarity score
-- Weighted skill match score
-- Matched skills
-- Missing or unclear required skills
-- Negated and unclear resume skill evidence
-- PDF/DOCX/TXT/Markdown upload for resume and job description
+* Overall suitability score
+* Neural fit prediction: `No Fit`, `Potential Fit`, or `Good Fit`
+* Cosine-based semantic similarity score
+* Weighted skill match score
+* Matched skills
+* Missing or unclear required skills
+* Negated and unclear resume skill evidence
+* PDF/DOCX/TXT/Markdown upload for resume and job description
 
 The system is a decision-support prototype. It is not intended to make automated hiring decisions.
 
